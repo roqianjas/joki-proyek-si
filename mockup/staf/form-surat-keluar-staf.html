@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Surat Keluar - SDIT Al-Huda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <aside class="w-64 bg-purple-800 text-white flex flex-col">
+            <div class="p-6 border-b border-purple-700">
+                <h2 class="text-2xl font-bold">SDIT Al-Huda</h2>
+                <p class="text-sm text-purple-200 mt-1">Staf TU</p>
+            </div>
+            <nav class="flex-1 p-4 space-y-2">
+                <a href="dashboard-staf.html" class="flex items-center px-4 py-3 hover:bg-purple-700 rounded-lg transition">
+                    <i class="fas fa-home mr-3"></i>Dashboard
+                </a>
+                <a href="surat-masuk-staf.html" class="flex items-center px-4 py-3 hover:bg-purple-700 rounded-lg transition">
+                    <i class="fas fa-inbox mr-3"></i>Surat Masuk
+                </a>
+                <a href="surat-keluar-staf.html" class="flex items-center px-4 py-3 bg-purple-700 rounded-lg">
+                    <i class="fas fa-paper-plane mr-3"></i>Surat Keluar
+                </a>
+                <a href="arsip-staf.html" class="flex items-center px-4 py-3 hover:bg-purple-700 rounded-lg transition">
+                    <i class="fas fa-archive mr-3"></i>Arsip Digital
+                </a>
+                <a href="profil-staf.html" class="flex items-center px-4 py-3 hover:bg-purple-700 rounded-lg transition">
+                    <i class="fas fa-user-circle mr-3"></i>Profil
+                </a>
+            </nav>
+            <div class="p-4 border-t border-purple-700">
+                <a href="../index.html" class="flex items-center px-4 py-3 hover:bg-purple-700 rounded-lg transition">
+                    <i class="fas fa-sign-out-alt mr-3"></i>Logout
+                </a>
+            </div>
+        </aside>
+        <main class="flex-1 overflow-y-auto">
+            <header class="bg-white shadow-sm p-6">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">Form Surat Keluar</h1>
+                        <p class="text-sm text-gray-600 mt-1">Tambah atau edit data surat keluar</p>
+                    </div>
+                    <a href="surat-keluar-staf.html" class="text-gray-600 hover:text-gray-800">
+                        <i class="fas fa-times text-2xl"></i>
+                    </a>
+                </div>
+            </header>
+            <div class="p-6">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Nomor Surat <span class="text-red-500">*</span></label>
+                                <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500" placeholder="Contoh: 001/SK/XI/2025" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Tanggal Surat <span class="text-red-500">*</span></label>
+                                <input type="date" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Tujuan Surat <span class="text-red-500">*</span></label>
+                            <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500" placeholder="Nama instansi/lembaga tujuan" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Alamat Tujuan <span class="text-red-500">*</span></label>
+                            <textarea rows="2" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500" placeholder="Alamat lengkap tujuan surat" required></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Perihal <span class="text-red-500">*</span></label>
+                            <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500" placeholder="Perihal surat" required>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Kategori Surat <span class="text-red-500">*</span></label>
+                                <select class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500" required>
+                                    <option value="">Pilih Kategori</option>
+                                    <option>Undangan</option>
+                                    <option>Surat Edaran</option>
+                                    <option>Permohonan</option>
+                                    <option>Pemberitahuan</option>
+                                    <option>Laporan</option>
+                                    <option>Lainnya</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Sifat Surat <span class="text-red-500">*</span></label>
+                                <select class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500" required>
+                                    <option value="">Pilih Sifat</option>
+                                    <option>Biasa</option>
+                                    <option>Penting</option>
+                                    <option>Segera</option>
+                                    <option>Rahasia</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Isi Surat <span class="text-red-500">*</span></label>
+                            <textarea rows="6" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500" placeholder="Isi lengkap surat" required></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Penandatangan <span class="text-red-500">*</span></label>
+                            <select class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500" required>
+                                <option value="">Pilih Penandatangan</option>
+                                <option>Kepala Sekolah</option>
+                                <option>Wakil Kepala Sekolah</option>
+                                <option>Ketua Komite</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Upload File Surat (PDF)</label>
+                            <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-purple-500 transition">
+                                <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-2"></i>
+                                <p class="text-sm text-gray-600">Klik atau drag & drop file PDF di sini</p>
+                                <input type="file" accept=".pdf" class="hidden">
+                            </div>
+                        </div>
+                        <div class="flex justify-end space-x-4 pt-6 border-t">
+                            <a href="surat-keluar-staf.html" class="px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition">
+                                Batal
+                            </a>
+                            <button type="button" class="px-6 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition">
+                                <i class="fas fa-save mr-2"></i>Simpan Draft
+                            </button>
+                            <button type="submit" class="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
+                                <i class="fas fa-paper-plane mr-2"></i>Kirim Surat
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

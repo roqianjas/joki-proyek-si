@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Kepala Sekolah - SDIT Al-Huda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <aside class="w-64 bg-green-800 text-white flex flex-col">
+            <div class="p-6 border-b border-green-700">
+                <h2 class="text-2xl font-bold">SDIT Al-Huda</h2>
+                <p class="text-sm text-green-200 mt-1">Kepala Sekolah</p>
+            </div>
+            
+            <nav class="flex-1 p-4 space-y-2">
+                <a href="dashboard-kepala-sekolah.html" class="flex items-center px-4 py-3 bg-green-700 rounded-lg">
+                    <i class="fas fa-home mr-3"></i>Dashboard
+                </a>
+                <a href="surat-masuk-kepala-sekolah.html" class="flex items-center px-4 py-3 hover:bg-green-700 rounded-lg transition">
+                    <i class="fas fa-inbox mr-3"></i>Surat Masuk
+                </a>
+                <a href="disposisi-kepala-sekolah.html" class="flex items-center px-4 py-3 hover:bg-green-700 rounded-lg transition">
+                    <i class="fas fa-share-square mr-3"></i>Disposisi Saya
+                </a>
+                <a href="arsip-kepala-sekolah.html" class="flex items-center px-4 py-3 hover:bg-green-700 rounded-lg transition">
+                    <i class="fas fa-archive mr-3"></i>Arsip Digital
+                </a>
+                <a href="laporan-kepala-sekolah.html" class="flex items-center px-4 py-3 hover:bg-green-700 rounded-lg transition">
+                    <i class="fas fa-chart-bar mr-3"></i>Laporan
+                </a>
+                <a href="profil-kepala-sekolah.html" class="flex items-center px-4 py-3 hover:bg-green-700 rounded-lg transition">
+                    <i class="fas fa-user-circle mr-3"></i>Profil
+                </a>
+            </nav>
+            
+            <div class="p-4 border-t border-green-700">
+                <a href="../index.html" class="flex items-center px-4 py-3 hover:bg-green-700 rounded-lg transition">
+                    <i class="fas fa-sign-out-alt mr-3"></i>Logout
+                </a>
+            </div>
+        </aside>
+        
+        <main class="flex-1 overflow-y-auto">
+            <header class="bg-white shadow-sm p-6">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">Dashboard Kepala Sekolah</h1>
+                        <p class="text-sm text-gray-600 mt-1">Selamat datang, Rita Amalia, S.H</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button class="relative">
+                            <i class="fas fa-bell text-gray-600 text-xl"></i>
+                            <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">5</span>
+                        </button>
+                        <div class="flex items-center space-x-2">
+                            <img src="https://ui-avatars.com/api/?name=Rita+Amalia&background=10b981&color=fff" class="w-10 h-10 rounded-full">
+                            <span class="font-medium text-gray-700">Rita Amalia</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">Surat Masuk Baru</p>
+                                <p class="text-3xl font-bold text-gray-800 mt-2">8</p>
+                                <p class="text-red-600 text-sm mt-2"><i class="fas fa-exclamation-circle"></i> Perlu perhatian</p>
+                            </div>
+                            <div class="bg-blue-100 p-4 rounded-full">
+                                <i class="fas fa-inbox text-blue-600 text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">Disposisi Pending</p>
+                                <p class="text-3xl font-bold text-gray-800 mt-2">5</p>
+                                <p class="text-yellow-600 text-sm mt-2"><i class="fas fa-clock"></i> Menunggu</p>
+                            </div>
+                            <div class="bg-yellow-100 p-4 rounded-full">
+                                <i class="fas fa-share-square text-yellow-600 text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">Surat Ditandatangani</p>
+                                <p class="text-3xl font-bold text-gray-800 mt-2">42</p>
+                                <p class="text-green-600 text-sm mt-2"><i class="fas fa-check-circle"></i> Bulan ini</p>
+                            </div>
+                            <div class="bg-green-100 p-4 rounded-full">
+                                <i class="fas fa-signature text-green-600 text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">Total Arsip</p>
+                                <p class="text-3xl font-bold text-gray-800 mt-2">1,245</p>
+                                <p class="text-gray-600 text-sm mt-2">Dokumen tersimpan</p>
+                            </div>
+                            <div class="bg-purple-100 p-4 rounded-full">
+                                <i class="fas fa-archive text-purple-600 text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6 border-b">
+                            <h3 class="text-lg font-semibold text-gray-800">Surat Perlu Tindakan</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-4 pb-4 border-b">
+                                    <div class="bg-red-100 p-3 rounded-lg">
+                                        <i class="fas fa-exclamation-triangle text-red-600"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-800">Undangan Rapat Dinas</p>
+                                        <p class="text-sm text-gray-500">Dinas Pendidikan Kota</p>
+                                        <p class="text-xs text-gray-400 mt-1">Batas: 25 Nov 2025</p>
+                                    </div>
+                                    <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Urgent</span>
+                                </div>
+                                <div class="flex items-start space-x-4 pb-4 border-b">
+                                    <div class="bg-yellow-100 p-3 rounded-lg">
+                                        <i class="fas fa-file-signature text-yellow-600"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-800">Persetujuan Anggaran</p>
+                                        <p class="text-sm text-gray-500">Bendahara Sekolah</p>
+                                        <p class="text-xs text-gray-400 mt-1">Batas: 28 Nov 2025</p>
+                                    </div>
+                                    <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Penting</span>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-blue-100 p-3 rounded-lg">
+                                        <i class="fas fa-file-alt text-blue-600"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-800">Laporan Kegiatan</p>
+                                        <p class="text-sm text-gray-500">Koordinator Kesiswaan</p>
+                                        <p class="text-xs text-gray-400 mt-1">Batas: 30 Nov 2025</p>
+                                    </div>
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Normal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6 border-b">
+                            <h3 class="text-lg font-semibold text-gray-800">Aktivitas Terbaru</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="bg-green-100 p-2 rounded-full">
+                                        <i class="fas fa-check text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-medium text-gray-800">Disposisi dikirim</p>
+                                        <p class="text-xs text-gray-500">Surat Edaran Kurikulum ke Koordinator</p>
+                                        <p class="text-xs text-gray-400 mt-1">21 Nov 2025, 14:30</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="bg-blue-100 p-2 rounded-full">
+                                        <i class="fas fa-signature text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-medium text-gray-800">Surat ditandatangani</p>
+                                        <p class="text-xs text-gray-500">Surat Keterangan Siswa</p>
+                                        <p class="text-xs text-gray-400 mt-1">21 Nov 2025, 11:15</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="bg-purple-100 p-2 rounded-full">
+                                        <i class="fas fa-eye text-purple-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-medium text-gray-800">Surat dibaca</p>
+                                        <p class="text-xs text-gray-500">Undangan Rapat Komite</p>
+                                        <p class="text-xs text-gray-400 mt-1">20 Nov 2025, 16:45</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

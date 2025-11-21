@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - SDIT Al-Huda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Sidebar -->
+    <div class="flex h-screen">
+        <aside class="w-64 bg-indigo-800 text-white flex flex-col">
+            <div class="p-6 border-b border-indigo-700">
+                <h2 class="text-2xl font-bold">SDIT Al-Huda</h2>
+                <p class="text-sm text-indigo-200 mt-1">Admin Panel</p>
+            </div>
+            
+            <nav class="flex-1 p-4 space-y-2">
+                <a href="dashboard-admin.html" class="flex items-center px-4 py-3 bg-indigo-700 rounded-lg">
+                    <i class="fas fa-home mr-3"></i>Dashboard
+                </a>
+                <a href="surat-masuk.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+                    <i class="fas fa-inbox mr-3"></i>Surat Masuk
+                </a>
+                <a href="surat-keluar.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+                    <i class="fas fa-paper-plane mr-3"></i>Surat Keluar
+                </a>
+                <a href="disposisi.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+                    <i class="fas fa-share-square mr-3"></i>Disposisi
+                </a>
+                <a href="arsip.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+                    <i class="fas fa-archive mr-3"></i>Arsip Digital
+                </a>
+                <a href="laporan.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+                    <i class="fas fa-chart-bar mr-3"></i>Laporan
+                </a>
+                <a href="pengguna.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+                    <i class="fas fa-users mr-3"></i>Kelola Pengguna
+                </a>
+                <a href="profil.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+                    <i class="fas fa-user-circle mr-3"></i>Profil
+                </a>
+            </nav>
+            
+            <div class="p-4 border-t border-indigo-700">
+                <a href="../index.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+                    <i class="fas fa-sign-out-alt mr-3"></i>Logout
+                </a>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto">
+            <!-- Header -->
+            <header class="bg-white shadow-sm p-6">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-2xl font-bold text-gray-800">Dashboard Admin</h1>
+                    <div class="flex items-center space-x-4">
+                        <button class="relative">
+                            <i class="fas fa-bell text-gray-600 text-xl"></i>
+                            <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                        </button>
+                        <div class="flex items-center space-x-2">
+                            <img src="https://ui-avatars.com/api/?name=Admin&background=4f46e5&color=fff" class="w-10 h-10 rounded-full">
+                            <span class="font-medium text-gray-700">Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Dashboard Content -->
+            <div class="p-6">
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">Surat Masuk</p>
+                                <p class="text-3xl font-bold text-gray-800 mt-2">127</p>
+                                <p class="text-green-600 text-sm mt-2"><i class="fas fa-arrow-up"></i> 12% bulan ini</p>
+                            </div>
+                            <div class="bg-blue-100 p-4 rounded-full">
+                                <i class="fas fa-inbox text-blue-600 text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">Surat Keluar</p>
+                                <p class="text-3xl font-bold text-gray-800 mt-2">89</p>
+                                <p class="text-green-600 text-sm mt-2"><i class="fas fa-arrow-up"></i> 8% bulan ini</p>
+                            </div>
+                            <div class="bg-green-100 p-4 rounded-full">
+                                <i class="fas fa-paper-plane text-green-600 text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">Perlu Disposisi</p>
+                                <p class="text-3xl font-bold text-gray-800 mt-2">15</p>
+                                <p class="text-red-600 text-sm mt-2"><i class="fas fa-exclamation-circle"></i> Segera</p>
+                            </div>
+                            <div class="bg-yellow-100 p-4 rounded-full">
+                                <i class="fas fa-share-square text-yellow-600 text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">Total Arsip</p>
+                                <p class="text-3xl font-bold text-gray-800 mt-2">1,245</p>
+                                <p class="text-gray-600 text-sm mt-2">Dokumen tersimpan</p>
+                            </div>
+                            <div class="bg-purple-100 p-4 rounded-full">
+                                <i class="fas fa-archive text-purple-600 text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Activity -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6 border-b">
+                            <h3 class="text-lg font-semibold text-gray-800">Surat Masuk Terbaru</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-4 pb-4 border-b">
+                                    <div class="bg-blue-100 p-3 rounded-lg">
+                                        <i class="fas fa-file-alt text-blue-600"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-800">Undangan Rapat Dinas</p>
+                                        <p class="text-sm text-gray-500">Dinas Pendidikan Kota</p>
+                                        <p class="text-xs text-gray-400 mt-1">21 Nov 2025, 10:30</p>
+                                    </div>
+                                    <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Pending</span>
+                                </div>
+                                <div class="flex items-start space-x-4 pb-4 border-b">
+                                    <div class="bg-blue-100 p-3 rounded-lg">
+                                        <i class="fas fa-file-alt text-blue-600"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-800">Surat Edaran Kurikulum</p>
+                                        <p class="text-sm text-gray-500">Kemendikbud</p>
+                                        <p class="text-xs text-gray-400 mt-1">20 Nov 2025, 14:20</p>
+                                    </div>
+                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Selesai</span>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-blue-100 p-3 rounded-lg">
+                                        <i class="fas fa-file-alt text-blue-600"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-800">Permohonan Izin Kegiatan</p>
+                                        <p class="text-sm text-gray-500">Komite Sekolah</p>
+                                        <p class="text-xs text-gray-400 mt-1">19 Nov 2025, 09:15</p>
+                                    </div>
+                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Selesai</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6 border-b">
+                            <h3 class="text-lg font-semibold text-gray-800">Statistik Bulanan</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-sm text-gray-600">Surat Masuk</span>
+                                        <span class="text-sm font-medium text-gray-800">127 surat</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-sm text-gray-600">Surat Keluar</span>
+                                        <span class="text-sm font-medium text-gray-800">89 surat</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-600 h-2 rounded-full" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-sm text-gray-600">Disposisi Selesai</span>
+                                        <span class="text-sm font-medium text-gray-800">102 disposisi</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-yellow-600 h-2 rounded-full" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-sm text-gray-600">Arsip Tersimpan</span>
+                                        <span class="text-sm font-medium text-gray-800">1,245 dokumen</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-purple-600 h-2 rounded-full" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
