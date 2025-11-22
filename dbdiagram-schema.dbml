@@ -1,0 +1,208 @@
+// ============================================
+// Database Schema untuk dbdiagram.io
+// Sistem Manajemen Arsip Persuratan SDIT Al-Huda
+// 
+// Cara pakai:
+// 1. Buka https://dbdiagram.io/
+// 2. Copy semua isi file ini
+// 3. Paste di editor dbdiagram.io
+// 4. Diagram ERD akan muncul otomatis
+// ============================================
+
+Table users {
+  id_user int [pk, increment]
+  username varchar(50) [unique, not null]
+  password varchar(255) [not null]
+  nama_lengkap varchar(100) [not null]
+  email varchar(100) [unique, not null]
+  no_telepon varchar(20)
+  nip varchar(50)
+  alamat text
+  role enum('admin', 'kepala_sekolah', 'guru', 'staf') [not null]
+  foto_profil varchar(255)
+  status enum('aktif', 'nonaktif') [default: 'aktif']
+  last_login timestamp
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+  
+  indexes {
+    username
+    email
+    role
+  }
+  
+  Note: 'Tabel pengguna sistem dengan 4 role: admin, kepala_sekolah, guru, staf'
+}
+
+Table surat_masuk {
+  id_surat_masuk int [pk, increment]
+  nomor_surat varchar(50) [unique, not null]
+  tanggal_surat date [not null]
+  tanggal_diterima date [not null]
+  pengirim varchar(200) [not null]
+  perihal varchar(255) [not null]
+  kategori enum('undangan', 'surat_edaran', 'permohonan', 'pemberitahuan', 'lainnya') [not null]
+  sifat_surat enum('biasa', 'penting', 'segera', 'rahasia') [default: 'biasa']
+  isi_ringkas text
+  file_surat varchar(255)
+  lampiran text
+  status enum('pending', 'diproses', 'selesai') [default: 'pending']
+  id_user_input int [not null, ref: > users.id_user]
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+  
+  indexes {
+    nomor_surat
+    tanggal_diterima
+    status
+    kategori
+  }
+  
+  Note: 'Tabel surat masuk yang diterima sekolah'
+}
+
+Table surat_keluar {
+  id_surat_keluar int [pk, increment]
+  nomor_surat varchar(50) [unique, not null]
+  tanggal_surat date [not null]
+  tujuan varchar(200) [not null]
+  alamat_tujuan text
+  perihal varchar(255) [not null]
+  kategori enum('undangan', 'surat_edaran', 'permohonan', 'pemberitahuan', 'laporan', 'lainnya') [not null]
+  sifat_surat enum('biasa', 'penting', 'segera', 'rahasia') [default: 'biasa']
+  isi_surat text
+  file_surat varchar(255)
+  lampiran text
+  id_penandatangan int [ref: > users.id_user]
+  status enum('draft', 'terkirim') [default: 'draft']
+  id_user_input int [not null, ref: > users.id_user]
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+  
+  indexes {
+    nomor_surat
+    tanggal_surat
+    status
+  }
+  
+  Note: 'Tabel surat keluar yang dikirim sekolah'
+}
+
+Table disposisi {
+  id_disposisi int [pk, increment]
+  id_surat_masuk int [not null, ref: > surat_masuk.id_surat_masuk]
+  id_dari int [not null, ref: > users.id_user]
+  id_kepada int [not null, ref: > users.id_user]
+  instruksi text [not null]
+  catatan text
+  prioritas enum('biasa', 'penting', 'sangat_penting', 'segera') [default: 'biasa']
+  batas_waktu date
+  status enum('pending', 'proses', 'selesai') [default: 'pending']
+  tanggal_selesai timestamp
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+  
+  indexes {
+    id_surat_masuk
+    id_kepada
+    status
+  }
+  
+  Note: 'Tabel disposisi/penugasan surat kepada pihak terkait'
+}
+
+Table arsip {
+  id_arsip int [pk, increment]
+  jenis_surat enum('surat_masuk', 'surat_keluar') [not null]
+  id_surat int [not null]
+  nomor_surat varchar(50) [not null]
+  perihal varchar(255) [not null]
+  tanggal_surat date [not null]
+  file_path varchar(255) [not null]
+  ukuran_file int
+  tahun_arsip int [not null]
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  
+  indexes {
+    nomor_surat
+    tahun_arsip
+    jenis_surat
+  }
+  
+  Note: 'Tabel arsip digital untuk referensi dokumen'
+}
+
+Table log_aktivitas {
+  id_log int [pk, increment]
+  id_user int [not null, ref: > users.id_user]
+  aktivitas varchar(255) [not null]
+  jenis_aktivitas enum('login', 'logout', 'create', 'update', 'delete', 'disposisi', 'download') [not null]
+  tabel_terkait varchar(50)
+  id_terkait int
+  ip_address varchar(45)
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  
+  indexes {
+    id_user
+    created_at
+  }
+  
+  Note: 'Tabel log aktivitas pengguna untuk audit trail'
+}
+
+Table notifikasi {
+  id_notifikasi int [pk, increment]
+  id_user int [not null, ref: > users.id_user]
+  judul varchar(255) [not null]
+  pesan text [not null]
+  jenis enum('surat_masuk', 'disposisi', 'deadline', 'sistem') [not null]
+  link varchar(255)
+  is_read boolean [default: false]
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  
+  indexes {
+    id_user
+    is_read
+  }
+  
+  Note: 'Tabel notifikasi untuk pengguna'
+}
+
+Table kategori_surat {
+  id_kategori int [pk, increment]
+  nama_kategori varchar(100) [not null]
+  deskripsi text
+  jenis enum('surat_masuk', 'surat_keluar', 'both') [default: 'both']
+  is_active boolean [default: true]
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  
+  Note: 'Tabel master kategori surat (optional, dapat dikustomisasi)'
+}
+
+// ============================================
+// Relasi Antar Tabel
+// ============================================
+
+// users -> surat_masuk (1:N - user input)
+// Ref: users.id_user < surat_masuk.id_user_input
+
+// users -> surat_keluar (1:N - user input)
+// Ref: users.id_user < surat_keluar.id_user_input
+
+// users -> surat_keluar (1:N - penandatangan)
+// Ref: users.id_user < surat_keluar.id_penandatangan
+
+// surat_masuk -> disposisi (1:N)
+// Ref: surat_masuk.id_surat_masuk < disposisi.id_surat_masuk
+
+// users -> disposisi (1:N - pemberi)
+// Ref: users.id_user < disposisi.id_dari
+
+// users -> disposisi (1:N - penerima)
+// Ref: users.id_user < disposisi.id_kepada
+
+// users -> log_aktivitas (1:N)
+// Ref: users.id_user < log_aktivitas.id_user
+
+// users -> notifikasi (1:N)
+// Ref: users.id_user < notifikasi.id_user

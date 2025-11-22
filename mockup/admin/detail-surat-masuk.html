@@ -6,44 +6,50 @@
     <title>Detail Surat Masuk - SDIT Al-Huda</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="bg-gray-100">
     <div class="flex h-screen">
-        <aside class="w-64 bg-indigo-800 text-white flex flex-col">
-            <div class="p-6 border-b border-indigo-700">
-                <h2 class="text-2xl font-bold">SDIT Al-Huda</h2>
-                <p class="text-sm text-indigo-200 mt-1">Admin Panel</p>
+        <aside class="w-64 bg-[#3fb980] text-white flex flex-col">
+            <div class="p-6 border-b border-[#2d8a5f]">
+                <div class="flex items-center space-x-3 mb-2">
+                    <img src="../assets/logo-sdit.png" alt="Logo SDIT" class="w-12 h-12 object-contain bg-white rounded-lg p-1">
+                    <div>
+                        <h2 class="text-xl font-bold">SDIT Al-Huda</h2>
+                        <p class="text-xs text-green-100">Admin Panel</p>
+                    </div>
+                </div>
             </div>
             
             <nav class="flex-1 p-4 space-y-2">
-                <a href="dashboard-admin.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+                <a href="dashboard-admin.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-home mr-3"></i>Dashboard
                 </a>
-                <a href="surat-masuk.html" class="flex items-center px-4 py-3 bg-indigo-700 rounded-lg">
+                <a href="surat-masuk.html" class="flex items-center px-4 py-3 bg-[#2d8a5f] rounded-lg">
                     <i class="fas fa-inbox mr-3"></i>Surat Masuk
                 </a>
-                <a href="surat-keluar.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+                <a href="surat-keluar.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-paper-plane mr-3"></i>Surat Keluar
                 </a>
-                <a href="disposisi.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+                <a href="disposisi.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-share-square mr-3"></i>Disposisi
                 </a>
-                <a href="arsip.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+                <a href="arsip.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-archive mr-3"></i>Arsip Digital
                 </a>
-                <a href="laporan.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+                <a href="laporan.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-chart-bar mr-3"></i>Laporan
                 </a>
-                <a href="pengguna.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+                <a href="pengguna.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-users mr-3"></i>Kelola Pengguna
                 </a>
-                <a href="profil.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+                <a href="profil.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-user-circle mr-3"></i>Profil
                 </a>
             </nav>
             
-            <div class="p-4 border-t border-indigo-700">
-                <a href="../index.html" class="flex items-center px-4 py-3 hover:bg-indigo-700 rounded-lg transition">
+            <div class="p-4 border-t border-[#2d8a5f]">
+                <a href="../index.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-sign-out-alt mr-3"></i>Logout
                 </a>
             </div>
@@ -120,7 +126,7 @@
                                         <p class="text-sm text-gray-600">245 KB</p>
                                     </div>
                                 </div>
-                                <button class="text-indigo-600 hover:text-indigo-800">
+                                <button class="text-[#3fb980] hover:text-[#2d8a5f]">
                                     <i class="fas fa-download text-xl"></i>
                                 </button>
                             </div>
@@ -131,10 +137,10 @@
                         <div class="bg-white rounded-lg shadow p-6">
                             <h3 class="font-semibold text-gray-800 mb-4">Aksi</h3>
                             <div class="space-y-3">
-                                <a href="disposisi.html" class="block w-full bg-indigo-600 text-white text-center py-2 rounded-lg hover:bg-indigo-700 transition">
+                                <a href="disposisi.html" class="block w-full bg-[#3fb980] text-white text-center py-2 rounded-lg hover:bg-[#2d8a5f] transition">
                                     <i class="fas fa-share-square mr-2"></i>Buat Disposisi
                                 </a>
-                                <a href="form-surat-masuk.html" class="block w-full bg-green-600 text-white text-center py-2 rounded-lg hover:bg-green-700 transition">
+                                <a href="form-surat-masuk.html" class="block w-full bg-[#3fb980] text-white text-center py-2 rounded-lg hover:bg-[#2d8a5f] transition">
                                     <i class="fas fa-edit mr-2"></i>Edit Surat
                                 </a>
                                 <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition">
@@ -148,7 +154,7 @@
                             <div class="space-y-4">
                                 <div class="flex items-start space-x-3">
                                     <div class="bg-blue-100 p-2 rounded-full">
-                                        <i class="fas fa-check text-blue-600"></i>
+                                        <i class="fas fa-check text-[#3fb980]"></i>
                                     </div>
                                     <div>
                                         <p class="text-sm font-medium text-gray-800">Surat Diterima</p>

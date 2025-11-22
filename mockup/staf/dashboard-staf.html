@@ -6,35 +6,41 @@
     <title>Dashboard Staf TU - SDIT Al-Huda</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="bg-gray-100">
     <div class="flex h-screen">
-        <aside class="w-64 bg-purple-800 text-white flex flex-col">
-            <div class="p-6 border-b border-purple-700">
-                <h2 class="text-2xl font-bold">SDIT Al-Huda</h2>
-                <p class="text-sm text-purple-200 mt-1">Staf TU</p>
+        <aside class="w-64 bg-[#3fb980] text-white flex flex-col">
+            <div class="p-6 border-b border-[#2d8a5f]">
+                <div class="flex items-center space-x-3 mb-2">
+                    <img src="../assets/logo-sdit.png" alt="Logo SDIT" class="w-12 h-12 object-contain bg-white rounded-lg p-1">
+                    <div>
+                        <h2 class="text-xl font-bold">SDIT Al-Huda</h2>
+                        <p class="text-xs text-green-100">Staf TU</p>
+                    </div>
+                </div>
             </div>
             
             <nav class="flex-1 p-4 space-y-2">
-                <a href="dashboard-staf.html" class="flex items-center px-4 py-3 bg-purple-700 rounded-lg">
+                <a href="dashboard-staf.html" class="flex items-center px-4 py-3 bg-[#2d8a5f] rounded-lg">
                     <i class="fas fa-home mr-3"></i>Dashboard
                 </a>
-                <a href="surat-masuk-staf.html" class="flex items-center px-4 py-3 hover:bg-purple-700 rounded-lg transition">
+                <a href="surat-masuk-staf.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-inbox mr-3"></i>Surat Masuk
                 </a>
-                <a href="surat-keluar-staf.html" class="flex items-center px-4 py-3 hover:bg-purple-700 rounded-lg transition">
+                <a href="surat-keluar-staf.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-paper-plane mr-3"></i>Surat Keluar
                 </a>
-                <a href="arsip-staf.html" class="flex items-center px-4 py-3 hover:bg-purple-700 rounded-lg transition">
+                <a href="arsip-staf.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-archive mr-3"></i>Arsip Digital
                 </a>
-                <a href="profil-staf.html" class="flex items-center px-4 py-3 hover:bg-purple-700 rounded-lg transition">
+                <a href="profil-staf.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-user-circle mr-3"></i>Profil
                 </a>
             </nav>
             
-            <div class="p-4 border-t border-purple-700">
-                <a href="../index.html" class="flex items-center px-4 py-3 hover:bg-purple-700 rounded-lg transition">
+            <div class="p-4 border-t border-[#2d8a5f]">
+                <a href="../index.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-sign-out-alt mr-3"></i>Logout
                 </a>
             </div>
@@ -67,10 +73,10 @@
                             <div>
                                 <p class="text-gray-500 text-sm">Surat Masuk Hari Ini</p>
                                 <p class="text-3xl font-bold text-gray-800 mt-2">5</p>
-                                <p class="text-blue-600 text-sm mt-2"><i class="fas fa-arrow-up"></i> Perlu dicatat</p>
+                                <p class="text-[#3fb980] text-sm mt-2"><i class="fas fa-arrow-up"></i> Perlu dicatat</p>
                             </div>
                             <div class="bg-blue-100 p-4 rounded-full">
-                                <i class="fas fa-inbox text-blue-600 text-2xl"></i>
+                                <i class="fas fa-inbox text-[#3fb980] text-2xl"></i>
                             </div>
                         </div>
                     </div>
@@ -80,10 +86,10 @@
                             <div>
                                 <p class="text-gray-500 text-sm">Surat Keluar Hari Ini</p>
                                 <p class="text-3xl font-bold text-gray-800 mt-2">3</p>
-                                <p class="text-green-600 text-sm mt-2"><i class="fas fa-check"></i> Sudah dikirim</p>
+                                <p class="text-[#3fb980] text-sm mt-2"><i class="fas fa-check"></i> Sudah dikirim</p>
                             </div>
                             <div class="bg-green-100 p-4 rounded-full">
-                                <i class="fas fa-paper-plane text-green-600 text-2xl"></i>
+                                <i class="fas fa-paper-plane text-[#3fb980] text-2xl"></i>
                             </div>
                         </div>
                     </div>
@@ -106,10 +112,10 @@
                             <div>
                                 <p class="text-gray-500 text-sm">Arsip Tersimpan</p>
                                 <p class="text-3xl font-bold text-gray-800 mt-2">1,245</p>
-                                <p class="text-purple-600 text-sm mt-2">Dokumen digital</p>
+                                <p class="text-[#3fb980] text-sm mt-2">Dokumen digital</p>
                             </div>
                             <div class="bg-purple-100 p-4 rounded-full">
-                                <i class="fas fa-archive text-purple-600 text-2xl"></i>
+                                <i class="fas fa-archive text-[#3fb980] text-2xl"></i>
                             </div>
                         </div>
                     </div>
@@ -124,40 +130,40 @@
                             <div class="space-y-4">
                                 <div class="flex items-start space-x-4 pb-4 border-b">
                                     <div class="bg-blue-100 p-3 rounded-lg">
-                                        <i class="fas fa-file-alt text-blue-600"></i>
+                                        <i class="fas fa-file-alt text-[#3fb980]"></i>
                                     </div>
                                     <div class="flex-1">
                                         <p class="font-medium text-gray-800">Undangan Rapat Dinas</p>
                                         <p class="text-sm text-gray-500">Dinas Pendidikan Kota</p>
                                         <p class="text-xs text-gray-400 mt-1">21 Nov 2025, 10:30</p>
                                     </div>
-                                    <a href="form-surat-masuk-staf.html" class="text-indigo-600 hover:text-indigo-800 text-sm">
+                                    <a href="form-surat-masuk-staf.html" class="text-[#3fb980] hover:text-[#2d8a5f] text-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
                                 </div>
                                 <div class="flex items-start space-x-4 pb-4 border-b">
                                     <div class="bg-blue-100 p-3 rounded-lg">
-                                        <i class="fas fa-file-alt text-blue-600"></i>
+                                        <i class="fas fa-file-alt text-[#3fb980]"></i>
                                     </div>
                                     <div class="flex-1">
                                         <p class="font-medium text-gray-800">Surat Edaran Kurikulum</p>
                                         <p class="text-sm text-gray-500">Kemendikbud</p>
                                         <p class="text-xs text-gray-400 mt-1">21 Nov 2025, 09:15</p>
                                     </div>
-                                    <a href="form-surat-masuk-staf.html" class="text-indigo-600 hover:text-indigo-800 text-sm">
+                                    <a href="form-surat-masuk-staf.html" class="text-[#3fb980] hover:text-[#2d8a5f] text-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
                                 </div>
                                 <div class="flex items-start space-x-4">
                                     <div class="bg-blue-100 p-3 rounded-lg">
-                                        <i class="fas fa-file-alt text-blue-600"></i>
+                                        <i class="fas fa-file-alt text-[#3fb980]"></i>
                                     </div>
                                     <div class="flex-1">
                                         <p class="font-medium text-gray-800">Permohonan Izin Kegiatan</p>
                                         <p class="text-sm text-gray-500">Komite Sekolah</p>
                                         <p class="text-xs text-gray-400 mt-1">20 Nov 2025, 16:45</p>
                                     </div>
-                                    <a href="form-surat-masuk-staf.html" class="text-indigo-600 hover:text-indigo-800 text-sm">
+                                    <a href="form-surat-masuk-staf.html" class="text-[#3fb980] hover:text-[#2d8a5f] text-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
                                 </div>

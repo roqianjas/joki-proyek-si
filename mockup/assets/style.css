@@ -1,0 +1,62 @@
+/* ============================================
+   Custom Styles - Sistem Manajemen Arsip SDIT Al-Huda
+   Warna Utama: #3fb980 (Hijau SDIT)
+   ============================================ */
+
+:root {
+    --primary-color: #3fb980;
+    --primary-dark: #2d8a5f;
+    --primary-light: #5fcb9a;
+    --primary-bg: #e8f7f0;
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* Primary Color Overrides */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.border-primary {
+    border-color: var(--primary-color) !important;
+}
+
+.hover\:bg-primary:hover {
+    background-color: var(--primary-dark) !important;
+}
+
+/* Button Primary */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Focus Ring Primary */
+.focus\:ring-primary:focus {
+    --tw-ring-color: var(--primary-color);
+}
+
+/* Badge Primary */
+.badge-primary {
+    background-color: var(--primary-bg);
+    color: var(--primary-dark);
+}

@@ -6,35 +6,41 @@
     <title>Dashboard Guru - SDIT Al-Huda</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="bg-gray-100">
     <div class="flex h-screen">
-        <aside class="w-64 bg-blue-800 text-white flex flex-col">
-            <div class="p-6 border-b border-blue-700">
-                <h2 class="text-2xl font-bold">SDIT Al-Huda</h2>
-                <p class="text-sm text-blue-200 mt-1">Panel Guru</p>
+        <aside class="w-64 bg-[#3fb980] text-white flex flex-col">
+            <div class="p-6 border-b border-[#2d8a5f]">
+                <div class="flex items-center space-x-3 mb-2">
+                    <img src="../assets/logo-sdit.png" alt="Logo SDIT" class="w-12 h-12 object-contain bg-white rounded-lg p-1">
+                    <div>
+                        <h2 class="text-xl font-bold">SDIT Al-Huda</h2>
+                        <p class="text-xs text-green-100">Panel Guru</p>
+                    </div>
+                </div>
             </div>
             
             <nav class="flex-1 p-4 space-y-2">
-                <a href="dashboard-guru.html" class="flex items-center px-4 py-3 bg-blue-700 rounded-lg">
+                <a href="dashboard-guru.html" class="flex items-center px-4 py-3 bg-[#2d8a5f] rounded-lg">
                     <i class="fas fa-home mr-3"></i>Dashboard
                 </a>
-                <a href="surat-masuk-guru.html" class="flex items-center px-4 py-3 hover:bg-blue-700 rounded-lg transition">
+                <a href="surat-masuk-guru.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-inbox mr-3"></i>Surat Masuk
                 </a>
-                <a href="tugas-guru.html" class="flex items-center px-4 py-3 hover:bg-blue-700 rounded-lg transition">
+                <a href="tugas-guru.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-tasks mr-3"></i>Tugas Saya
                 </a>
-                <a href="arsip-guru.html" class="flex items-center px-4 py-3 hover:bg-blue-700 rounded-lg transition">
+                <a href="arsip-guru.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-archive mr-3"></i>Arsip
                 </a>
-                <a href="profil-guru.html" class="flex items-center px-4 py-3 hover:bg-blue-700 rounded-lg transition">
+                <a href="profil-guru.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-user-circle mr-3"></i>Profil
                 </a>
             </nav>
             
-            <div class="p-4 border-t border-blue-700">
-                <a href="../index.html" class="flex items-center px-4 py-3 hover:bg-blue-700 rounded-lg transition">
+            <div class="p-4 border-t border-[#2d8a5f]">
+                <a href="../index.html" class="flex items-center px-4 py-3 hover:bg-[#2d8a5f] rounded-lg transition">
                     <i class="fas fa-sign-out-alt mr-3"></i>Logout
                 </a>
             </div>
@@ -67,10 +73,10 @@
                             <div>
                                 <p class="text-gray-500 text-sm">Surat Baru</p>
                                 <p class="text-3xl font-bold text-gray-800 mt-2">3</p>
-                                <p class="text-blue-600 text-sm mt-2"><i class="fas fa-envelope"></i> Belum dibaca</p>
+                                <p class="text-[#3fb980] text-sm mt-2"><i class="fas fa-envelope"></i> Belum dibaca</p>
                             </div>
                             <div class="bg-blue-100 p-4 rounded-full">
-                                <i class="fas fa-inbox text-blue-600 text-2xl"></i>
+                                <i class="fas fa-inbox text-[#3fb980] text-2xl"></i>
                             </div>
                         </div>
                     </div>
@@ -93,10 +99,10 @@
                             <div>
                                 <p class="text-gray-500 text-sm">Tugas Selesai</p>
                                 <p class="text-3xl font-bold text-gray-800 mt-2">18</p>
-                                <p class="text-green-600 text-sm mt-2"><i class="fas fa-check-circle"></i> Bulan ini</p>
+                                <p class="text-[#3fb980] text-sm mt-2"><i class="fas fa-check-circle"></i> Bulan ini</p>
                             </div>
                             <div class="bg-green-100 p-4 rounded-full">
-                                <i class="fas fa-check-double text-green-600 text-2xl"></i>
+                                <i class="fas fa-check-double text-[#3fb980] text-2xl"></i>
                             </div>
                         </div>
                     </div>
@@ -123,7 +129,7 @@
                                 </div>
                                 <div class="flex items-start space-x-4 pb-4 border-b">
                                     <div class="bg-blue-100 p-3 rounded-lg">
-                                        <i class="fas fa-file-alt text-blue-600"></i>
+                                        <i class="fas fa-file-alt text-[#3fb980]"></i>
                                     </div>
                                     <div class="flex-1">
                                         <p class="font-medium text-gray-800">Jadwal Ujian Semester</p>
@@ -135,7 +141,7 @@
                                 </div>
                                 <div class="flex items-start space-x-4">
                                     <div class="bg-green-100 p-3 rounded-lg">
-                                        <i class="fas fa-file-alt text-green-600"></i>
+                                        <i class="fas fa-file-alt text-[#3fb980]"></i>
                                     </div>
                                     <div class="flex-1">
                                         <p class="font-medium text-gray-800">Pemberitahuan Libur</p>
@@ -157,7 +163,7 @@
                             <div class="space-y-4">
                                 <div class="bg-blue-50 p-4 rounded-lg">
                                     <div class="flex items-start space-x-3">
-                                        <i class="fas fa-bullhorn text-blue-600 mt-1"></i>
+                                        <i class="fas fa-bullhorn text-[#3fb980] mt-1"></i>
                                         <div>
                                             <p class="font-medium text-gray-800">Rapat Guru</p>
                                             <p class="text-sm text-gray-600 mt-1">Rapat koordinasi guru akan dilaksanakan pada Jumat, 24 November 2025 pukul 13.00 WIB di ruang guru.</p>
@@ -167,7 +173,7 @@
                                 </div>
                                 <div class="bg-green-50 p-4 rounded-lg">
                                     <div class="flex items-start space-x-3">
-                                        <i class="fas fa-info-circle text-green-600 mt-1"></i>
+                                        <i class="fas fa-info-circle text-[#3fb980] mt-1"></i>
                                         <div>
                                             <p class="font-medium text-gray-800">Pelatihan Kurikulum Merdeka</p>
                                             <p class="text-sm text-gray-600 mt-1">Pelatihan implementasi kurikulum merdeka akan diadakan tanggal 27-28 November 2025.</p>
