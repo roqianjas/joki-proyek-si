@@ -1,0 +1,41 @@
+@startuml tahapan-penelitian
+
+skinparam backgroundColor white
+skinparam rectangle {
+    BackgroundColor white
+    BorderColor black
+    FontColor black
+}
+skinparam arrow {
+    Color black
+}
+skinparam defaultTextAlignment center
+
+title Tahapan Penelitian\nSistem Informasi Manajemen Arsip Persuratan SDIT Al-Huda
+
+rectangle "**1. Inisiasi Proyek**\n\nIdentifikasi masalah,\ntujuan proyek,\nstakeholder analysis,\nproject charter" as init
+
+rectangle "**2. Perencanaan Proyek**\n\nScope, schedule, budget,\nkualitas, sumber daya,\nrisiko, komunikasi" as plan
+
+rectangle "**3. Pelaksanaan Proyek**\n\nAnalisis kebutuhan,\nperancangan sistem,\nimplementasi,\npengujian, deployment" as exec
+
+rectangle "**4. Pemantauan & Pengendalian**\n\nMonitoring progress,\npengendalian perubahan,\nkualitas, risiko" as monitor
+
+rectangle "**5. Penutupan Proyek**\n\nSerah terima sistem,\ndokumentasi lengkap,\nevaluasi, lessons learned" as close
+
+init -down-> plan
+plan -down-> exec
+exec -down-> monitor
+monitor -down-> close
+
+note right of exec
+  Dilakukan paralel
+  dengan pelaksanaan
+end note
+
+note right of monitor
+  Pemantauan dilakukan
+  sepanjang proyek
+end note
+
+@enduml

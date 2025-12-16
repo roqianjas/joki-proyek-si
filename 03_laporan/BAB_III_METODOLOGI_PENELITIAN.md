@@ -5,7 +5,11 @@
 
 Penelitian dan pengembangan Sistem Informasi Manajemen Arsip Persuratan di SDIT Al-Huda menggunakan pendekatan System Development Life Cycle (SDLC) dengan model Waterfall. Model ini dipilih karena karakteristik proyek yang memiliki kebutuhan jelas, waktu yang tetap, dan memerlukan dokumentasi yang komprehensif untuk keperluan akademik. Tahapan penelitian terdiri dari lima fase utama yang dilaksanakan secara berurutan dengan keluaran yang terdefinisi jelas di setiap fase.
 
-**Tahapan Penelitian:**
+![Gambar 3.1 Tahapan Penelitian](../02_desain/diagram/tahapan-penelitian.png)
+
+*Gambar 3.1 Tahapan Penelitian Sistem Informasi Manajemen Arsip Persuratan*
+
+**Uraian Tahapan Penelitian:**
 
 **1. Inisiasi Proyek**
 
