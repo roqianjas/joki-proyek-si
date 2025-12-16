@@ -1,6 +1,6 @@
 # KATA PENGANTAR
 
-Puji syukur kehadirat Allah SWT yang telah melimpahkan rahmat dan hidayah-Nya, sehingga penulis dapat menyelesaikan laporan capstone project dengan judul **"Perancangan Sistem Informasi Manajemen Arsip Persuratan di SDIT Al-Huda"** tepat pada waktunya.
+Puji syukur kehadirat Allah SWT yang telah melimpahkan rahmat dan hidayah-Nya, sehingga penulis dapat menyelesaikan laporan *capstone project* dengan judul **"Perancangan Sistem Informasi Manajemen Arsip Persuratan di SDIT Al-Huda"** tepat pada waktunya.
 
 Laporan ini disusun sebagai salah satu syarat untuk menyelesaikan program studi dan merupakan implementasi dari proyek pengembangan sistem informasi yang telah dilaksanakan selama satu semester. Proyek ini bertujuan untuk meningkatkan efisiensi pengelolaan arsip persuratan di SDIT Al-Huda melalui digitalisasi dan otomasi proses administrasi.
 
@@ -10,7 +10,7 @@ Penulis menyadari bahwa keberhasilan penyelesaian proyek dan penyusunan laporan 
 
 2. **Kepala Sekolah SDIT Al-Huda** beserta seluruh staf administrasi, guru, dan karyawan yang telah memberikan kesempatan, dukungan, dan partisipasi aktif dalam pengembangan dan pengujian sistem.
 
-3. **Orang tua dan keluarga** yang telah memberikan dukungan moral, doa, dan motivasi yang tiada henti.
+3. **Orang tua dan keluarga** yang telah memberikan dukungan moral, doa, dan motivasi yang tiada hentinya.
 
 4. **Rekan-rekan mahasiswa** yang telah berbagi pengetahuan, pengalaman, dan memberikan semangat dalam menyelesaikan proyek ini.
 

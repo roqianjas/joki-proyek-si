@@ -21,9 +21,9 @@ Dari sisi keamanan dan privasi, dokumen surat yang bersifat rahasia atau penting
 
 Kendala ruang penyimpanan juga menjadi masalah yang semakin serius. Dengan bertambahnya volume arsip setiap tahunnya, kebutuhan ruang penyimpanan fisik terus meningkat. Sekolah harus mengalokasikan ruangan khusus untuk penyimpanan arsip lama yang sebenarnya bisa dimanfaatkan untuk keperluan pembelajaran atau kegiatan siswa.
 
-Dalam konteks perkembangan teknologi informasi dan tuntutan transparansi serta akuntabilitas pengelolaan lembaga pendidikan, pengembangan sistem informasi manajemen arsip persuratan berbasis digital menjadi solusi yang sangat diperlukan. Sistem informasi dapat mengotomatisasi proses pencatatan, mempermudah pencarian dan pengambilan dokumen, memfasilitasi disposisi secara elektronik, menyediakan monitoring status surat secara real-time, serta menghasilkan laporan dan analitik yang komprehensif.
+Dalam konteks perkembangan teknologi informasi dan tuntutan transparansi serta akuntabilitas pengelolaan lembaga pendidikan, pengembangan sistem informasi manajemen arsip persuratan berbasis digital menjadi solusi yang sangat diperlukan. Sistem informasi dapat mengotomatisasi proses pencatatan, mempermudah pencarian dan pengambilan dokumen, memfasilitasi disposisi secara elektronik, menyediakan *monitoring* status surat secara *real-time*, serta menghasilkan laporan dan analitik yang komprehensif.
 
-Penelitian ini mengembangkan sistem informasi manajemen arsip persuratan berbasis web menggunakan teknologi modern yang sesuai untuk kebutuhan lembaga pendidikan. Sistem yang dirancang akan mencakup modul pengelolaan surat masuk dan surat keluar, disposisi elektronik, manajemen arsip digital, serta dasbor monitoring dan pelaporan. Sistem ini diharapkan dapat meningkatkan efisiensi operasional, akurasi data, keamanan informasi, serta mendukung pengambilan keputusan berbasis data di SDIT Al-Huda.
+Penelitian ini mengembangkan sistem informasi manajemen arsip persuratan berbasis *web* menggunakan teknologi modern yang sesuai untuk kebutuhan lembaga pendidikan. Sistem yang dirancang akan mencakup *modul* pengelolaan surat masuk dan surat keluar, disposisi elektronik, manajemen arsip digital, serta *dashboard monitoring* dan pelaporan. Sistem ini diharapkan dapat meningkatkan efisiensi operasional, akurasi data, keamanan informasi, serta mendukung pengambilan keputusan berbasis data di SDIT Al-Huda.
 
 ## 1.2 Identifikasi Masalah
 
@@ -47,7 +47,7 @@ Berdasarkan analisis kondisi eksisting pada SDIT Al-Huda melalui observasi, wawa
 
 5. **Ketiadaan Sistem Monitoring dan Pelacakan Status Surat**
 
-   Tidak adanya sistem yang dapat memantau status tindak lanjut surat masuk menyulitkan kepala sekolah dan staf administrasi dalam mengontrol proses penanganan surat. Informasi tentang surat mana yang sudah ditindaklanjuti, sedang diproses, atau belum ditangani sama sekali tidak tersedia secara real-time. Hal ini mengakibatkan surat-surat penting bisa terabaikan atau penanganannya terlambat, terutama surat yang memiliki tenggat waktu tertentu.
+   Tidak adanya sistem yang dapat memantau status tindak lanjut surat masuk menyulitkan kepala sekolah dan staf administrasi dalam mengontrol proses penanganan surat. Informasi tentang surat mana yang sudah ditindaklanjuti, sedang diproses, atau belum ditangani sama sekali tidak tersedia secara *real-time*. Hal ini mengakibatkan surat-surat penting bisa terabaikan atau penanganannya terlambat, terutama surat yang memiliki tenggat waktu tertentu.
 
 6. **Kesulitan dalam Pembuatan Laporan dan Analisis**
 
@@ -72,67 +72,67 @@ Untuk memfokuskan pembahasan dan memastikan keberhasilan proyek, penelitian ini 
 Sistem informasi yang dikembangkan mencakup fungsi-fungsi utama sebagai berikut:
 
 1. **Modul Autentikasi dan Manajemen Pengguna**
-   - Sistem login dengan kontrol akses berbasis peran (admin, kepala sekolah, guru, staf)
+   - Sistem *login* dengan kontrol akses berbasis peran (*admin*, kepala sekolah, guru, staf)
    - Manajemen profil pengguna
    - Pengelolaan data pengguna oleh administrator
 
 2. **Modul Manajemen Surat Masuk**
    - Pencatatan surat masuk dengan nomor otomatis
-   - Upload dokumen scan surat masuk
+   - *Upload* dokumen *scan* surat masuk
    - Pelacakan status surat masuk
-   - Pencarian dan filter surat masuk
+   - Pencarian dan *filter* surat masuk
 
 3. **Modul Manajemen Surat Keluar**
-   - Pembuatan surat keluar dengan template
+   - Pembuatan surat keluar dengan *template*
    - Penomoran surat keluar otomatis
-   - Upload dokumen surat keluar
+   - *Upload* dokumen surat keluar
    - Pelacakan status surat keluar
 
 4. **Modul Disposisi Surat**
    - Disposisi surat dari kepala sekolah ke guru/staf
-   - Notifikasi disposisi via email
+   - Notifikasi disposisi *via email*
    - Catatan dan instruksi disposisi
    - Pelacakan status tindak lanjut disposisi
 
 5. **Modul Arsip Digital**
    - Penyimpanan dokumen digital
-   - Kategorisasi dan tagging arsip
+   - Kategorisasi dan *tagging* arsip
    - Sistem pencarian canggih
-   - Download dan preview dokumen
+   - *Download* dan *preview* dokumen
 
-6. **Modul Dashboard dan Laporan**
-   - Dashboard untuk setiap peran pengguna
+6. **Modul *Dashboard* dan Laporan**
+   - *Dashboard* untuk setiap peran pengguna
    - Statistik dan visualisasi data surat
    - Laporan periodik (harian, bulanan, tahunan)
-   - Export laporan ke PDF/Excel
+   - *Export* laporan ke PDF/Excel
 
 7. **Modul Notifikasi**
-   - Notifikasi email untuk disposisi baru
+   - Notifikasi *email* untuk disposisi baru
    - Notifikasi surat masuk penting
    - Pengingat tindak lanjut surat
 
-8. **Modul Log Aktivitas**
+8. **Modul *Log* Aktivitas**
    - Pencatatan semua aktivitas pengguna
-   - Jejak audit akses dokumen
+   - Jejak *audit* akses dokumen
    - Riwayat perubahan data
 
 ### 1.3.2 Ruang Lingkup Teknis
 
 1. **Platform:**
-   - Aplikasi web berbasis PHP dengan framework modern
+   - Aplikasi *web* berbasis PHP dengan *framework* modern
    - Basis data MySQL
    - Desain responsif menggunakan Tailwind CSS
-   - Hosting pada server lokal atau cloud
+   - *Hosting* pada *server* lokal atau *cloud*
 
 2. **Arsitektur:**
-   - Arsitektur client-server dengan pola MVC (Model-View-Controller)
+   - Arsitektur *client-server* dengan pola MVC (*Model-View-Controller*)
    - Sistem manajemen basis data relasional
 
 3. **Keamanan:**
    - Autentikasi dan otorisasi berbasis peran
    - Enkripsi data sensitif
-   - Backup data otomatis
-   - Proteksi dari serangan umum (SQL injection, XSS, CSRF)
+   - *Backup* data otomatis
+   - Proteksi dari serangan umum (*SQL injection*, XSS, CSRF)
 
 ### 1.3.3 Ruang Lingkup Pengguna
 
@@ -141,7 +141,7 @@ Sistem dirancang untuk empat kategori pengguna utama:
 1. **Administrator:** Mengelola seluruh sistem, pengguna, dan konfigurasi
 2. **Kepala Sekolah:** Membaca surat masuk, melakukan disposisi, membuat surat keluar, dan melihat laporan
 3. **Guru/Wakil:** Menerima disposisi, menindaklanjuti surat, dan membuat laporan tugas
-4. **Staf Administrasi:** Input surat masuk, membuat surat keluar, mengelola arsip, dan membuat laporan
+4. **Staf Administrasi:** *Input* surat masuk, membuat surat keluar, mengelola arsip, dan membuat laporan
 
 ### 1.3.4 Batasan Sistem
 
@@ -150,7 +150,7 @@ Sistem yang dikembangkan memiliki batasan sebagai berikut:
 1. Sistem tidak mencakup pengelolaan keuangan sekolah
 2. Sistem tidak terintegrasi dengan sistem akademik atau kepegawaian
 3. Sistem hanya mengelola persuratan internal sekolah, tidak termasuk korespondensi elektronik eksternal
-4. Sistem berbasis web dan memerlukan koneksi internet untuk akses
+4. Sistem berbasis *web* dan memerlukan koneksi internet untuk akses
 5. Fitur tanda tangan digital tidak termasuk dalam versi awal
 
 ## 1.4 Tujuan dan Manfaat Penelitian
@@ -167,9 +167,9 @@ Tujuan dari penelitian dan pengembangan sistem informasi manajemen arsip persura
 
 4. Memfasilitasi proses disposisi surat secara elektronik dengan notifikasi otomatis dan pelacakan status tindak lanjut.
 
-5. Meningkatkan keamanan dan integritas dokumen arsip melalui kontrol akses berbasis peran dan jejak audit.
+5. Meningkatkan keamanan dan integritas dokumen arsip melalui kontrol akses berbasis peran dan jejak *audit*.
 
-6. Menyediakan dashboard dan laporan analitik untuk mendukung pengambilan keputusan dan evaluasi kinerja pengelolaan persuratan.
+6. Menyediakan *dashboard* dan laporan analitik untuk mendukung pengambilan keputusan dan evaluasi kinerja pengelolaan persuratan.
 
 7. Mengurangi penggunaan kertas dan kebutuhan ruang penyimpanan fisik melalui digitalisasi arsip.
 
@@ -185,15 +185,15 @@ Penelitian ini diharapkan memberikan manfaat bagi berbagai pihak, antara lain:
 
 2. **Penghematan Biaya:** Pengurangan penggunaan kertas, toner printer, dan biaya penyimpanan fisik dalam jangka panjang.
 
-3. **Peningkatan Akuntabilitas:** Jejak audit yang lengkap memastikan setiap tindakan tercatat dan dapat dipertanggungjawabkan.
+3. **Peningkatan Akuntabilitas:** Jejak *audit* yang lengkap memastikan setiap tindakan tercatat dan dapat dipertanggungjawabkan.
 
-4. **Kepatuhan Regulasi:** Memudahkan pemenuhan regulasi pengelolaan arsip dan dokumentasi untuk keperluan akreditasi atau audit.
+4. **Kepatuhan Regulasi:** Memudahkan pemenuhan regulasi pengelolaan arsip dan dokumentasi untuk keperluan akreditasi atau *audit*.
 
-5. **Dukungan Pengambilan Keputusan:** Data dan laporan yang tersedia secara real-time membantu manajemen dalam pengambilan keputusan strategis.
+5. **Dukungan Pengambilan Keputusan:** Data dan laporan yang tersedia secara *real-time* membantu manajemen dalam pengambilan keputusan strategis.
 
 **Manfaat bagi Pengguna Sistem:**
 
-1. **Kepala Sekolah:** Kemudahan dalam melakukan disposisi surat secara cepat, monitoring status tindak lanjut, dan akses informasi kapan saja.
+1. **Kepala Sekolah:** Kemudahan dalam melakukan disposisi surat secara cepat, *monitoring* status tindak lanjut, dan akses informasi kapan saja.
 
 2. **Guru dan Staf:** Penerimaan disposisi secara langsung dengan notifikasi, kemudahan dalam melaporkan tindak lanjut, dan akses arsip yang relevan.
 
