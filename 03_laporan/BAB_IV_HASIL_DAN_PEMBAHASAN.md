@@ -434,7 +434,7 @@ Sistem dibangun dengan arsitektur **MVC (*Model-View-Controller*)** sederhana me
 
 Arsitektur lengkap sistem dapat dilihat pada **Gambar 4.1 Arsitektur Sistem MVC**.
 
-![Gambar 4.1 Arsitektur Sistem MVC](../../02_desain/diagram/arsitektur-sistem.png)
+![Gambar 4.1 Arsitektur Sistem MVC](../02_desain/diagram/arsitektur-sistem.png)
 
 *Gambar 4.1 Arsitektur Sistem MVC*
 
@@ -525,7 +525,7 @@ Use Case Diagram menggambarkan interaksi antara aktor (pengguna) dengan sistem, 
 
 Diagram lengkap use case dapat dilihat pada **Gambar 4.3 Use Case Diagram Sistem**.
 
-![Gambar 4.3 Use Case Diagram](../../02_desain/diagram/use-case-diagram.png)
+![Gambar 4.3 Use Case Diagram](../02_desain/diagram/use-case-diagram.png)
 
 *Gambar 4.3 Use Case Diagram Sistem Manajemen Arsip Persuratan*
 
@@ -585,7 +585,7 @@ Activity Diagram menggambarkan alur aktivitas dalam sistem untuk berbagai proses
 
 Diagram lengkap alur pengelolaan surat masuk dapat dilihat pada **Gambar 4.4**.
 
-![Gambar 4.4 Activity Diagram Pengelolaan Surat Masuk](../../02_desain/diagram/activity-pengelolaan-surat-masuk.png)
+![Gambar 4.4 Activity Diagram Pengelolaan Surat Masuk](../02_desain/diagram/activity-pengelolaan-surat-masuk.png)
 
 *Gambar 4.4 Activity Diagram Proses Pengelolaan Surat Masuk*
 
@@ -611,7 +611,7 @@ Alur proses pengelolaan surat masuk:
 
 Diagram lengkap alur disposisi surat dapat dilihat pada **Gambar 4.5**.
 
-![Gambar 4.5 Activity Diagram Disposisi Surat](../../02_desain/diagram/activity-disposisi-surat.png)
+![Gambar 4.5 Activity Diagram Disposisi Surat](../02_desain/diagram/activity-disposisi-surat.png)
 
 *Gambar 4.5 Activity Diagram Proses Disposisi Surat*
 
@@ -641,7 +641,7 @@ Alur proses disposisi surat:
 
 Diagram lengkap alur pencarian arsip dapat dilihat pada **Gambar 4.6**.
 
-![Gambar 4.6 Activity Diagram Pencarian Arsip](../../02_desain/diagram/activity-pencarian-arsip.png)
+![Gambar 4.6 Activity Diagram Pencarian Arsip](../02_desain/diagram/activity-pencarian-arsip.png)
 
 *Gambar 4.6 Activity Diagram Proses Pencarian Arsip*
 
@@ -665,7 +665,7 @@ Alur proses pencarian arsip:
 
 Diagram lengkap alur generate laporan dapat dilihat pada **Gambar 4.7**.
 
-![Gambar 4.7 Activity Diagram Generate Laporan](../../02_desain/diagram/activity-generate-laporan.png)
+![Gambar 4.7 Activity Diagram Generate Laporan](../02_desain/diagram/activity-generate-laporan.png)
 
 *Gambar 4.7 Activity Diagram Generate Laporan*
 
@@ -691,7 +691,7 @@ Entity Relationship Diagram (ERD) menggambarkan struktur basis data sistem infor
 
 Diagram lengkap ERD dapat dilihat pada **Gambar 4.8**.
 
-![Gambar 4.8 Entity Relationship Diagram](../../02_desain/database/ERD-Sistem-Manajemen-Arsip-Persuratan.png)
+![Gambar 4.8 Entity Relationship Diagram](../02_desain/database/ERD-Sistem-Manajemen-Arsip-Persuratan.png)
 
 *Gambar 4.8 Entity Relationship Diagram Sistem*
 
@@ -776,116 +776,201 @@ Sistem memiliki **38 halaman mockup** yang dirancang untuk 4 role pengguna berbe
 
 Halaman login merupakan pintu masuk utama sistem dengan form autentikasi yang sederhana dan aman.
 
-![Gambar 4.9 Halaman Login](../../02_desain/mockup/01-login.png)
+![Gambar 4.9 Halaman Login](../02_desain/mockup/01-login.png)
 *Gambar 4.9 Halaman Login - Form login dengan username dan password, responsive layout*
 
 Sitemap menyediakan navigasi lengkap untuk memudahkan pengguna memahami struktur sistem.
 
-![Gambar 4.10 Sitemap](../../02_desain/mockup/02-sitemap.png)
+![Gambar 4.10 Sitemap](../02_desain/mockup/02-sitemap.png)
 *Gambar 4.10 Sitemap - Peta navigasi lengkap 38 halaman untuk semua role*
 
 **2. Dashboard Admin (14 halaman)**
 
 Dashboard admin menampilkan statistik komprehensif untuk monitoring seluruh aktivitas sistem.
 
-![Gambar 4.11 Dashboard Admin](../../02_desain/mockup/admin/03-dashboard-admin.png)
+![Gambar 4.11 Dashboard Admin](../02_desain/mockup/admin/03-dashboard-admin.png)
 *Gambar 4.11 Dashboard Admin - Statistik lengkap dengan grafik dan quick actions*
 
 Halaman surat masuk admin menyediakan tabel dengan fitur pencarian dan filter untuk manajemen efisien.
 
-![Gambar 4.12 Surat Masuk Admin](../../02_desain/mockup/admin/04-surat-masuk-admin.png)
+![Gambar 4.12 Surat Masuk Admin](../02_desain/mockup/admin/04-surat-masuk-admin.png)
 *Gambar 4.12 Daftar Surat Masuk - Tabel dengan pagination, search, dan filter*
 
 Form input surat masuk dirancang dengan validasi lengkap untuk memastikan data akurat.
 
-![Gambar 4.13 Form Surat Masuk](../../02_desain/mockup/admin/05-form-surat-masuk.png)
+![Gambar 4.13 Form Surat Masuk](../02_desain/mockup/admin/05-form-surat-masuk.png)
 *Gambar 4.13 Form Surat Masuk - Input lengkap dengan upload file*
 
 Halaman detail menampilkan informasi surat secara lengkap beserta riwayat disposisinya.
 
-![Gambar 4.14 Detail Surat Masuk](../../02_desain/mockup/admin/06-detail-surat-masuk.png)
+![Gambar 4.14 Detail Surat Masuk](../02_desain/mockup/admin/06-detail-surat-masuk.png)
 *Gambar 4.14 Detail Surat Masuk - Informasi lengkap dengan riwayat disposisi*
 
 Manajemen surat keluar memungkinkan admin untuk memantau semua surat yang diterbitkan sekolah.
 
-![Gambar 4.15 Surat Keluar Admin](../../02_desain/mockup/admin/07-surat-keluar-admin.png)
+![Gambar 4.15 Surat Keluar Admin](../02_desain/mockup/admin/07-surat-keluar-admin.png)
 *Gambar 4.15 Daftar Surat Keluar - Tabel dengan filter lengkap*
 
 Arsip digital menyediakan fitur pencarian canggih dengan multiple filter untuk akses cepat dokumen.
 
-![Gambar 4.16 Arsip Digital Admin](../../02_desain/mockup/admin/08-arsip-admin.png)
+![Gambar 4.16 Arsip Digital Admin](../02_desain/mockup/admin/08-arsip-admin.png)
 *Gambar 4.16 Arsip Digital - Pencarian canggih dengan filter multi-kriteria*
 
 Manajemen pengguna memfasilitasi admin dalam mengelola akun dan hak akses setiap pengguna.
 
-![Gambar 4.17 Manajemen Pengguna](../../02_desain/mockup/admin/09-pengguna-admin.png)
+![Gambar 4.17 Manajemen Pengguna](../02_desain/mockup/admin/09-pengguna-admin.png)
 *Gambar 4.17 Manajemen Pengguna - CRUD pengguna dengan role assignment*
 
 Modul laporan menyediakan berbagai jenis laporan yang dapat di-export ke PDF atau Excel.
 
-![Gambar 4.18 Laporan Admin](../../02_desain/mockup/admin/10-laporan-admin.png)
+![Gambar 4.18 Laporan Admin](../02_desain/mockup/admin/10-laporan-admin.png)
 *Gambar 4.18 Laporan - Berbagai jenis laporan dengan export PDF/Excel*
+
+Form pembuatan surat keluar memudahkan admin dalam membuat dan mengirim surat resmi sekolah.
+
+![Gambar 4.19 Form Surat Keluar](../02_desain/mockup/admin/11-form-surat-keluar.png)
+*Gambar 4.19 Form Surat Keluar - Form lengkap dengan penomoran otomatis*
+
+Halaman detail surat keluar menampilkan informasi lengkap surat yang telah diterbitkan.
+
+![Gambar 4.20 Detail Surat Keluar](../02_desain/mockup/admin/12-detail-surat-keluar.png)
+*Gambar 4.20 Detail Surat Keluar - Informasi lengkap surat keluar dan status*
+
+Monitoring disposisi memungkinkan admin untuk memantau seluruh alur disposisi surat.
+
+![Gambar 4.21 Disposisi Admin](../02_desain/mockup/admin/13-disposisi-admin.png)
+*Gambar 4.21 Monitor Disposisi - Tracking semua disposisi dalam sistem*
+
+Form pengguna baru memfasilitasi admin dalam menambahkan pengguna dengan role yang sesuai.
+
+![Gambar 4.22 Form Pengguna](../02_desain/mockup/admin/14-form-pengguna.png)
+*Gambar 4.22 Form Pengguna - Tambah/edit pengguna dengan role assignment*
+
+Halaman detail pengguna menampilkan informasi lengkap dan riwayat aktivitas pengguna.
+
+![Gambar 4.23 Detail Pengguna](../02_desain/mockup/admin/15-detail-pengguna.png)
+*Gambar 4.23 Detail Pengguna - Profil lengkap dan log aktivitas*
+
+Halaman profil admin memungkinkan pengelolaan informasi pribadi dan perubahan password.
+
+![Gambar 4.24 Profil Admin](../02_desain/mockup/admin/16-profil-admin.png)
+*Gambar 4.24 Profil Admin - Kelola informasi pribadi dan keamanan akun*
 
 **3. Dashboard Kepala Sekolah (7 halaman)**
 
 Dashboard kepala sekolah menampilkan ringkasan eksekutif untuk monitoring dan pengambilan keputusan.
 
-![Gambar 4.19 Dashboard Kepala Sekolah](../../02_desain/mockup/kepala-sekolah/11-dashboard-kepala-sekolah.png)
-*Gambar 4.19 Dashboard Kepala Sekolah - Ringkasan surat dan disposisi*
+![Gambar 4.25 Dashboard Kepala Sekolah](../02_desain/mockup/kepala-sekolah/11-dashboard-kepala-sekolah.png)
+*Gambar 4.25 Dashboard Kepala Sekolah - Ringkasan surat dan disposisi*
 
 Daftar surat masuk dilengkapi dengan tombol disposisi cepat untuk efisiensi kerja kepala sekolah.
 
-![Gambar 4.20 Surat Masuk Kepala Sekolah](../../02_desain/mockup/kepala-sekolah/12-surat-masuk-kepala-sekolah.png)
-*Gambar 4.20 Surat Masuk Kepala Sekolah - Daftar surat dengan tombol disposisi*
+![Gambar 4.26 Surat Masuk Kepala Sekolah](../02_desain/mockup/kepala-sekolah/12-surat-masuk-kepala-sekolah.png)
+*Gambar 4.26 Surat Masuk Kepala Sekolah - Daftar surat dengan tombol disposisi*
 
 Halaman detail surat terintegrasi dengan form disposisi untuk mempercepat proses pendelegasian tugas.
 
-![Gambar 4.21 Detail Surat Kepala Sekolah](../../02_desain/mockup/kepala-sekolah/13-detail-surat-kepala-sekolah.png)
-*Gambar 4.21 Detail Surat - Form buat disposisi cepat*
+![Gambar 4.27 Detail Surat Kepala Sekolah](../02_desain/mockup/kepala-sekolah/13-detail-surat-kepala-sekolah.png)
+*Gambar 4.27 Detail Surat - Form buat disposisi cepat*
 
 Monitoring disposisi membantu kepala sekolah melacak status tindak lanjut setiap tugas yang didelegasikan.
 
-![Gambar 4.22 Disposisi Kepala Sekolah](../../02_desain/mockup/kepala-sekolah/14-disposisi-kepala-sekolah.png)
-*Gambar 4.22 Monitor Disposisi - Tracking status disposisi yang dibuat*
+![Gambar 4.28 Disposisi Kepala Sekolah](../02_desain/mockup/kepala-sekolah/17-disposisi-kepala-sekolah.png)
+*Gambar 4.28 Monitor Disposisi - Tracking status disposisi yang dibuat*
+
+Arsip digital memudahkan kepala sekolah dalam mengakses riwayat surat kapan saja diperlukan.
+
+![Gambar 4.29 Arsip Kepala Sekolah](../02_desain/mockup/kepala-sekolah/18-arsip-kepala-sekolah.png)
+*Gambar 4.29 Arsip Digital - Akses cepat ke semua arsip surat*
+
+Laporan manajemen menyediakan data analitik untuk pengambilan keputusan strategis.
+
+![Gambar 4.30 Laporan Kepala Sekolah](../02_desain/mockup/kepala-sekolah/19-laporan-kepala-sekolah.png)
+*Gambar 4.30 Laporan Manajemen - Dashboard analitik dan export data*
+
+Halaman profil kepala sekolah untuk mengelola informasi pribadi dan pengaturan akun.
+
+![Gambar 4.31 Profil Kepala Sekolah](../02_desain/mockup/kepala-sekolah/20-profil-kepala-sekolah.png)
+*Gambar 4.31 Profil Kepala Sekolah - Kelola informasi dan preferensi*
 
 **4. Dashboard Guru (6 halaman)**
 
 Dashboard guru menampilkan ringkasan tugas disposisi dengan notifikasi untuk memudahkan manajemen waktu.
 
-![Gambar 4.23 Dashboard Guru](../../02_desain/mockup/guru/15-dashboard-guru.png)
-*Gambar 4.23 Dashboard Guru - Ringkasan tugas disposisi dan notifikasi*
+![Gambar 4.32 Dashboard Guru](../02_desain/mockup/guru/15-dashboard-guru.png)
+*Gambar 4.32 Dashboard Guru - Ringkasan tugas disposisi dan notifikasi*
 
 Halaman tugas menampilkan semua disposisi yang diterima dengan indikator prioritas yang jelas.
 
-![Gambar 4.24 Tugas Guru](../../02_desain/mockup/guru/16-tugas-guru.png)
-*Gambar 4.24 Tugas Disposisi - Daftar disposisi dengan priority indicator*
+![Gambar 4.33 Tugas Guru](../02_desain/mockup/guru/16-tugas-guru.png)
+*Gambar 4.33 Tugas Disposisi - Daftar disposisi dengan priority indicator*
 
 Detail surat dilengkapi dengan form update status untuk pelaporan tindak lanjut.
 
-![Gambar 4.25 Detail Surat Guru](../../02_desain/mockup/guru/17-detail-surat-guru.png)
-*Gambar 4.25 Detail Surat Guru - Lengkap dengan form update status*
+![Gambar 4.34 Detail Surat Guru](../02_desain/mockup/guru/21-detail-surat-guru.png)
+*Gambar 4.34 Detail Surat Guru - Lengkap dengan form update status*
+
+Daftar surat masuk menampilkan semua surat yang relevan dengan tugas guru.
+
+![Gambar 4.35 Surat Masuk Guru](../02_desain/mockup/guru/22-surat-masuk-guru.png)
+*Gambar 4.35 Surat Masuk Guru - Akses ke surat-surat penting*
+
+Arsip guru menyediakan akses ke riwayat surat dan disposisi yang pernah diterima.
+
+![Gambar 4.36 Arsip Guru](../02_desain/mockup/guru/23-arsip-guru.png)
+*Gambar 4.36 Arsip Digital Guru - Riwayat surat dan dokumen terkait*
+
+Halaman profil guru untuk mengelola data pribadi dan pengaturan notifikasi.
+
+![Gambar 4.37 Profil Guru](../02_desain/mockup/guru/24-profil-guru.png)
+*Gambar 4.37 Profil Guru - Kelola informasi dan preferensi notifikasi*
 
 **5. Dashboard Staf (9 halaman)**
 
 Dashboard staf menampilkan aktivitas input surat untuk monitoring produktivitas kerja.
 
-![Gambar 4.26 Dashboard Staf](../../02_desain/mockup/staf/18-dashboard-staf.png)
-*Gambar 4.26 Dashboard Staf - Ringkasan aktivitas input surat*
+![Gambar 4.38 Dashboard Staf](../02_desain/mockup/staf/18-dashboard-staf.png)
+*Gambar 4.38 Dashboard Staf - Ringkasan aktivitas input surat*
 
 Manajemen surat masuk staf menyediakan CRUD lengkap untuk pencatatan dan pengelolaan efektif.
 
-![Gambar 4.27 Surat Masuk Staf](../../02_desain/mockup/staf/19-surat-masuk-staf.png)
-*Gambar 4.27 Surat Masuk Staf - Kelola surat masuk dengan CRUD*
+![Gambar 4.39 Surat Masuk Staf](../02_desain/mockup/staf/19-surat-masuk-staf.png)
+*Gambar 4.39 Surat Masuk Staf - Kelola surat masuk dengan CRUD*
 
 Form input surat masuk dilengkapi validasi real-time untuk mencegah kesalahan data.
 
-![Gambar 4.28 Form Surat Masuk Staf](../../02_desain/mockup/staf/20-form-surat-masuk-staf.png)
-*Gambar 4.28 Form Surat Masuk Staf - Input dengan validasi lengkap*
+![Gambar 4.40 Form Surat Masuk Staf](../02_desain/mockup/staf/20-form-surat-masuk-staf.png)
+*Gambar 4.40 Form Surat Masuk Staf - Input dengan validasi lengkap*
 
 Halaman surat keluar memudahkan staf dalam mencatat dan melacak surat yang diterbitkan.
 
-![Gambar 4.29 Surat Keluar Staf](../../02_desain/mockup/staf/21-surat-keluar-staf.png)
-*Gambar 4.29 Surat Keluar Staf - Kelola surat keluar dengan filter*
+![Gambar 4.41 Surat Keluar Staf](../02_desain/mockup/staf/25-surat-keluar-staf.png)
+*Gambar 4.41 Surat Keluar Staf - Kelola surat keluar dengan filter*
+
+Detail surat masuk menampilkan informasi lengkap dengan opsi edit dan hapus.
+
+![Gambar 4.42 Detail Surat Masuk Staf](../02_desain/mockup/staf/26-detail-surat-masuk-staf.png)
+*Gambar 4.42 Detail Surat Masuk - Informasi lengkap dengan aksi edit/delete*
+
+Form input surat keluar memungkinkan staf membuat surat dengan penomoran otomatis.
+
+![Gambar 4.43 Form Surat Keluar Staf](../02_desain/mockup/staf/27-form-surat-keluar-staf.png)
+*Gambar 4.43 Form Surat Keluar - Input surat keluar dengan upload dokumen*
+
+Detail surat keluar menampilkan informasi lengkap surat yang telah dibuat.
+
+![Gambar 4.44 Detail Surat Keluar Staf](../02_desain/mockup/staf/28-detail-surat-keluar-staf.png)
+*Gambar 4.44 Detail Surat Keluar - View lengkap dengan opsi edit*
+
+Arsip staf menyediakan akses mudah ke semua dokumen yang pernah dikelola.
+
+![Gambar 4.45 Arsip Staf](../02_desain/mockup/staf/29-arsip-staf.png)
+*Gambar 4.45 Arsip Digital Staf - Pencarian dan akses dokumen*
+
+Halaman profil staf untuk mengelola informasi pribadi dan keamanan akun.
+
+![Gambar 4.46 Profil Staf](../02_desain/mockup/staf/30-profil-staf.png)
+*Gambar 4.46 Profil Staf - Kelola data pribadi dan ubah password*
 
 #### C. Fitur Desain Unggulan
 
@@ -928,11 +1013,11 @@ Total **38 halaman mockup** yang mencakup seluruh perjalanan pengguna dari 4 per
 | No | Role | Jumlah Halaman | Fitur Utama | Gambar Referensi |
 |----|------|----------------|-------------|------------------|
 | 1 | Umum | 2 halaman | Login, Sitemap navigasi | Gambar 4.9 - 4.10 |
-| 2 | Admin | 14 halaman | Full CRUD surat, kelola pengguna, laporan lengkap | Gambar 4.11 - 4.18 |
-| 3 | Kepala Sekolah | 7 halaman | Baca surat, buat disposisi, monitoring, laporan | Gambar 4.19 - 4.22 |
-| 4 | Guru | 6 halaman | Terima disposisi, update status, akses arsip | Gambar 4.23 - 4.25 |
-| 5 | Staf | 9 halaman | Input surat masuk/keluar, kelola arsip | Gambar 4.26 - 4.29 |
-| **TOTAL** | **38 halaman** | **Mockup lengkap dan fungsional** | **29 gambar preview** |
+| 2 | Admin | 14 halaman | Full CRUD surat, kelola pengguna, laporan lengkap | Gambar 4.11 - 4.24 |
+| 3 | Kepala Sekolah | 7 halaman | Baca surat, buat disposisi, monitoring, laporan | Gambar 4.25 - 4.31 |
+| 4 | Guru | 6 halaman | Terima disposisi, update status, akses arsip | Gambar 4.32 - 4.37 |
+| 5 | Staf | 9 halaman | Input surat masuk/keluar, kelola arsip | Gambar 4.38 - 4.46 |
+| **TOTAL** | **38 halaman** | **Mockup lengkap dan fungsional** | **38 gambar preview** |
 
 Semua mockup dirancang dengan prinsip:
 - **Responsif**: Adaptif untuk berbagai ukuran layar (desktop, tablet, mobile)
@@ -941,7 +1026,7 @@ Semua mockup dirancang dengan prinsip:
 - **Professional**: Mencerminkan kredibilitas institusi pendidikan
 - **Accessible**: Memenuhi standar WCAG 2.1 Level AA
 
-*Catatan: Mockup lengkap 38 halaman tersedia di folder `02_desain/mockup/`. Preview di atas menampilkan halaman-halaman utama dari setiap role pengguna.*
+*Catatan: Mockup lengkap 38 halaman (Gambar 4.9 - 4.46) tersedia di folder `02_desain/mockup/`. Setiap halaman dirancang dengan prinsip user-centered design untuk memastikan kemudahan penggunaan bagi semua role pengguna.*
 
 ---
 
