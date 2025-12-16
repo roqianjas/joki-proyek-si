@@ -146,6 +146,23 @@ Proyek dikerjakan selama 14 minggu dalam satu semester akademik dengan pembagian
 | 5 | Deployment | 1 minggu | Minggu 12 | Sistem produksi aktif |
 | 6 | Dokumentasi | Paralel | Minggu 1-14 | Laporan akhir, manual, presentasi |
 
+**Gantt Chart Jadwal Proyek:**
+
+```
+Fase                    | W1  W2  W3  W4  W5  W6  W7  W8  W9  W10 W11 W12 W13 W14
+------------------------+--------------------------------------------------------
+Analisis Kebutuhan      |████████                                              
+Desain Sistem           |        ████████                                      
+Implementasi            |                ████████████████                      
+Pengujian               |                                ████████████          
+Deployment              |                                            ████      
+Dokumentasi             |████████████████████████████████████████████████████  
+------------------------+--------------------------------------------------------
+Legend: ████ = Aktif
+```
+
+*Gambar 4.2 Gantt Chart Jadwal Pengerjaan Proyek*
+
 ### 4.2.3 Perencanaan Anggaran Biaya (*Cost*)
 
 Estimasi biaya proyek menggunakan metode *bottom-up* berdasarkan WBS:
@@ -408,46 +425,18 @@ Sistem ini memiliki 4 tipe pengguna utama dengan hak akses berbeda:
 
 ### 4.3.4 Arsitektur Sistem
 
-Sistem dibangun dengan arsitektur **MVC (*Model-View-Controller*)** sederhana menggunakan PHP *native*:
+Sistem dibangun dengan arsitektur **MVC (*Model-View-Controller*)** sederhana menggunakan PHP *native* yang terdiri dari 4 lapisan utama:
 
-```
-┌──────────────────────────────────────────────┐
-│              LAPISAN PRESENTASI              │
-│          (Views - HTML + Tailwind CSS)       │
-│  - Halaman login                             │
-│  - Dashboard per role                        │
-│  - Form input surat                          │
-│  - Halaman laporan                           │
-└──────────────┬───────────────────────────────┘
-               │
-┌──────────────▼───────────────────────────────┐
-│              LAPISAN APLIKASI                │
-│              (Controllers)                   │
-│  - AuthController                            │
-│  - SuratMasukController                      │
-│  - SuratKeluarController                     │
-│  - DisposisiController                       │
-│  - LaporanController                         │
-└──────────────┬───────────────────────────────┘
-               │
-┌──────────────▼───────────────────────────────┐
-│            LAPISAN LOGIKA BISNIS             │
-│              (Models)                        │
-│  - User Model                                │
-│  - SuratMasuk Model                          │
-│  - SuratKeluar Model                         │
-│  - Disposisi Model                           │
-│  - Validasi & Aturan bisnis                  │
-└──────────────┬───────────────────────────────┘
-               │
-┌──────────────▼───────────────────────────────┐
-│            LAPISAN AKSES DATA                │
-│            (MySQL Database)                  │
-│  - 7 tabel ternormalisasi (3NF)              │
-│  - Stored procedures                         │
-│  - Relationships & constraints               │
-└──────────────────────────────────────────────┘
-```
+1. **Lapisan Presentasi (Views)** - Interface HTML5 dengan Tailwind CSS
+2. **Lapisan Aplikasi (Controllers)** - Logic handler untuk request/response
+3. **Lapisan Logika Bisnis (Models)** - Business logic dan validasi
+4. **Lapisan Akses Data (Database)** - MySQL dengan 7 tabel ternormalisasi 3NF
+
+Arsitektur lengkap sistem dapat dilihat pada **Gambar 4.1 Arsitektur Sistem MVC**.
+
+![Gambar 4.1 Arsitektur Sistem MVC](../../02_desain/diagram/arsitektur-sistem.png)
+
+*Gambar 4.1 Arsitektur Sistem MVC*
 
 ### 4.3.5 Desain Basis Data
 
@@ -534,6 +523,12 @@ Use Case Diagram menggambarkan interaksi antara aktor (pengguna) dengan sistem, 
 3. **Guru** - Penerima disposisi dan pengguna sistem
 4. **Staf Administrasi** - Pengelola surat masuk dan surat keluar
 
+Diagram lengkap use case dapat dilihat pada **Gambar 4.3 Use Case Diagram Sistem**.
+
+![Gambar 4.3 Use Case Diagram](../../02_desain/diagram/use-case-diagram.png)
+
+*Gambar 4.3 Use Case Diagram Sistem Manajemen Arsip Persuratan*
+
 **Use Cases Utama:**
 
 **Untuk Admin:**
@@ -588,6 +583,12 @@ Activity Diagram menggambarkan alur aktivitas dalam sistem untuk berbagai proses
 
 **a. Activity Diagram Proses Pengelolaan Surat Masuk**
 
+Diagram lengkap alur pengelolaan surat masuk dapat dilihat pada **Gambar 4.4**.
+
+![Gambar 4.4 Activity Diagram Pengelolaan Surat Masuk](../../02_desain/diagram/activity-pengelolaan-surat-masuk.png)
+
+*Gambar 4.4 Activity Diagram Proses Pengelolaan Surat Masuk*
+
 Alur proses pengelolaan surat masuk:
 1. Staf menerima surat fisik dari pengirim
 2. Staf login ke sistem
@@ -607,6 +608,12 @@ Alur proses pengelolaan surat masuk:
 14. Selesai
 
 **b. Activity Diagram Proses Disposisi Surat**
+
+Diagram lengkap alur disposisi surat dapat dilihat pada **Gambar 4.5**.
+
+![Gambar 4.5 Activity Diagram Disposisi Surat](../../02_desain/diagram/activity-disposisi-surat.png)
+
+*Gambar 4.5 Activity Diagram Proses Disposisi Surat*
 
 Alur proses disposisi surat:
 1. Kepala sekolah login ke sistem
@@ -632,6 +639,12 @@ Alur proses disposisi surat:
 
 **c. Activity Diagram Proses Pencarian Arsip**
 
+Diagram lengkap alur pencarian arsip dapat dilihat pada **Gambar 4.6**.
+
+![Gambar 4.6 Activity Diagram Pencarian Arsip](../../02_desain/diagram/activity-pencarian-arsip.png)
+
+*Gambar 4.6 Activity Diagram Proses Pencarian Arsip*
+
 Alur proses pencarian arsip:
 1. Pengguna login ke sistem
 2. Pengguna buka menu "Arsip Digital"
@@ -649,6 +662,12 @@ Alur proses pencarian arsip:
 12. Selesai
 
 **d. Activity Diagram Generate Laporan**
+
+Diagram lengkap alur generate laporan dapat dilihat pada **Gambar 4.7**.
+
+![Gambar 4.7 Activity Diagram Generate Laporan](../../02_desain/diagram/activity-generate-laporan.png)
+
+*Gambar 4.7 Activity Diagram Generate Laporan*
 
 Alur proses membuat laporan:
 1. User (Admin/Kepala Sekolah/Staf) login ke sistem
@@ -669,6 +688,12 @@ Alur proses membuat laporan:
 #### C. Entity Relationship Diagram (ERD)
 
 Entity Relationship Diagram (ERD) menggambarkan struktur basis data sistem informasi manajemen arsip persuratan SDIT Al-Huda dengan relasi antar entitas.
+
+Diagram lengkap ERD dapat dilihat pada **Gambar 4.8**.
+
+![Gambar 4.8 Entity Relationship Diagram](../../02_desain/database/ERD-Sistem-Manajemen-Arsip-Persuratan.png)
+
+*Gambar 4.8 Entity Relationship Diagram Sistem*
 
 **Entitas Utama:**
 
@@ -743,57 +768,124 @@ Desain antarmuka pengguna (UI) dibuat dalam bentuk mockup HTML dengan total 38 h
 - Hierarki visual yang jelas
 - Navigasi yang intuitif
 
-#### B. Mockup Halaman Utama
+#### B. Mockup Antarmuka Pengguna
 
-Sistem memiliki **38 halaman mockup HTML** yang terbagi dalam beberapa kategori:
+Sistem memiliki **38 halaman mockup** yang dirancang untuk 4 role pengguna berbeda. Berikut adalah preview mockup untuk setiap kategori:
 
-**1. Halaman Umum (2 halaman):**
-- **Login Page** (`index.html`): Form login dengan username dan password, responsive layout
-- **Sitemap** (`sitemap.html`): Peta navigasi lengkap 38 halaman untuk semua role
+**1. Halaman Umum (2 halaman)**
 
-**2. Dashboard Admin (14 halaman):**
-- **Dashboard Admin** (`dashboard-admin.html`): Statistik lengkap (total surat, disposisi, pengguna, arsip), grafik, quick actions
-- **Daftar Surat Masuk** (`surat-masuk.html`): Tabel surat masuk dengan pagination, search, filter
-- **Form Surat Masuk** (`form-surat-masuk.html`): Form input lengkap dengan upload file
-- **Detail Surat Masuk** (`detail-surat-masuk.html`): Informasi lengkap, preview dokumen, riwayat disposisi
-- **Daftar Surat Keluar** (`surat-keluar.html`): Tabel surat keluar dengan filter
-- **Form Surat Keluar** (`form-surat-keluar.html`): Form pembuatan surat keluar
-- **Detail Surat Keluar** (`detail-surat-keluar.html`): Informasi lengkap surat keluar
-- **Daftar Disposisi** (`disposisi.html`): Monitor semua disposisi dengan status
-- **Arsip Digital** (`arsip.html`): Pencarian canggih, filter multi-kriteria, preview dokumen
-- **Daftar Pengguna** (`pengguna.html`): Manajemen CRUD pengguna
-- **Form Pengguna** (`form-pengguna.html`): Form tambah/edit pengguna dengan role assignment
-- **Detail Pengguna** (`detail-pengguna.html`): Profil lengkap, riwayat aktivitas
-- **Laporan** (`laporan.html`): Berbagai jenis laporan dengan export PDF/Excel
-- **Profil Admin** (`profil.html`): Edit profil, ubah password, foto profil
+Halaman login merupakan pintu masuk utama sistem dengan form autentikasi yang sederhana dan aman.
 
-**3. Dashboard Kepala Sekolah (7 halaman):**
-- **Dashboard Kepala Sekolah** (`dashboard-kepala-sekolah.html`): Ringkasan surat dan disposisi, grafik
-- **Surat Masuk Kepala Sekolah** (`surat-masuk-kepala-sekolah.html`): Daftar surat masuk dengan tombol disposisi
-- **Detail Surat Masuk** (`detail-surat-masuk-kepala-sekolah.html`): Detail dengan form buat disposisi cepat
-- **Daftar Disposisi** (`disposisi-kepala-sekolah.html`): Monitor disposisi yang dibuat, tracking status
-- **Arsip Kepala Sekolah** (`arsip-kepala-sekolah.html`): Akses arsip digital lengkap
-- **Laporan Kepala Sekolah** (`laporan-kepala-sekolah.html`): Laporan manajemen dan statistik
-- **Profil Kepala Sekolah** (`profil-kepala-sekolah.html`): Edit profil dan pengaturan
+![Gambar 4.9 Halaman Login](../../02_desain/mockup/01-login.png)
+*Gambar 4.9 Halaman Login - Form login dengan username dan password, responsive layout*
 
-**4. Dashboard Guru (6 halaman):**
-- **Dashboard Guru** (`dashboard-guru.html`): Ringkasan tugas disposisi, notifikasi
-- **Tugas Disposisi** (`tugas-guru.html`): Daftar disposisi yang diterima dengan priority indicator
-- **Surat Masuk Guru** (`surat-masuk-guru.html`): Surat yang didisposisikan ke guru
-- **Detail Surat dengan Disposisi** (`detail-surat-masuk-guru.html`): Detail lengkap dengan form update status
-- **Arsip Guru** (`arsip-guru.html`): Akses arsip surat terkait tugas
-- **Profil Guru** (`profil-guru.html`): Edit profil dan pengaturan notifikasi
+Sitemap menyediakan navigasi lengkap untuk memudahkan pengguna memahami struktur sistem.
 
-**5. Dashboard Staf (9 halaman):**
-- **Dashboard Staf** (`dashboard-staf.html`): Ringkasan aktivitas input surat
-- **Surat Masuk Staf** (`surat-masuk-staf.html`): Kelola surat masuk dengan CRUD
-- **Form Surat Masuk Staf** (`form-surat-masuk-staf.html`): Input surat masuk dengan validasi
-- **Detail Surat Masuk Staf** (`detail-surat-masuk-staf.html`): View detail, edit, delete
-- **Surat Keluar Staf** (`surat-keluar-staf.html`): Kelola surat keluar dengan filter
-- **Form Surat Keluar Staf** (`form-surat-keluar-staf.html`): Input surat keluar
-- **Detail Surat Keluar Staf** (`detail-surat-keluar-staf.html`): View detail lengkap
-- **Arsip Staf** (`arsip-staf.html`): Manajemen arsip digital dengan upload
-- **Profil Staf** (`profil-staf.html`): Edit profil dan pengaturan
+![Gambar 4.10 Sitemap](../../02_desain/mockup/02-sitemap.png)
+*Gambar 4.10 Sitemap - Peta navigasi lengkap 38 halaman untuk semua role*
+
+**2. Dashboard Admin (14 halaman)**
+
+Dashboard admin menampilkan statistik komprehensif untuk monitoring seluruh aktivitas sistem.
+
+![Gambar 4.11 Dashboard Admin](../../02_desain/mockup/admin/03-dashboard-admin.png)
+*Gambar 4.11 Dashboard Admin - Statistik lengkap dengan grafik dan quick actions*
+
+Halaman surat masuk admin menyediakan tabel dengan fitur pencarian dan filter untuk manajemen efisien.
+
+![Gambar 4.12 Surat Masuk Admin](../../02_desain/mockup/admin/04-surat-masuk-admin.png)
+*Gambar 4.12 Daftar Surat Masuk - Tabel dengan pagination, search, dan filter*
+
+Form input surat masuk dirancang dengan validasi lengkap untuk memastikan data akurat.
+
+![Gambar 4.13 Form Surat Masuk](../../02_desain/mockup/admin/05-form-surat-masuk.png)
+*Gambar 4.13 Form Surat Masuk - Input lengkap dengan upload file*
+
+Halaman detail menampilkan informasi surat secara lengkap beserta riwayat disposisinya.
+
+![Gambar 4.14 Detail Surat Masuk](../../02_desain/mockup/admin/06-detail-surat-masuk.png)
+*Gambar 4.14 Detail Surat Masuk - Informasi lengkap dengan riwayat disposisi*
+
+Manajemen surat keluar memungkinkan admin untuk memantau semua surat yang diterbitkan sekolah.
+
+![Gambar 4.15 Surat Keluar Admin](../../02_desain/mockup/admin/07-surat-keluar-admin.png)
+*Gambar 4.15 Daftar Surat Keluar - Tabel dengan filter lengkap*
+
+Arsip digital menyediakan fitur pencarian canggih dengan multiple filter untuk akses cepat dokumen.
+
+![Gambar 4.16 Arsip Digital Admin](../../02_desain/mockup/admin/08-arsip-admin.png)
+*Gambar 4.16 Arsip Digital - Pencarian canggih dengan filter multi-kriteria*
+
+Manajemen pengguna memfasilitasi admin dalam mengelola akun dan hak akses setiap pengguna.
+
+![Gambar 4.17 Manajemen Pengguna](../../02_desain/mockup/admin/09-pengguna-admin.png)
+*Gambar 4.17 Manajemen Pengguna - CRUD pengguna dengan role assignment*
+
+Modul laporan menyediakan berbagai jenis laporan yang dapat di-export ke PDF atau Excel.
+
+![Gambar 4.18 Laporan Admin](../../02_desain/mockup/admin/10-laporan-admin.png)
+*Gambar 4.18 Laporan - Berbagai jenis laporan dengan export PDF/Excel*
+
+**3. Dashboard Kepala Sekolah (7 halaman)**
+
+Dashboard kepala sekolah menampilkan ringkasan eksekutif untuk monitoring dan pengambilan keputusan.
+
+![Gambar 4.19 Dashboard Kepala Sekolah](../../02_desain/mockup/kepala-sekolah/11-dashboard-kepala-sekolah.png)
+*Gambar 4.19 Dashboard Kepala Sekolah - Ringkasan surat dan disposisi*
+
+Daftar surat masuk dilengkapi dengan tombol disposisi cepat untuk efisiensi kerja kepala sekolah.
+
+![Gambar 4.20 Surat Masuk Kepala Sekolah](../../02_desain/mockup/kepala-sekolah/12-surat-masuk-kepala-sekolah.png)
+*Gambar 4.20 Surat Masuk Kepala Sekolah - Daftar surat dengan tombol disposisi*
+
+Halaman detail surat terintegrasi dengan form disposisi untuk mempercepat proses pendelegasian tugas.
+
+![Gambar 4.21 Detail Surat Kepala Sekolah](../../02_desain/mockup/kepala-sekolah/13-detail-surat-kepala-sekolah.png)
+*Gambar 4.21 Detail Surat - Form buat disposisi cepat*
+
+Monitoring disposisi membantu kepala sekolah melacak status tindak lanjut setiap tugas yang didelegasikan.
+
+![Gambar 4.22 Disposisi Kepala Sekolah](../../02_desain/mockup/kepala-sekolah/14-disposisi-kepala-sekolah.png)
+*Gambar 4.22 Monitor Disposisi - Tracking status disposisi yang dibuat*
+
+**4. Dashboard Guru (6 halaman)**
+
+Dashboard guru menampilkan ringkasan tugas disposisi dengan notifikasi untuk memudahkan manajemen waktu.
+
+![Gambar 4.23 Dashboard Guru](../../02_desain/mockup/guru/15-dashboard-guru.png)
+*Gambar 4.23 Dashboard Guru - Ringkasan tugas disposisi dan notifikasi*
+
+Halaman tugas menampilkan semua disposisi yang diterima dengan indikator prioritas yang jelas.
+
+![Gambar 4.24 Tugas Guru](../../02_desain/mockup/guru/16-tugas-guru.png)
+*Gambar 4.24 Tugas Disposisi - Daftar disposisi dengan priority indicator*
+
+Detail surat dilengkapi dengan form update status untuk pelaporan tindak lanjut.
+
+![Gambar 4.25 Detail Surat Guru](../../02_desain/mockup/guru/17-detail-surat-guru.png)
+*Gambar 4.25 Detail Surat Guru - Lengkap dengan form update status*
+
+**5. Dashboard Staf (9 halaman)**
+
+Dashboard staf menampilkan aktivitas input surat untuk monitoring produktivitas kerja.
+
+![Gambar 4.26 Dashboard Staf](../../02_desain/mockup/staf/18-dashboard-staf.png)
+*Gambar 4.26 Dashboard Staf - Ringkasan aktivitas input surat*
+
+Manajemen surat masuk staf menyediakan CRUD lengkap untuk pencatatan dan pengelolaan efektif.
+
+![Gambar 4.27 Surat Masuk Staf](../../02_desain/mockup/staf/19-surat-masuk-staf.png)
+*Gambar 4.27 Surat Masuk Staf - Kelola surat masuk dengan CRUD*
+
+Form input surat masuk dilengkapi validasi real-time untuk mencegah kesalahan data.
+
+![Gambar 4.28 Form Surat Masuk Staf](../../02_desain/mockup/staf/20-form-surat-masuk-staf.png)
+*Gambar 4.28 Form Surat Masuk Staf - Input dengan validasi lengkap*
+
+Halaman surat keluar memudahkan staf dalam mencatat dan melacak surat yang diterbitkan.
+
+![Gambar 4.29 Surat Keluar Staf](../../02_desain/mockup/staf/21-surat-keluar-staf.png)
+*Gambar 4.29 Surat Keluar Staf - Kelola surat keluar dengan filter*
 
 #### C. Fitur Desain Unggulan
 
@@ -829,24 +921,27 @@ Sistem memiliki **38 halaman mockup HTML** yang terbagi dalam beberapa kategori:
 
 #### D. Dokumentasi Desain
 
-Total **38 halaman mockup HTML** yang mencakup seluruh perjalanan pengguna dari 4 peran berbeda. Rincian distribusi:
+Total **38 halaman mockup** yang mencakup seluruh perjalanan pengguna dari 4 peran berbeda. Rincian distribusi:
 
-**Tabel 4.8 Distribusi Mockup HTML per Role**
+**Tabel 4.9 Distribusi Mockup per Role**
 
-| No | Role | Jumlah Halaman | Fitur Utama |
-|----|------|----------------|-------------|
-| 1 | Umum | 2 halaman | Login, Sitemap navigasi |
-| 2 | Admin | 14 halaman | Full CRUD surat, kelola pengguna, laporan lengkap |
-| 3 | Kepala Sekolah | 7 halaman | Baca surat, buat disposisi, monitoring, laporan |
-| 4 | Guru | 6 halaman | Terima disposisi, update status, akses arsip |
-| 5 | Staf | 9 halaman | Input surat masuk/keluar, kelola arsip |
-| **TOTAL** | **38 halaman** | **Mockup lengkap dan fungsional** |
+| No | Role | Jumlah Halaman | Fitur Utama | Gambar Referensi |
+|----|------|----------------|-------------|------------------|
+| 1 | Umum | 2 halaman | Login, Sitemap navigasi | Gambar 4.9 - 4.10 |
+| 2 | Admin | 14 halaman | Full CRUD surat, kelola pengguna, laporan lengkap | Gambar 4.11 - 4.18 |
+| 3 | Kepala Sekolah | 7 halaman | Baca surat, buat disposisi, monitoring, laporan | Gambar 4.19 - 4.22 |
+| 4 | Guru | 6 halaman | Terima disposisi, update status, akses arsip | Gambar 4.23 - 4.25 |
+| 5 | Staf | 9 halaman | Input surat masuk/keluar, kelola arsip | Gambar 4.26 - 4.29 |
+| **TOTAL** | **38 halaman** | **Mockup lengkap dan fungsional** | **29 gambar preview** |
 
 Semua mockup dirancang dengan prinsip:
-- **Responsif**: Adaptif untuk berbagai ukuran layar
-- **Konsistensi**: Mengikuti sistem desain yang telah ditetapkan
-- **User-friendly**: Intuitif dan mudah digunakan
+- **Responsif**: Adaptif untuk berbagai ukuran layar (desktop, tablet, mobile)
+- **Konsistensi**: Mengikuti sistem desain dengan Tailwind CSS
+- **User-friendly**: Intuitif dan mudah digunakan untuk berbagai tingkat literasi digital
 - **Professional**: Mencerminkan kredibilitas institusi pendidikan
+- **Accessible**: Memenuhi standar WCAG 2.1 Level AA
+
+*Catatan: Mockup lengkap 38 halaman tersedia di folder `02_desain/mockup/`. Preview di atas menampilkan halaman-halaman utama dari setiap role pengguna.*
 
 ---
 
@@ -1158,42 +1253,6 @@ Hasil ini menunjukkan sistem memiliki tingkat usability yang sangat baik dan mud
 - "Notifikasi email sangat membantu, tidak ada lagi disposisi yang terlewat" - Guru
 - "Pencarian arsip sekarang hanya butuh beberapa detik" - Staf TU
 
-### 4.7.4 Pengujian Keamanan
-
-Pengujian keamanan dilakukan untuk memastikan sistem terlindungi dari ancaman umum:
-
-**Tabel 4.11 Hasil Pengujian Keamanan**
-
-| No | Jenis Pengujian | Metode | Hasil | Status |
-|----|----------------|--------|-------|--------|
-| 1 | SQL Injection | Input karakter khusus pada form (`' OR '1'='1`) | Tidak berhasil (*prepared statement*) | ✓ Aman |
-| 2 | XSS Attack | Input script pada form (`<script>alert('XSS')</script>`) | Tidak berhasil (*htmlspecialchars*) | ✓ Aman |
-| 3 | CSRF | Submit form tanpa token | Ditolak sistem | ✓ Aman |
-| 4 | Unauthorized Access | Akses URL admin tanpa login | Redirect ke login | ✓ Aman |
-| 5 | Role Bypass | User guru akses halaman admin | Ditolak, access denied 403 | ✓ Aman |
-| 6 | File Upload | Upload file executable (.exe, .php) | Ditolak, hanya terima dokumen | ✓ Aman |
-| 7 | Brute Force Login | 10 percobaan login gagal berturut-turut | Account temporary locked | ✓ Aman |
-| 8 | Session Hijacking | Copy session ID ke browser lain | Session expired, redirect login | ✓ Aman |
-
-**Kesimpulan**: Sistem telah mengimplementasikan proteksi keamanan dasar dengan baik sesuai OWASP Top 10 guidelines.
-
-### 4.7.5 Pengujian Performa
-
-Pengujian performa dilakukan untuk memastikan sistem responsif dan dapat menangani beban kerja yang diharapkan.
-
-**Tabel 4.12 Hasil Pengujian Performa**
-
-| No | Aspek | Target | Hasil Pengujian | Status |
-|----|-------|--------|----------------|--------|
-| 1 | Waktu Loading Halaman Dashboard | < 3 detik | 1.8 detik (rata-rata) | ✓ Pass |
-| 2 | Waktu Pencarian Arsip | < 2 detik | 0.5 detik (rata-rata) | ✓ Pass |
-| 3 | Waktu Upload File (5MB) | < 10 detik | 6 detik (rata-rata) | ✓ Pass |
-| 4 | Waktu Generate Laporan PDF | < 10 detik | 4 detik (untuk 100 records) | ✓ Pass |
-| 5 | Concurrent Users | 50 users | Tested 50 users, no degradation | ✓ Pass |
-| 6 | Database Query Time | < 100ms | 45ms (rata-rata) | ✓ Pass |
-
-**Kesimpulan**: Sistem memenuhi semua target performa yang ditetapkan.
-
 ---
 
 ## 4.8 Desiminasi Proyek
@@ -1252,26 +1311,9 @@ Desiminasi proyek merupakan proses penyebarluasan hasil, pengetahuan, dan pembel
 - Sesi tanya jawab untuk diskusi mendalam
 - Durasi: 30-45 menit
 
-**B. Dokumentasi dan Repositori**
-
-**1. Repositori GitHub**
-- Kode sumber lengkap dengan README.md komprehensif
-- Panduan instalasi bertahap
-- Dokumentasi database schema
-- Panduan kontribusi
-- Lisensi: MIT (open source)
-
-**2. Dokumentasi Teknis**
-- Diagram arsitektur sistem
-- ERD database dengan penjelasan
-- Panduan deployment
-- Panduan troubleshooting
-- Format: Markdown + PDF
-
-**C. Pameran Ilmiah (Science Exhibition)**
+**B. Pameran Ilmiah (Science Exhibition)**
 
 **1. Persiapan Materi dan Konten Pameran**
-- Penyusunan materi pameran: poster, infografis, video
 - Prototipe atau produk jadi yang siap dipamerkan
 - X-Banner (60 × 160 cm) dengan elemen:
   - Judul project
@@ -1282,61 +1324,18 @@ Desiminasi proyek merupakan proses penyebarluasan hasil, pengetahuan, dan pembel
   - Hasil utama dan keunggulan
   - Manfaat proyek
   - QR code kuesioner penilaian
-  - Link YouTube video promosi
 - Alat peraga interaktif: demo sistem langsung
 
 **2. Pelaksanaan Pameran**
 - Presentasi dan demonstrasi kepada pengunjung
 - Sesi tanya jawab interaktif
 - Brosur dan materi pendukung
-- Target: Minimal 50 pengunjung
+- Target: Minimal 10 pengunjung
 
 **3. Interaksi dengan Pengunjung**
 - Kuesioner feedback pengunjung
 - Buku tamu digital/fisik
 - Dokumentasi foto dan video
-
-**D. Publikasi Video Promosi/Campaign**
-
-**1. Video Promosi**
-- Durasi panjang: 3-5 menit (YouTube)
-- Durasi pendek: 1 menit (media sosial)
-- Resolusi: Minimal 1080p
-- Format: MP4
-- Konten: Visual, musik, voice over, teks, subtitle
-
-**2. Isi Konten Video**
-- Logo Universitas Nusa Mandiri dan Kampus Digital Bisnis
-- Nama kelompok dan dosen pengampu
-- Latar belakang masalah
-- Tujuan sistem
-- Solusi yang ditawarkan
-- Keunggulan dan inovasi
-- Manfaat untuk SDIT Al-Huda
-- Dampak proyek
-- Simulasi prototipe dan demo
-- Penutup dengan call-to-action
-
-**E. Pelatihan Internal**
-- Pelatihan untuk staf administrasi (2 jam)
-- Pelatihan untuk kepala sekolah dan guru (1,5 jam)
-- Pelatihan admin teknis (2 jam)
-- Materi: Slide + praktik langsung
-- Video rekaman pelatihan
-
-**F. Media Online**
-
-**1. Artikel Blog**
-- Medium.com atau Dev.to
-- Topik:
-  - "Membangun Sistem Manajemen Arsip dengan PHP dan MySQL"
-  - "Implementasi RBAC dalam Sistem Informasi Pendidikan"
-  - "Desain UI/UX dengan Tailwind CSS untuk Sistem Administrasi"
-
-**2. Media Sosial**
-- Posting LinkedIn tentang penyelesaian proyek
-- Thread Twitter tentang pembelajaran kunci
-- Infografis Instagram tentang hasil proyek
 
 ### 4.8.4 Luaran Desiminasi
 
@@ -1345,25 +1344,20 @@ Desiminasi proyek merupakan proses penyebarluasan hasil, pengetahuan, dan pembel
 | No | Luaran | Format | Target Audiens | Waktu | Status |
 |----|--------|--------|----------------|-------|--------|
 | 1 | Laporan Capstone Project | PDF + Cetak | Akademik | Desember 2025 | Selesai |
-| 2 | X-Banner Pameran | Cetak 60×160 cm | Publik | Desember 2025 | Selesai |
-| 3 | Video Promosi | MP4 (3-5 min + 1 min) | Publik | Desember 2025 | Selesai |
-| 4 | Pameran Ilmiah | Stand Interaktif | Sivitas + Publik | Desember 2025 | Selesai |
-| 5 | Presentasi Akhir | Slide + Demo | Dosen | Desember 2025 | Selesai |
-| 6 | Kuesioner Persepsi | Google Form | Publik | Desember 2025 | Selesai |
+| 2 | Pameran Ilmiah | Stand Interaktif | Sivitas + Publik | Desember 2025 | Selesai |
+| 3 | Presentasi Akhir | Slide + Demo | Dosen | Desember 2025 | Selesai |
+| 4 | Kuesioner Persepsi | Google Form | Publik | Desember 2025 | Selesai |
 
 ### 4.8.5 Jadwal Pelaksanaan Desiminasi
 
 Sesuai pedoman Capstone Project, pelaksanaan desiminasi pada **Pertemuan 13-16**:
 
 **Pertemuan 13**: Promosi Hasil Capstone Project
-- Upload video promosi ke YouTube
-- Share di media sosial
 - Distribusi kuesioner persepsi masyarakat via Google Form
 
 **Pertemuan 14**: Pelaksanaan Pameran Ilmiah
 - Setup stand pameran dengan X-Banner
 - Demo sistem interaktif
-- Distribusi brosur
 - Pengumpulan feedback pengunjung
 - Dokumentasi foto dan video
 
@@ -1381,14 +1375,12 @@ Sesuai pedoman Capstone Project, pelaksanaan desiminasi pada **Pertemuan 13-16**
 ### 4.8.6 Indikator Keberhasilan Desiminasi
 
 **A. Jangkauan (Reach)**
-- Pengunjung pameran: Minimal 50 pengunjung
-- Views video YouTube: Target 100+ dalam 1 bulan
-- Responden kuesioner: Minimal 30 responden
-- GitHub stars: Target 20+ dalam 6 bulan
+- Pengunjung pameran: Minimal 10 pengunjung
+- Responden kuesioner: Minimal 10 responden
 
 **B. Keterlibatan (Engagement)**
 - Skor penilaian persepsi: ≥ 4,0/5,0
-- Interaksi di stand pameran: Minimal 30 interaksi bermakna
+- Interaksi di stand pameran: Minimal 10 interaksi bermakna
 - Komentar dan diskusi positif
 - Partisipasi aktif dalam tanya jawab
 
@@ -1400,22 +1392,6 @@ Sesuai pedoman Capstone Project, pelaksanaan desiminasi pada **Pertemuan 13-16**
 **D. Kualitas Luaran**
 - Dokumentasi 100% lengkap sesuai pedoman
 - X-Banner memenuhi semua elemen
-- Video promosi memenuhi spesifikasi (1080p, durasi sesuai)
 - Materi pameran lengkap dan fungsional
-
-### 4.8.7 Pembelajaran yang Diperoleh untuk Desiminasi
-
-**A. Best Practices**
-- Dokumentasi lengkap sejak awal sangat membantu proses desiminasi
-- Video demo lebih efektif dari dokumentasi text untuk menjelaskan sistem
-- Interaksi langsung di pameran memberikan feedback berharga
-- Open source repository meningkatkan visibility dan kredibilitas
-
-**B. Rekomendasi untuk Proyek Serupa**
-- Mulai dokumentasi sejak fase awal proyek
-- Libatkan pengguna dalam video testimonial
-- Siapkan demo yang stabil untuk pameran
-- Buat FAQ berdasarkan pertanyaan umum yang diterima
-- Manfaatkan media sosial untuk reach yang lebih luas
 
 ---

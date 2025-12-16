@@ -1,0 +1,127 @@
+@startuml Use Case Diagram Sistem Manajemen Arsip Persuratan
+left to right direction
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam actorStyle awesome
+skinparam backgroundColor white
+skinparam package {
+    BackgroundColor white
+    BorderColor black
+}
+skinparam usecase {
+    BackgroundColor white
+    BorderColor black
+}
+
+' Actors
+actor "Admin" as admin
+actor "Kepala Sekolah" as kepsek
+actor "Guru" as guru
+actor "Staf Administrasi" as staf
+
+rectangle "Sistem Informasi Manajemen Arsip Persuratan SDIT Al-Huda" {
+    
+    ' Use Cases Umum
+    usecase "Login/Logout" as UC_Login
+    usecase "Kelola Profil Pribadi" as UC_Profil
+    
+    ' Use Cases Admin
+    package "Modul Admin" {
+        usecase "Kelola Data Pengguna" as UC_KelolaUser
+        usecase "Lihat Semua Surat" as UC_LihatSemuaSurat
+        usecase "Lihat Semua Disposisi" as UC_LihatSemuaDisposisi
+        usecase "Generate Semua Laporan" as UC_LaporanAdmin
+        usecase "Lihat Log Aktivitas" as UC_LogAktivitas
+        usecase "Kelola Sistem" as UC_KelolaSystem
+    }
+    
+    ' Use Cases Kepala Sekolah
+    package "Modul Kepala Sekolah" {
+        usecase "Lihat Dashboard Ringkasan" as UC_DashKepsek
+        usecase "Lihat Surat Masuk" as UC_LihatSuratMasuk
+        usecase "Buat Disposisi Surat" as UC_BuatDisposisi
+        usecase "Pilih Penerima Disposisi" as UC_PilihPenerima
+        usecase "Tentukan Prioritas & Deadline" as UC_SetPrioritas
+        usecase "Monitor Status Disposisi" as UC_MonitorDisposisi
+        usecase "Generate Laporan Manajemen" as UC_LaporanManajemen
+    }
+    
+    ' Use Cases Guru
+    package "Modul Guru" {
+        usecase "Lihat Dashboard Tugas" as UC_DashGuru
+        usecase "Lihat Daftar Disposisi" as UC_LihatDisposisi
+        usecase "Lihat Detail Surat" as UC_DetailSurat
+        usecase "Update Status Tindak Lanjut" as UC_UpdateStatus
+        usecase "Terima Notifikasi" as UC_Notifikasi
+    }
+    
+    ' Use Cases Staf Administrasi
+    package "Modul Staf Administrasi" {
+        usecase "Lihat Dashboard Aktivitas" as UC_DashStaf
+        usecase "Kelola Surat Masuk" as UC_KelolaSuratMasuk
+        usecase "Upload Scan Surat Masuk" as UC_UploadSuratMasuk
+        usecase "Kelola Surat Keluar" as UC_KelolaSuratKeluar
+        usecase "Upload Dokumen Surat Keluar" as UC_UploadSuratKeluar
+        usecase "Cari dan Filter Surat" as UC_CariSurat
+        usecase "Generate Laporan Surat" as UC_LaporanSurat
+    }
+    
+    ' Use Cases Bersama
+    package "Modul Bersama" {
+        usecase "Lihat Arsip Digital" as UC_LihatArsip
+        usecase "Download Dokumen" as UC_Download
+    }
+}
+
+' Relationships - Admin
+admin --> UC_Login
+admin --> UC_KelolaUser
+admin --> UC_LihatSemuaSurat
+admin --> UC_LihatSemuaDisposisi
+admin --> UC_LihatArsip
+admin --> UC_LaporanAdmin
+admin --> UC_LogAktivitas
+admin --> UC_KelolaSystem
+
+' Relationships - Kepala Sekolah
+kepsek --> UC_Login
+kepsek --> UC_DashKepsek
+kepsek --> UC_LihatSuratMasuk
+kepsek --> UC_BuatDisposisi
+kepsek --> UC_MonitorDisposisi
+kepsek --> UC_LihatArsip
+kepsek --> UC_LaporanManajemen
+kepsek --> UC_Profil
+
+' Extends & Includes untuk Disposisi
+UC_BuatDisposisi ..> UC_PilihPenerima : <<include>>
+UC_BuatDisposisi ..> UC_SetPrioritas : <<include>>
+
+' Relationships - Guru
+guru --> UC_Login
+guru --> UC_DashGuru
+guru --> UC_LihatDisposisi
+guru --> UC_DetailSurat
+guru --> UC_UpdateStatus
+guru --> UC_Notifikasi
+guru --> UC_LihatArsip
+guru --> UC_Profil
+
+' Relationships - Staf
+staf --> UC_Login
+staf --> UC_DashStaf
+staf --> UC_KelolaSuratMasuk
+staf --> UC_KelolaSuratKeluar
+staf --> UC_CariSurat
+staf --> UC_LihatArsip
+staf --> UC_LaporanSurat
+staf --> UC_Profil
+
+' Extends untuk Kelola Surat
+UC_KelolaSuratMasuk ..> UC_UploadSuratMasuk : <<include>>
+UC_KelolaSuratKeluar ..> UC_UploadSuratKeluar : <<include>>
+
+' Include untuk Arsip
+UC_LihatArsip ..> UC_Download : <<include>>
+
+@enduml

@@ -1,0 +1,64 @@
+@startuml Activity Diagram - Generate Laporan
+|Pengguna (Admin/Kepala Sekolah/Staf)|
+start
+:Login ke sistem;
+:Akses menu "Laporan";
+
+|Sistem|
+:Tampilkan halaman laporan;
+
+|Pengguna|
+:Pilih jenis laporan:
+- Laporan Surat Masuk
+- Laporan Surat Keluar
+- Laporan Disposisi;
+
+:Pilih periode tanggal:
+- Tanggal mulai
+- Tanggal selesai;
+
+:Pilih format (opsional):
+- Tampil di layar
+- Export PDF
+- Export Excel;
+
+:Klik tombol
+"Generate Laporan";
+
+|Sistem|
+:Query data dari database
+sesuai kriteria;
+
+:Proses dan hitung statistik:
+- Total surat
+- Per kategori
+- Per sifat
+- Per status;
+
+if (Format export?) then (Layar)
+  :Tampilkan laporan dalam
+  format tabel dan grafik
+  di browser;
+elseif (PDF)
+  :Generate PDF menggunakan
+  library TCPDF;
+  :Set header dan footer;
+  :Format tabel dan styling;
+  :Download file PDF;
+elseif (Excel)
+  :Generate Excel menggunakan
+  PHPSpreadsheet;
+  :Buat worksheet;
+  :Isi data dan styling;
+  :Download file Excel;
+endif
+
+:Catat log aktivitas
+generate laporan;
+
+|Pengguna|
+:Terima/Lihat laporan;
+
+stop
+
+@enduml

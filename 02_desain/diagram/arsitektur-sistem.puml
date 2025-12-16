@@ -1,0 +1,116 @@
+@startuml Arsitektur Sistem MVC
+!define RECTANGLE_PADDING 20
+
+skinparam componentStyle rectangle
+skinparam shadowing false
+skinparam backgroundColor white
+skinparam component {
+    BackgroundColor white
+    BorderColor black
+    FontSize 12
+}
+skinparam packageStyle rectangle
+skinparam package {
+    BackgroundColor white
+    BorderColor black
+}
+
+package "Lapisan Presentasi (Views)" {
+    component [Login Page] as login
+    component [Dashboard Admin] as dashAdmin
+    component [Dashboard Kepala Sekolah] as dashKepsek
+    component [Dashboard Guru] as dashGuru
+    component [Dashboard Staf] as dashStaf
+    component [Form Surat Masuk] as formSuratMasuk
+    component [Form Surat Keluar] as formSuratKeluar
+    component [Form Disposisi] as formDisposisi
+    component [Halaman Arsip] as pageArsip
+    component [Halaman Laporan] as pageLaporan
+    
+    note right of login
+        HTML5 + Tailwind CSS
+        38 halaman total
+    end note
+}
+
+package "Lapisan Aplikasi (Controllers)" {
+    component [AuthController] as authCtrl
+    component [UserController] as userCtrl
+    component [SuratMasukController] as suratMasukCtrl
+    component [SuratKeluarController] as suratKeluarCtrl
+    component [DisposisiController] as disposisiCtrl
+    component [ArsipController] as arsipCtrl
+    component [LaporanController] as laporanCtrl
+    component [NotifikasiController] as notifCtrl
+    
+    note right of authCtrl
+        PHP Native
+        MVC Pattern
+    end note
+}
+
+package "Lapisan Logika Bisnis (Models)" {
+    component [User Model] as userModel
+    component [SuratMasuk Model] as suratMasukModel
+    component [SuratKeluar Model] as suratKeluarModel
+    component [Disposisi Model] as disposisiModel
+    component [Arsip Model] as arsipModel
+    component [Notifikasi Model] as notifModel
+    component [Validation Rules] as validation
+    
+    note right of userModel
+        Business Logic
+        Data Validation
+    end note
+}
+
+package "Lapisan Akses Data (Database)" {
+    database "MySQL 8.0" as db {
+        component [users]
+        component [surat_masuk]
+        component [surat_keluar]
+        component [disposisi]
+        component [arsip]
+        component [log_aktivitas]
+        component [notifikasi]
+    }
+    
+    note right of db
+        7 Tabel
+        Normalisasi 3NF
+    end note
+}
+
+' Relasi Views -> Controllers
+login --> authCtrl
+dashAdmin --> userCtrl
+dashKepsek --> disposisiCtrl
+dashGuru --> disposisiCtrl
+dashStaf --> suratMasukCtrl
+formSuratMasuk --> suratMasukCtrl
+formSuratKeluar --> suratKeluarCtrl
+formDisposisi --> disposisiCtrl
+pageArsip --> arsipCtrl
+pageLaporan --> laporanCtrl
+
+' Relasi Controllers -> Models
+authCtrl --> userModel
+userCtrl --> userModel
+suratMasukCtrl --> suratMasukModel
+suratKeluarCtrl --> suratKeluarModel
+disposisiCtrl --> disposisiModel
+arsipCtrl --> arsipModel
+laporanCtrl --> suratMasukModel
+laporanCtrl --> suratKeluarModel
+notifCtrl --> notifModel
+
+' Relasi Models -> Database
+userModel --> users
+suratMasukModel --> surat_masuk
+suratKeluarModel --> surat_keluar
+disposisiModel --> disposisi
+arsipModel --> arsip
+notifModel --> notifikasi
+validation --> log_aktivitas
+
+@enduml

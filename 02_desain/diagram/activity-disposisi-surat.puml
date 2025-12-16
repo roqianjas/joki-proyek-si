@@ -1,0 +1,60 @@
+@startuml Activity Diagram - Proses Disposisi Surat
+|Kepala Sekolah|
+start
+:Login ke sistem;
+:Buka menu "Surat Masuk";
+:Pilih surat yang akan didisposisikan;
+:Klik tombol "Buat Disposisi";
+
+|Sistem|
+:Tampilkan form disposisi;
+
+|Kepala Sekolah|
+:Pilih penerima disposisi\n(Guru/Staf);
+note right
+  Dapat pilih multiple penerima
+end note
+
+:Input instruksi dan catatan;
+
+:Tentukan prioritas:\n- Biasa\n- Penting\n- Sangat Penting\n- Segera;
+
+:Tentukan batas waktu/deadline;
+
+:Klik tombol "Simpan Disposisi";
+
+|Sistem|
+:Validasi data disposisi;
+
+if (Data valid?) then (tidak)
+  :Tampilkan pesan error;
+  |Kepala Sekolah|
+  :Perbaiki input;
+  |Sistem|
+else (ya)
+  :Simpan data disposisi\nke database;
+  
+  :Update status surat masuk\nmenjadi "Didisposisi";
+  
+  fork
+    :Kirim notifikasi email\nke penerima disposisi;
+  fork again
+    :Buat notifikasi in-app\nuntuk penerima;
+  end fork
+  
+  :Catat log aktivitas;
+  
+  |Kepala Sekolah|
+  :Tampilkan notifikasi sukses;
+  note right
+    Disposisi berhasil dibuat
+  end note
+endif
+
+|Penerima (Guru/Staf)|
+:Terima notifikasi email;
+:Lihat tugas disposisi\ndi dashboard;
+
+stop
+
+@enduml

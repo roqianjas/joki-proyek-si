@@ -1,0 +1,42 @@
+@startuml Activity Diagram - Pengelolaan Surat Masuk
+|Staf Administrasi|
+start
+:Terima surat fisik dari pengirim;
+:Login ke sistem;
+:Pilih menu "Surat Masuk" > "Tambah Surat Masuk";
+
+|Sistem|
+:Tampilkan form input surat masuk;
+
+|Staf Administrasi|
+:Isi formulir:\n- Nomor surat\n- Tanggal surat\n- Tanggal diterima\n- Pengirim\n- Perihal\n- Kategori\n- Sifat surat\n- Isi ringkas;
+
+:Upload file scan surat\n(PDF/JPG/PNG);
+
+:Klik tombol "Simpan";
+
+|Sistem|
+:Validasi data dan file;
+
+if (Data valid?) then (tidak)
+  :Tampilkan pesan error;
+  |Staf Administrasi|
+  :Perbaiki input;
+  |Sistem|
+else (ya)
+  :Generate nomor registrasi otomatis;
+  :Simpan data ke database\n(tabel surat_masuk);
+  :Simpan file ke folder upload\ndengan nama random;
+  :Catat log aktivitas;
+  
+  |Staf Administrasi|
+  :Tampilkan notifikasi sukses;
+  note right
+    Data surat tersimpan dan
+    dapat dilihat di daftar
+  end note
+endif
+
+stop
+
+@enduml

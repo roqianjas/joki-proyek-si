@@ -1,0 +1,71 @@
+@startuml Activity Diagram - Pencarian Arsip
+|Pengguna|
+start
+:Login ke sistem;
+:Buka menu "Arsip Digital";
+
+|Sistem|
+:Tampilkan halaman arsip
+dengan form pencarian;
+
+|Pengguna|
+:Input kata kunci pencarian:
+- Nomor surat, atau
+- Pengirim, atau
+- Perihal;
+
+:Pilih filter tambahan
+(opsional):
+- Kategori
+- Sifat surat
+- Periode tanggal;
+
+:Klik tombol "Cari";
+
+|Sistem|
+:Proses query pencarian
+ke database dengan JOIN:
+- tabel arsip
+- tabel surat_masuk
+- tabel surat_keluar;
+
+:Jalankan query dengan
+LIKE operator;
+
+if (Ada hasil?) then (tidak)
+  :Tampilkan pesan
+  "Data tidak ditemukan";
+  note right
+    Saran: Gunakan kata kunci
+    yang lebih umum
+  end note
+else (ya)
+  :Tampilkan list arsip
+  dalam bentuk tabel;
+  note right
+    Tampilkan: Nomor, Tanggal,
+    Pengirim/Tujuan, Perihal,
+    Kategori, Action
+  end note
+endif
+
+|Pengguna|
+if (Pilih aksi?) then (Lihat Detail)
+  |Sistem|
+  :Tampilkan detail lengkap
+  dokumen;
+elseif (Preview)
+  |Sistem|
+  :Buka dokumen dalam
+  browser (PDF/Image);
+elseif (Download)
+  |Sistem|
+  :Download file ke
+  komputer pengguna;
+  :Catat log aktivitas
+  akses arsip;
+endif
+
+stop
+
+@enduml
