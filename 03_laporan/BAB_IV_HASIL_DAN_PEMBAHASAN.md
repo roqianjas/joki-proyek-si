@@ -7,35 +7,11 @@ Proyek pengembangan Sistem Informasi Manajemen Arsip Persuratan di SDIT Al-Huda 
 
 ### 4.1.1 Latar Belakang Masalah
 
-Berdasarkan observasi dan wawancara yang dilakukan pada November 2025, teridentifikasi beberapa permasalahan utama:
-
-1. **Proses pengelolaan surat manual** menggunakan buku agenda dan arsip fisik yang memakan waktu rata-rata 10-15 menit per surat dan rawan kesalahan pencatatan.
-
-2. **Kesulitan pencarian arsip** yang membutuhkan waktu 15-30 menit untuk menemukan satu dokumen tertentu, terutama untuk keperluan audit atau pelaporan.
-
-3. **Risiko kerusakan dan kehilangan dokumen** akibat faktor lingkungan seperti kelembaban, rayap, atau bencana kebakaran menjadi ancaman serius terhadap keamanan arsip.
-
-4. **Proses disposisi manual** yang lambat karena surat harus diteruskan secara fisik dari satu pihak ke pihak lain, tidak jarang terjadi surat tertunda atau bahkan hilang dalam proses penyampaian.
-
-5. **Tidak ada sistem monitoring** status surat membuat kepala sekolah dan staf administrasi kesulitan memantau tindak lanjut surat yang telah didisposisikan.
-
-6. **Pembuatan laporan membutuhkan waktu lama** karena staf administrasi harus merekap secara manual dari buku agenda, yang bisa memakan waktu 2-3 hari kerja.
-
-7. **Keamanan dan privasi dokumen tidak memadai** dimana siapa saja yang memiliki akses ke ruang administrasi dapat membuka lemari arsip tanpa jejak audit.
-
-8. **Kendala ruang penyimpanan** yang semakin serius dengan bertambahnya volume arsip setiap tahunnya.
+Berdasarkan observasi dan wawancara pada November 2025, teridentifikasi permasalahan utama: (1) Proses pengelolaan surat manual memakan waktu 10-15 menit per surat, (2) Pencarian arsip memerlukan 15-30 menit, (3) Risiko kerusakan dokumen tinggi, (4) Disposisi manual lambat, (5) Tidak ada monitoring status surat, (6) Pembuatan laporan memakan waktu 2-3 hari, (7) Keamanan dokumen lemah tanpa jejak audit, (8) Keterbatasan ruang penyimpanan fisik.
 
 ### 4.1.2 Identifikasi Masalah
 
-Berdasarkan latar belakang di atas, teridentifikasi beberapa masalah sebagai berikut:
-
-a. Pelayanan administrasi persuratan masih dilaksanakan secara konvensional sehingga kurang efektif dan efisien
-
-b. Belum adanya sistem informasi berbasis web untuk pengelolaan surat masuk, surat keluar, dan disposisi
-
-c. Banyak terjadi kehilangan data dan kesulitan pencarian arsip karena belum adanya sistem informasi yang dapat mendata dan menyimpan dokumen secara digital
-
-d. Tidak ada sistem monitoring dan pelaporan yang memadai untuk mendukung pengambilan keputusan manajemen
+Masalah utama: (a) Pelayanan administrasi konvensional kurang efisien, (b) Belum ada sistem informasi berbasis web, (c) Kehilangan data dan kesulitan pencarian arsip, (d) Tidak ada sistem monitoring dan pelaporan.
 
 ### 4.1.3 Ruang Lingkup
 
@@ -52,27 +28,9 @@ Ruang lingkup proyek ini mencakup pengembangan sistem informasi berbasis web den
 
 ### 4.1.4 Tujuan dan Manfaat Proyek
 
-**Tujuan proyek:**
+**Tujuan:** Meningkatkan efisiensi pengelolaan arsip persuratan melalui sistem berbasis web, mempercepat disposisi dengan notifikasi otomatis, menyediakan arsip digital aman, dan menghasilkan laporan informatif untuk pengambilan keputusan.
 
-a. Meningkatkan efektivitas dan efisiensi pengelolaan arsip persuratan di SDIT Al-Huda
-
-b. Menyediakan sistem informasi berbasis web yang memudahkan pencatatan, pencarian, dan monitoring surat
-
-c. Mempercepat proses disposisi melalui sistem elektronik dengan notifikasi otomatis
-
-d. Menyediakan arsip digital yang aman, mudah diakses, dan terlindungi dari kerusakan fisik
-
-e. Menyediakan laporan dan statistik yang informatif untuk mendukung pengambilan keputusan
-
-f. Sebagai salah satu syarat kelulusan pada Program Studi Sistem Informasi
-
-**Manfaat proyek:**
-
-- **Bagi SDIT Al-Huda**: Meningkatkan efisiensi operasional, mengurangi biaya penyimpanan fisik, dan meningkatkan kualitas layanan administrasi
-- **Bagi Kepala Sekolah**: Memudahkan monitoring dan disposisi surat, serta akses informasi untuk pengambilan keputusan
-- **Bagi Guru/Staf**: Menerima notifikasi disposisi secara real-time dan kemudahan akses riwayat surat
-- **Bagi Staf Administrasi**: Mengurangi beban kerja manual dan mempercepat proses pembuatan laporan
-- **Bagi Akademik**: Sebagai referensi pengembangan sistem informasi sejenis untuk lembaga pendidikan
+**Manfaat:** Efisiensi operasional meningkat, monitoring real-time, pengurangan beban kerja manual, dan menjadi referensi sistem informasi untuk lembaga pendidikan.
 
 ### 4.1.5 Identifikasi Pemangku Kepentingan
 
@@ -262,34 +220,11 @@ Strategi komunikasi untuk memastikan informasi mengalir efektif kepada seluruh p
 | 4 | Sesi UAT | Pengguna Akhir | 2 kali (Testing) | Tatap Muka | 2-3 jam | Pengujian sistem, feedback |
 | 5 | Dokumentasi Proyek | Tim & Stakeholder | Berkelanjutan | Google Drive | - | Repositori dokumen |
 
-### 4.2.8 Batasan Proyek
+### 4.2.8 Batasan dan Asumsi Proyek
 
-**A. Batasan Waktu:**
-- Proyek diselesaikan dalam 14 minggu (satu semester akademik)
-- Tidak termasuk pemeliharaan jangka panjang
+**Batasan:** Proyek diselesaikan dalam 14 minggu tanpa pemeliharaan jangka panjang. Fokus pada fitur inti manajemen persuratan untuk desktop/tablet dengan kapasitas 50 pengguna bersamaan.
 
-**B. Batasan Fitur:**
-- Fokus pada fitur inti manajemen persuratan
-- Integrasi lanjutan (SMS, aplikasi mobile) tidak termasuk fase 1
-
-**C. Batasan Teknis:**
-- Sistem dioptimalkan untuk desktop dan tablet
-- Kapasitas sistem untuk menangani hingga 50 pengguna bersamaan
-- Bahasa sistem: Bahasa Indonesia
-
-### 4.2.9 Asumsi Proyek
-
-**A. Asumsi Teknis:**
-- Infrastruktur teknologi (internet, listrik) stabil
-- Server hosting dapat disewa sesuai spesifikasi
-
-**B. Asumsi Organisasi:**
-- Stakeholder SDIT Al-Huda bersedia meluangkan waktu untuk UAT dan pelatihan
-- Persetujuan dapat dilakukan tepat waktu
-
-**C. Asumsi Pengguna:**
-- Pengguna memiliki kemampuan dasar menggunakan teknologi digital
-- Pengguna bersedia mengadopsi sistem baru
+**Asumsi:** Infrastruktur teknologi stabil, stakeholder bersedia berpartisipasi dalam UAT dan pelatihan, pengguna memiliki kemampuan dasar teknologi digital.
 
 ---
 
@@ -307,41 +242,7 @@ Tujuan sistem ini adalah membangun sistem informasi berbasis web yang dapat memb
 
 ### 4.3.2 Pengguna Sistem
 
-Sistem ini memiliki 4 tipe pengguna utama dengan hak akses berbeda:
-
-**A. Untuk Admin:**
-- Mengelola seluruh pengguna sistem
-- Akses penuh ke semua modul
-- Melihat semua surat masuk dan surat keluar
-- Monitoring disposisi dan arsip
-- Generate laporan lengkap
-- Manajemen sistem dan log aktivitas
-
-**B. Untuk Kepala Sekolah:**
-- Melihat dashboard ringkasan surat dan disposisi
-- Membaca semua surat masuk
-- Melakukan disposisi surat kepada guru/staf
-- Monitoring status tindak lanjut disposisi
-- Akses arsip digital
-- Generate laporan manajemen
-- Melihat statistik dan grafik
-
-**C. Untuk Guru:**
-- Melihat dashboard tugas disposisi
-- Menerima notifikasi disposisi baru
-- Melihat detail surat yang didisposisikan
-- Update status tindak lanjut disposisi
-- Akses arsip surat terkait
-- Kelola profil pribadi
-
-**D. Untuk Staf Administrasi:**
-- Input dan kelola surat masuk
-- Input dan kelola surat keluar
-- Upload dokumen scan surat
-- Pencarian dan filter surat
-- Kelola arsip digital
-- Generate laporan surat
-- Kelola profil pribadi
+Sistem memiliki 4 role pengguna: (1) **Admin** - kelola pengguna, akses penuh semua modul, (2) **Kepala Sekolah** - disposisi surat dan monitoring, (3) **Guru** - terima disposisi dan update status, (4) **Staf Administrasi** - input surat masuk/keluar dan kelola arsip.
 
 ### 4.3.3 Fitur Utama Sistem
 
@@ -969,35 +870,11 @@ Halaman profil staf untuk mengelola informasi pribadi dan keamanan akun.
 
 #### C. Fitur Desain Unggulan
 
-**Desain Responsif:**
-- Pendekatan *mobile-first* dengan *breakpoints* optimal
-- Adaptif untuk desktop (1920px), tablet (768px), dan mobile (375px)
-- *Touch-friendly* untuk perangkat mobile
+**Desain Responsif:** Pendekatan *mobile-first* adaptif untuk desktop, tablet, dan mobile dengan *breakpoints* optimal.
 
-**Aksesibilitas:**
-- Memenuhi standar *WCAG 2.1 Level AA*
-- Rasio kontras warna minimal 4.5:1
-- Label yang jelas untuk form input
-- Navigasi keyboard
+**Aksesibilitas:** Memenuhi standar *WCAG 2.1 Level AA* dengan rasio kontras minimal 4.5:1 dan navigasi keyboard.
 
-**Pengalaman Pengguna:**
-- Pola navigasi konsisten dengan sidebar
-- Tombol *call-to-action* yang jelas
-- Loading indicator untuk operasi async
-- Toast notification untuk feedback
-- Status warna untuk prioritas dan kategori
-
-**Desain Formulir:**
-- Label dan *placeholder* yang jelas
-- Validasi input dengan pesan error yang membantu
-- Required field indicator (*)
-- Upload file dengan preview
-
-**Visualisasi Data:**
-- Grafik menggunakan *Chart.js*
-- Dashboard cards dengan icon dan statistik
-- Tabel dengan pagination dan sorting
-- Badge untuk status dan kategori
+**Pengalaman Pengguna:** Navigasi konsisten, *call-to-action* jelas, loading indicator, toast notification, dan visualisasi data dengan *Chart.js*.
 
 #### D. Dokumentasi Desain
 
@@ -1027,52 +904,11 @@ Semua mockup dirancang dengan prinsip:
 
 Keberhasilan implementasi Sistem Informasi Manajemen Arsip Persuratan SDIT Al-Huda ditentukan oleh berbagai faktor yang saling berkaitan. Faktor-faktor ini dibagi menjadi Faktor Kunci Keberhasilan (*Key Success Factors*/KSF), Faktor Kritis Keberhasilan (*Critical Success Factors*/CSF), dan Indikator Kinerja Utama (*Key Performance Indicators*/KPI).
 
-### 4.4.1 Faktor Kunci Keberhasilan (*Key Success Factors*/KSF)
+### 4.4.1 Faktor Keberhasilan
 
-Faktor Kunci Keberhasilan adalah faktor-faktor yang mendukung pencapaian tujuan proyek secara umum:
+**Faktor Kunci:** Stabilitas sistem (*uptime* 99%), antarmuka responsif, keamanan data dengan HTTPS, kompetensi tim, dan komunikasi efektif.
 
-**A. Faktor Teknologi**
-- Stabilitas dan keandalan sistem dengan *uptime* minimal 99%
-- Antarmuka yang mudah digunakan dan responsif
-- Keamanan data dengan enkripsi dan HTTPS
-- Skalabilitas untuk pertumbuhan jumlah pengguna dan data
-
-**B. Faktor Manusia**
-- Kompetensi tim pengembang dalam PHP, MySQL, dan Tailwind CSS
-- Komitmen pemangku kepentingan SDIT Al-Huda
-- Tingkat adopsi pengguna dengan pelatihan yang memadai
-
-**C. Faktor Manajemen Proyek**
-- Perencanaan yang matang dengan jadwal 14 minggu
-- Komunikasi yang efektif dengan *weekly meeting*
-- Jaminan kualitas melalui pengujian sistematis
-
-### 4.4.2 Faktor Kritis Keberhasilan (*Critical Success Factors*/CSF)
-
-Faktor yang **HARUS** dipenuhi agar proyek berhasil:
-
-**CSF 1: Ketersediaan dan Keandalan Sistem**
-- Target: *Uptime* ≥ 99%, waktu respons < 3 detik
-- Dapat menangani minimal 50 pengguna bersamaan
-
-**CSF 2: Keamanan dan Privasi Data**
-- Tidak ada pelanggaran keamanan atau akses tidak sah
-- Implementasi HTTPS dan enkripsi password
-- RBAC berfungsi dengan baik
-
-**CSF 3: Adopsi dan Kepuasan Pengguna**
-- Minimal 80% pengguna aktif menggunakan sistem
-- Skor kepuasan pengguna ≥ 4,0 dari 5,0
-- Skor SUS ≥ 68
-
-**CSF 4: Integrasi dengan Proses Bisnis**
-- 100% surat masuk/keluar dicatat dalam sistem
-- Pengurangan beban kerja administratif minimal 50%
-- Laporan dapat dihasilkan dalam 5 menit
-
-**CSF 5: Kepatuhan Anggaran dan Jadwal**
-- Penyelesaian proyek dalam 14 minggu
-- Biaya aktual tidak melebihi 110% anggaran (Rp 24,15 juta)
+**Faktor Kritis:** (1) *Uptime* ≥ 99% dengan waktu respons < 3 detik, (2) Keamanan tanpa pelanggaran dengan HTTPS dan RBAC, (3) Adopsi pengguna 80% dengan skor kepuasan ≥ 4,0/5,0 dan SUS ≥ 68, (4) 100% surat tercatat dengan pengurangan beban kerja 50%, (5) Penyelesaian dalam 14 minggu dengan biaya ≤ 110% anggaran.
 
 ### 4.4.3 Indikator Kinerja Utama (*Key Performance Indicators*/KPI)
 
@@ -1097,66 +933,13 @@ Faktor yang **HARUS** dipenuhi agar proyek berhasil:
 
 Implementasi sistem diharapkan memberikan berbagai keuntungan bagi SDIT Al-Huda:
 
-### 4.5.1 Manfaat untuk Sekolah (Organisasi)
+### 4.5.1 Manfaat dan ROI
 
-**A. Efisiensi Operasional**
-- Proses pencatatan surat: dari 10-15 menit menjadi 2-3 menit (penghematan 70-80%)
-- Pencarian arsip: dari 15-30 menit menjadi 5-10 detik (penghematan 99%)
-- Disposisi: dari 1-3 hari menjadi 5-10 menit (penghematan 99%)
-- Pembuatan laporan: dari 2-3 hari menjadi 2-5 menit (penghematan 99%)
+**Efisiensi Operasional:** Pencatatan surat 70-80% lebih cepat, pencarian arsip 99% lebih cepat, disposisi dari 1-3 hari menjadi 5-10 menit, pembuatan laporan dari 2-3 hari menjadi 2-5 menit.
 
-**B. Penghematan Biaya**
-- Pengurangan penggunaan kertas 60%: penghematan Rp 1,2 juta/tahun
-- Pengurangan ruang penyimpanan fisik: penghematan Rp 2 juta/tahun
-- Pengurangan waktu kerja lembur: penghematan Rp 3 juta/tahun
-- **Total penghematan: Rp 6,2 juta/tahun**
+**Penghematan Biaya:** Pengurangan kertas 60% (Rp 1,2 juta/tahun), ruang penyimpanan (Rp 2 juta/tahun), waktu lembur (Rp 3 juta/tahun). **Total: Rp 6,2 juta/tahun**.
 
-**C. Peningkatan Kualitas Layanan**
-- Respon disposisi lebih cepat
-- Monitoring real-time status surat
-- Tidak ada lagi surat yang hilang atau terlewat
-- Transparansi proses untuk semua pihak
-
-**D. Peningkatan Produktivitas**
-- Staf administrasi dapat fokus pada tugas strategis (bukan data entry repetitif)
-- Kepala sekolah dapat monitoring dan membuat keputusan lebih cepat
-- Guru menerima disposisi langsung via notifikasi email
-
-### 4.5.2 Manfaat untuk Pengguna
-
-**A. Untuk Kepala Sekolah**
-- Dashboard eksekutif dengan statistik real-time
-- Disposisi cepat hanya dalam beberapa klik
-- Monitoring status tindak lanjut disposisi
-- Akses informasi untuk pengambilan keputusan
-
-**B. Untuk Guru/Staf**
-- Menerima notifikasi disposisi langsung
-- Akses mudah ke detail surat
-- Update status tindak lanjut dengan mudah
-- Akses arsip kapan saja diperlukan
-
-**C. Untuk Staf Administrasi**
-- Pengurangan beban kerja manual hingga 70%
-- Pencatatan dan pencarian yang cepat
-- Pembuatan laporan otomatis
-- Tidak ada lagi arsip yang hilang
-
-### 4.5.3 Analisis Return on Investment (ROI)
-
-**Investasi:**
-- Biaya pengembangan: Rp 24.150.000
-- Biaya operasional tahun 1 (hosting, domain, maintenance): Rp 2.550.000
-- **Total biaya tahun 1: Rp 26.700.000**
-
-**Manfaat Tahun 1:**
-- Penghematan biaya operasional: Rp 6.200.000/tahun
-- Peningkatan produktivitas (setara nilai): Rp 18.000.000/tahun
-- **Total manfaat: Rp 24.200.000/tahun**
-
-**Hasil:**
-- **Payback period: 1,1 tahun (13,2 bulan)**
-- **ROI 3 tahun: 171%**
+**ROI:** Investasi Rp 26,7 juta (tahun 1), manfaat Rp 24,2 juta/tahun. **Payback period: 1,1 tahun**, **ROI 3 tahun: 171%**.
 
 ---
 
@@ -1164,102 +947,17 @@ Implementasi sistem diharapkan memberikan berbagai keuntungan bagi SDIT Al-Huda:
 
 Teknologi yang digunakan untuk membangun sistem dapat dibagi ke dalam beberapa bagian:
 
-### 4.6.1 Server dan Infrastruktur
+### 4.6.1 Teknologi yang Digunakan
 
-**A. Web Server**
-- **Apache 2.4 / Nginx**: Web server untuk menangani HTTP request
-- **PHP 8.0+**: Bahasa pemrograman server-side
+**Backend:** PHP 8.0+, MySQL 8.0, PDO dengan prepared statement, MVC pattern, bcrypt hashing, CSRF protection.
 
-**B. Hosting**
-- **Shared Hosting / VPS**: Ubuntu Server atau Windows Server
-- Spesifikasi minimum: 2GB RAM, 20GB Storage
-- Bandwidth: Unlimited atau minimal 100GB/bulan
+**Frontend:** HTML5, CSS3, JavaScript ES6+, Tailwind CSS 3.x (utility-first), Font Awesome 6.x.
 
-**C. Database Server**
-- **MySQL 8.0**: Sistem manajemen database relasional
-- Storage Engine: InnoDB untuk ACID compliance
-- Backup: Otomatis mingguan dengan retensi 4 minggu
+**Libraries:** TCPDF (PDF), PHPSpreadsheet (Excel), PHPMailer (email), Chart.js (grafik).
 
-**D. Version Control**
-- **Git & GitHub**: Manajemen kode sumber dan kolaborasi
+**Infrastructure:** Apache/Nginx web server, shared hosting/VPS (2GB RAM, 20GB storage), Git & GitHub, VS Code, phpMyAdmin.
 
-### 4.6.2 Backend Development
-
-**A. Bahasa dan Framework**
-- **PHP 8.0+**: Bahasa pemrograman utama backend
-- **PDO (PHP Data Objects)**: Abstraksi database dengan prepared statement
-- **MVC Pattern**: Arsitektur aplikasi terstruktur
-
-**B. Keamanan**
-- **Bcrypt**: Hashing password dengan cost factor 10
-- **Prepared Statement**: Mencegah SQL injection
-- **htmlspecialchars()**: Mencegah XSS attack
-- **CSRF Token**: Proteksi dari Cross-Site Request Forgery
-
-**C. Libraries & Packages**
-- **TCPDF**: Library untuk generate laporan PDF
-- **PHPSpreadsheet**: Library untuk export Excel
-- **PHPMailer**: Library untuk kirim email notifikasi
-- **Chart.js**: Library JavaScript untuk visualisasi grafik
-
-### 4.6.3 Frontend Development
-
-**A. Teknologi**
-- **HTML5**: Markup semantik modern
-- **CSS3**: Styling dengan flexbox dan grid
-- **JavaScript (ES6+)**: Interaktivitas dan konten dinamis
-
-**B. Framework CSS**
-- **Tailwind CSS 3.x**: Framework CSS utility-first
-- Desain responsif dengan pendekatan mobile-first
-- Custom color palette dan typography
-- JIT compiler untuk optimasi
-
-**C. Komponen UI**
-- **Font Awesome 6.x**: Icon library
-- Custom component library berbasis Tailwind
-- Form validation: Client-side JavaScript + Server-side PHP
-
-### 4.6.4 Database Management
-
-**A. Database Management**
-- **MySQL 8.0**: Database utama
-- Character Set: utf8mb4 untuk full Unicode support
-- Collation: utf8mb4_unicode_ci
-
-**B. Desain Database**
-- 7 tabel dengan normalisasi 3NF
-- Foreign key constraints untuk referential integrity
-- Index pada kolom yang sering di-query
-- Timestamps untuk audit trail
-
-### 4.6.5 Tools Development
-
-**A. Code Editor**
-- **Visual Studio Code**: Editor kode utama
-- Extensions: PHP Intelephense, Tailwind CSS IntelliSense, ESLint
-
-**B. Database Management**
-- **phpMyAdmin**: GUI untuk manajemen MySQL
-- **MySQL Workbench**: Database design dan modeling
-
-**C. Testing**
-- **Browser DevTools**: Debugging frontend
-- **Postman**: Testing API endpoints
-
-### 4.6.6 Alasan Pemilihan Teknologi
-
-**Tabel 4.10 Justifikasi Pemilihan Teknologi**
-
-| Teknologi | Alasan Pemilihan |
-|-----------|------------------|
-| **PHP 8.0+** | Bahasa yang mature, dokumentasi lengkap, cocok untuk proyek web, dan banyak hosting support |
-| **MySQL 8.0** | Database relasional yang andal, gratis (open source), performa baik untuk aplikasi skala kecil-menengah |
-| **Tailwind CSS** | Produktivitas tinggi, ukuran file kecil, highly customizable, rapid prototyping |
-| **Apache/Nginx** | Web server yang reliable, konfigurasi mudah, support PHP dengan baik |
-| **TCPDF** | Library PHP untuk PDF yang mature, gratis, dan mudah digunakan |
-| **PHPSpreadsheet** | Library terbaik untuk export Excel di PHP, support berbagai format |
-| **Visual Studio Code** | Editor gratis, lightweight, banyak extensions untuk web development |
+**Database:** 7 tabel normalisasi 3NF, foreign key constraints, indexing optimal, backup otomatis mingguan.
 
 ---
 
@@ -1398,141 +1096,44 @@ Hasil ini menunjukkan sistem memiliki tingkat usability yang sangat baik dan mud
 
 ## 4.8 Desiminasi Proyek
 
-Desiminasi proyek merupakan proses penyebarluasan hasil, pengetahuan, dan pembelajaran dari proyek pengembangan Sistem Informasi Manajemen Arsip Persuratan SDIT Al-Huda kepada berbagai pihak yang berkepentingan.
+Desiminasi proyek dilakukan untuk menyebarluaskan hasil dan pembelajaran kepada pemangku kepentingan (SDIT Al-Huda, sivitas akademika, lembaga pendidikan lain) melalui publikasi akademik dan pameran ilmiah.
 
-### 4.8.1 Tujuan Desiminasi
+### 4.8.1 Metode dan Luaran Desiminasi
 
-**A. Berbagi Pengetahuan**
-- Berbagi pengetahuan dan praktik terbaik dalam pengembangan sistem informasi manajemen arsip
-- Memberikan pembelajaran tentang implementasi sistem berbasis web untuk lembaga pendidikan
-- Dokumentasi proses dan tantangan yang dihadapi selama pengembangan
+**A. Laporan Capstone Project**
+- Laporan lengkap BAB I-V dengan dokumentasi teknis (SRS, desain sistem, panduan pengguna)
+- Format: PDF
 
-**B. Peningkatan Kesadaran**
-- Meningkatkan kesadaran tentang pentingnya digitalisasi administrasi persuratan
-- Menunjukkan manfaat sistem informasi untuk efisiensi operasional
-- Mempromosikan adopsi teknologi di lembaga pendidikan
+**B. Pameran Ilmiah**
+- X-Banner (60 × 160 cm) dengan judul, logo, latar belakang, tujuan, metodologi, hasil, manfaat, dan QR code kuesioner
+- Demo sistem interaktif
+- Target: Minimal 10 pengunjung, 10 responden kuesioner
 
-**C. Replikasi dan Skalabilitas**
-- Memungkinkan lembaga pendidikan lain untuk mengadopsi sistem serupa
-- Menyediakan dokumentasi lengkap untuk implementasi
-- Berbagi pembelajaran yang diperoleh untuk menghindari kesalahan yang sama
-
-### 4.8.2 Target Audiens Desiminasi
-
-**A. Pemangku Kepentingan Internal**
-- Tim manajemen SDIT Al-Huda
-- Guru dan staf administratif
-- Yayasan pengelola
-
-**B. Akademik**
-- Dosen pembimbing dan penguji
-- Mahasiswa Program Studi Sistem Informasi
-- Sivitas akademika Universitas Nusa Mandiri
-
-**C. Eksternal**
-- Lembaga pendidikan Islam lainnya
-- Sekolah yang memerlukan sistem serupa
-- Komunitas pengembang web Indonesia
-- Pihak yang tertarik dengan sistem informasi pendidikan
-
-### 4.8.3 Metode Desiminasi
-
-**A. Publikasi Akademik**
-
-**1. Laporan Capstone Project**
-- Laporan lengkap BAB I - BAB V
-- Dokumentasi teknis (SRS, Desain Sistem)
-- Panduan pengguna dan panduan admin
-- Kode sumber dengan dokumentasi lengkap
-- Format: PDF dan Salinan Cetak
-
-**2. Presentasi Akademik**
-- Presentasi akhir di hadapan dosen pembimbing dan penguji
-- Slide presentasi dengan demonstrasi sistem langsung
-- Sesi tanya jawab untuk diskusi mendalam
-- Durasi: 30-45 menit
-
-**B. Pameran Ilmiah (Science Exhibition)**
-
-**1. Persiapan Materi dan Konten Pameran**
-- Prototipe atau produk jadi yang siap dipamerkan
-- X-Banner (60 × 160 cm) dengan elemen:
-  - Judul project
-  - Logo Universitas Nusa Mandiri
-  - Logo Kampus Digital Bisnis
-  - Nama kelompok dan dosen pengampu
-  - Latar belakang, tujuan, metodologi
-  - Hasil utama dan keunggulan
-  - Manfaat proyek
-  - QR code kuesioner penilaian
-- Alat peraga interaktif: demo sistem langsung
-
-**2. Pelaksanaan Pameran**
-- Presentasi dan demonstrasi kepada pengunjung
-- Sesi tanya jawab interaktif
-- Brosur dan materi pendukung
-- Target: Minimal 10 pengunjung
-
-**3. Interaksi dengan Pengunjung**
-- Kuesioner feedback pengunjung
-- Buku tamu digital/fisik
-- Dokumentasi foto dan video
-
-### 4.8.4 Luaran Desiminasi
+**C. Presentasi Akhir**
+- Presentasi dan demonstrasi sistem di hadapan dosen pembimbing dan penguji (30-45 menit)
+- Sesi tanya jawab
 
 **Tabel 4.14 Luaran Desiminasi Proyek**
 
-| No | Luaran | Format | Target Audiens | Waktu | Status |
-|----|--------|--------|----------------|-------|--------|
-| 1 | Laporan Capstone Project | PDF + Cetak | Akademik | Desember 2025 | Selesai |
-| 2 | Pameran Ilmiah | Stand Interaktif | Sivitas + Publik | Desember 2025 | Selesai |
-| 3 | Presentasi Akhir | Slide + Demo | Dosen | Desember 2025 | Selesai |
-| 4 | Kuesioner Persepsi | Google Form | Publik | Desember 2025 | Selesai |
+| No | Luaran | Format | Target Audiens | Status |
+|----|--------|--------|----------------|--------|
+| 1 | Laporan Capstone Project | PDF + Cetak | Akademik | Selesai |
+| 2 | Pameran Ilmiah | Stand Interaktif | Sivitas + Publik | Selesai |
+| 3 | Presentasi Akhir | Slide + Demo | Dosen | Selesai |
+| 4 | Kuesioner Persepsi | Google Form | Publik | Selesai |
 
-### 4.8.5 Jadwal Pelaksanaan Desiminasi
+### 4.8.2 Jadwal dan Indikator Keberhasilan
 
-Sesuai pedoman Capstone Project, pelaksanaan desiminasi pada **Pertemuan 13-16**:
+**Jadwal Pelaksanaan (Pertemuan 13-16):**
+- **P13**: Distribusi kuesioner persepsi
+- **P14**: Pameran ilmiah dengan X-Banner dan demo
+- **P15**: Presentasi dan penilaian dosen
+- **P16**: Evaluasi final
 
-**Pertemuan 13**: Promosi Hasil Capstone Project
-- Distribusi kuesioner persepsi masyarakat via Google Form
-
-**Pertemuan 14**: Pelaksanaan Pameran Ilmiah
-- Setup stand pameran dengan X-Banner
-- Demo sistem interaktif
-- Pengumpulan feedback pengunjung
-- Dokumentasi foto dan video
-
-**Pertemuan 15**: Presentasi di hadapan Dosen
-- Presentasi hasil proyek
-- Demonstrasi sistem
-- Sesi tanya jawab
-- Penilaian oleh dosen
-
-**Pertemuan 16**: Penilaian Akhir
-- Evaluasi keseluruhan proyek
-- Feedback untuk perbaikan
-- Persetujuan final
-
-### 4.8.6 Indikator Keberhasilan Desiminasi
-
-**A. Jangkauan (Reach)**
-- Pengunjung pameran: Minimal 10 pengunjung
-- Responden kuesioner: Minimal 10 responden
-
-**B. Keterlibatan (Engagement)**
-- Skor penilaian persepsi: ≥ 4,0/5,0
-- Interaksi di stand pameran: Minimal 10 interaksi bermakna
-- Komentar dan diskusi positif
-- Partisipasi aktif dalam tanya jawab
-
-**C. Dampak (Impact)**
-- Nilai presentasi: Minimal B
-- Transfer pengetahuan: Staf SDIT dapat operasikan sistem mandiri
-- Minat adopsi: Minimal 2 lembaga lain tertarik
-
-**D. Kualitas Luaran**
-- Dokumentasi 100% lengkap sesuai pedoman
-- X-Banner memenuhi semua elemen
-- Materi pameran lengkap dan fungsional
+**Indikator Keberhasilan:**
+- Pengunjung pameran ≥ 10, responden kuesioner ≥ 10
+- Skor penilaian persepsi ≥ 4,0/5,0
+- Nilai presentasi minimal B
+- Dokumentasi 100% lengkap
 
 ---
