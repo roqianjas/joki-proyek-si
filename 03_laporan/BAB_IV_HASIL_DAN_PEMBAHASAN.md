@@ -1003,7 +1003,7 @@ Halaman profil staf untuk mengelola informasi pribadi dan keamanan akun.
 
 Total **38 halaman mockup** yang mencakup seluruh perjalanan pengguna dari 4 peran berbeda. Rincian distribusi:
 
-**Tabel 4.9 Distribusi Mockup per Role**
+**Tabel 4.8 Distribusi Mockup per Role**
 
 | No | Role | Jumlah Halaman | Fitur Utama | Gambar Referensi |
 |----|------|----------------|-------------|------------------|
@@ -1076,7 +1076,7 @@ Faktor yang **HARUS** dipenuhi agar proyek berhasil:
 
 ### 4.4.3 Indikator Kinerja Utama (*Key Performance Indicators*/KPI)
 
-**Tabel 4.8 - Key Performance Indicators (KPI)**
+**Tabel 4.9 Key Performance Indicators (KPI)**
 
 | Kategori | Nama KPI | Target | Frekuensi Pemantauan |
 |----------|----------|--------|---------------------|
@@ -1249,7 +1249,7 @@ Teknologi yang digunakan untuk membangun sistem dapat dibagi ke dalam beberapa b
 
 ### 4.6.6 Alasan Pemilihan Teknologi
 
-**Tabel 4.9 - Justifikasi Pemilihan Teknologi**
+**Tabel 4.10 Justifikasi Pemilihan Teknologi**
 
 | Teknologi | Alasan Pemilihan |
 |-----------|------------------|
@@ -1271,7 +1271,7 @@ Pengujian sistem dilakukan secara menyeluruh untuk memastikan sistem berfungsi d
 
 Pengujian fungsional dilakukan untuk memastikan setiap fitur berfungsi sesuai dengan spesifikasi kebutuhan. Berikut hasil pengujian fitur utama:
 
-**Tabel 4.9 Hasil Pengujian Fungsional**
+**Tabel 4.11 Hasil Pengujian Fungsional**
 
 | No | Fitur | Skenario Pengujian | Hasil | Status |
 |----|-------|-------------------|-------|--------|
@@ -1294,7 +1294,7 @@ Pengujian fungsional dilakukan untuk memastikan setiap fitur berfungsi sesuai de
 
 UAT dilakukan dengan melibatkan pengguna akhir dari SDIT Al-Huda untuk menguji sistem dalam skenario penggunaan nyata.
 
-**Tabel 4.10 Hasil User Acceptance Testing**
+**Tabel 4.12 Hasil User Acceptance Testing**
 
 | No | Pengguna | Role | Skenario | Hasil | Feedback |
 |----|----------|------|----------|-------|----------|
@@ -1325,7 +1325,7 @@ System Usability Scale (SUS) terdiri dari 10 pertanyaan dengan skala Likert 1-5,
 - 4 = Setuju
 - 5 = Sangat Setuju
 
-**Tabel 4.11 Hasil Kuesioner System Usability Scale (SUS)**
+**Tabel 4.13 Hasil Kuesioner System Usability Scale (SUS)**
 
 | No | Pertanyaan | R1 | R2 | R3 | R4 | R5 | R6 | Rata-rata |
 |----|------------|----|----|----|----|----|----|-----------|
@@ -1480,7 +1480,7 @@ Desiminasi proyek merupakan proses penyebarluasan hasil, pengetahuan, dan pembel
 
 ### 4.8.4 Luaran Desiminasi
 
-**Tabel 4.14 - Luaran Desiminasi Proyek**
+**Tabel 4.14 Luaran Desiminasi Proyek**
 
 | No | Luaran | Format | Target Audiens | Waktu | Status |
 |----|--------|--------|----------------|-------|--------|
