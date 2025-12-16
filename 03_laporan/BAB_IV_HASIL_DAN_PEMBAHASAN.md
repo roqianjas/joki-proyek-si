@@ -144,8 +144,6 @@ Estimasi biaya proyek menggunakan metode *bottom-up* berdasarkan WBS:
 | 8 | Lain-lain | Dokumentasi & Transport | 600.000 |
 | **TOTAL** | | | **24.150.000** |
 
-*Catatan: Biaya tenaga kerja disesuaikan dengan standar proyek akademik. Untuk proyek komersial, biaya aktual bisa lebih tinggi.*
-
 ### 4.2.4 Perencanaan Kualitas (*Quality*)
 
 Standar kualitas yang ditetapkan untuk proyek ini:
@@ -232,19 +230,14 @@ Strategi komunikasi untuk memastikan informasi mengalir efektif kepada seluruh p
 
 ### 4.3.1 Tujuan Sistem
 
-Tujuan sistem ini adalah membangun sistem informasi berbasis web yang dapat memberikan informasi yang berkaitan dengan manajemen arsip persuratan SDIT Al-Huda, mencakup:
-
-- Informasi lengkap tentang surat masuk dan surat keluar
-- Sistem disposisi elektronik yang cepat dan terpantau
-- Manajemen arsip digital yang aman
-- Dashboard monitoring untuk setiap peran pengguna
-- Laporan dan analitik yang komprehensif
+Sistem informasi berbasis web untuk manajemen arsip persuratan SDIT Al-Huda dengan fitur: informasi lengkap surat masuk/keluar, disposisi elektronik terpantau, arsip digital aman, dashboard monitoring per role, laporan komprehensif.
 
 ### 4.3.2 Pengguna Sistem
 
 Sistem memiliki 4 role pengguna: (1) **Admin** - kelola pengguna, akses penuh semua modul, (2) **Kepala Sekolah** - disposisi surat dan monitoring, (3) **Guru** - terima disposisi dan update status, (4) **Staf Administrasi** - input surat masuk/keluar dan kelola arsip.
 
 ### 4.3.3 Fitur Utama Sistem
+
 
 **A. Modul Autentikasi**
 - Login multi-peran (Admin, Kepala Sekolah, Guru, Staf)
@@ -382,31 +375,7 @@ Normalisasi hingga 3NF memastikan tidak ada redundansi data dan menjaga integrit
 
 ### 4.3.7 Keamanan Sistem
 
-**A. Autentikasi & Otorisasi**
-- *Hashing* kata sandi dengan *bcrypt*
-- Session-based authentication
-- Perlindungan CSRF untuk semua form
-- Role-Based Access Control (RBAC)
-- Auto logout setelah inaktif 30 menit
-
-**B. Keamanan Data**
-- HTTPS untuk semua komunikasi (SSL Certificate)
-- Pencegahan *SQL injection* (*prepared statement*)
-- Pencegahan XSS (*htmlspecialchars*)
-- Validasi input untuk semua form
-- Upload file dengan validasi tipe dan ukuran
-
-**C. Keamanan File Upload**
-- Validasi ekstensi file (hanya PDF, JPG, PNG)
-- Batas ukuran file maksimal 5MB
-- Random filename untuk keamanan
-- Folder upload di luar web root
-
-**D. Audit Trail**
-- Log semua aktivitas penting
-- Tracking siapa mengakses apa dan kapan
-- Log login/logout user
-- Backup data otomatis mingguan
+**Implementasi:** Bcrypt hashing, session-based auth, CSRF protection, RBAC, auto logout (30 menit inaktif), HTTPS/SSL, prepared statement (SQL injection prevention), XSS prevention, validasi input/upload (PDF/JPG/PNG, max 5MB), audit trail logging, backup mingguan.
 
 ---
 
@@ -432,51 +401,13 @@ Diagram lengkap use case dapat dilihat pada **Gambar 4.3 Use Case Diagram Sistem
 
 **Use Cases Utama:**
 
-**Untuk Admin:**
-- Login/Logout
-- Kelola Data Pengguna (Create, Read, Update, Delete)
-- Lihat Semua Surat Masuk dan Keluar
-- Lihat Semua Disposisi
-- Kelola Arsip Digital
-- Generate Semua Jenis Laporan
-- Lihat Log Aktivitas
-- Kelola Profil Sistem
+**Admin:** Kelola pengguna (CRUD), akses semua surat/disposisi, kelola arsip, generate semua laporan, lihat log aktivitas.
 
-**Untuk Kepala Sekolah:**
-- Login/Logout
-- Lihat Dashboard Ringkasan
-- Lihat Surat Masuk
-- Buat Disposisi Surat
-- Pilih Penerima Disposisi (Guru/Staf)
-- Tentukan Prioritas dan Deadline
-- Monitor Status Disposisi
-- Lihat Arsip Digital
-- Generate Laporan Manajemen
-- Kelola Profil Pribadi
+**Kepala Sekolah:** Lihat dashboard, buat disposisi (pilih penerima, prioritas, deadline), monitor status, akses arsip, generate laporan.
 
-**Untuk Guru:**
-- Login/Logout
-- Lihat Dashboard Tugas
-- Lihat Daftar Disposisi yang Diterima
-- Lihat Detail Surat yang Didisposisikan
-- Update Status Tindak Lanjut (Pending/Proses/Selesai)
-- Lihat Arsip Surat Terkait
-- Terima Notifikasi Disposisi Baru
-- Kelola Profil Pribadi
+**Guru:** Lihat dashboard tugas, terima disposisi, update status tindak lanjut, akses arsip terkait, terima notifikasi.
 
-**Untuk Staf Administrasi:**
-- Login/Logout
-- Lihat Dashboard Aktivitas
-- Input Surat Masuk (Create)
-- Edit/Hapus Surat Masuk (Update/Delete)
-- Upload Scan Surat Masuk
-- Input Surat Keluar (Create)
-- Edit/Hapus Surat Keluar (Update/Delete)
-- Upload Dokumen Surat Keluar
-- Cari dan Filter Surat
-- Kelola Arsip Digital
-- Generate Laporan Surat
-- Kelola Profil Pribadi
+**Staf:** Input/edit/hapus surat masuk/keluar, upload dokumen, cari/filter surat, kelola arsip, generate laporan.
 
 #### B. Activity Diagram
 
@@ -490,23 +421,7 @@ Diagram lengkap alur pengelolaan surat masuk dapat dilihat pada **Gambar 4.4**.
 
 *Gambar 4.4 Activity Diagram Proses Pengelolaan Surat Masuk*
 
-Alur proses pengelolaan surat masuk:
-1. Staf menerima surat fisik dari pengirim
-2. Staf login ke sistem
-3. Staf memilih menu "Surat Masuk" > "Tambah Surat Masuk"
-4. Staf mengisi formulir (nomor surat, tanggal, pengirim, perihal, kategori, sifat)
-5. Staf upload file scan surat (PDF/gambar)
-6. Sistem validasi data dan file
-   - Jika tidak valid: Tampilkan pesan error, kembali ke form
-   - Jika valid: Lanjut ke langkah berikutnya
-7. Staf menyimpan data
-8. Sistem generate nomor registrasi otomatis
-9. Sistem simpan data ke database
-10. Sistem simpan file ke folder upload
-11. Sistem catat log aktivitas
-12. Sistem tampilkan notifikasi sukses
-13. Surat masuk tercatat dan dapat dilihat di daftar
-14. Selesai
+**Alur:** Staf terima surat fisik → login → isi form (nomor, tanggal, pengirim, perihal, kategori, sifat) → upload file → sistem validasi → generate nomor registrasi otomatis → simpan ke database → catat log → notifikasi sukses.
 
 **b. Activity Diagram Proses Disposisi Surat**
 
@@ -516,27 +431,7 @@ Diagram lengkap alur disposisi surat dapat dilihat pada **Gambar 4.5**.
 
 *Gambar 4.5 Activity Diagram Proses Disposisi Surat*
 
-Alur proses disposisi surat:
-1. Kepala sekolah login ke sistem
-2. Kepala sekolah buka menu "Surat Masuk"
-3. Kepala sekolah pilih surat yang akan didisposisikan
-4. Kepala sekolah klik tombol "Buat Disposisi"
-5. Sistem tampilkan form disposisi
-6. Kepala sekolah pilih penerima disposisi (Guru/Staf)
-7. Kepala sekolah input instruksi dan catatan
-8. Kepala sekolah tentukan prioritas (biasa/penting/sangat penting/segera)
-9. Kepala sekolah tentukan batas waktu/deadline
-10. Kepala sekolah simpan disposisi
-11. Sistem validasi data
-    - Jika tidak valid: Tampilkan pesan error
-    - Jika valid: Lanjut
-12. Sistem simpan data disposisi ke database
-13. Sistem update status surat masuk menjadi "Didisposisi"
-14. Sistem kirim notifikasi email ke penerima disposisi
-15. Sistem catat log aktivitas
-16. Sistem tampilkan notifikasi sukses
-17. Penerima terima notifikasi dan dapat lihat tugas di dashboard
-18. Selesai
+**Alur:** Kepala sekolah login → pilih surat → klik "Buat Disposisi" → pilih penerima → input instruksi, prioritas, deadline → simpan → sistem validasi → simpan ke database → update status surat → kirim notifikasi email → catat log → penerima terima notifikasi dan lihat di dashboard.
 
 **c. Activity Diagram Proses Pencarian Arsip**
 
@@ -546,21 +441,7 @@ Diagram lengkap alur pencarian arsip dapat dilihat pada **Gambar 4.6**.
 
 *Gambar 4.6 Activity Diagram Proses Pencarian Arsip*
 
-Alur proses pencarian arsip:
-1. Pengguna login ke sistem
-2. Pengguna buka menu "Arsip Digital"
-3. Pengguna input kata kunci pencarian (nomor/pengirim/perihal)
-4. Pengguna pilih filter tambahan (kategori, sifat, periode tanggal) - opsional
-5. Pengguna klik tombol "Cari"
-6. Sistem proses query pencarian ke database
-7. Sistem tampilkan hasil pencarian dalam bentuk tabel
-   - Jika tidak ada hasil: Tampilkan pesan "Data tidak ditemukan"
-   - Jika ada hasil: Tampilkan list arsip
-8. Pengguna dapat lihat detail, preview, atau download dokumen
-9. Jika preview: Sistem buka dokumen dalam browser
-10. Jika download: Sistem download file ke komputer pengguna
-11. Sistem catat log aktivitas akses arsip
-12. Selesai
+**Alur:** Pengguna login → akses menu "Arsip Digital" → input kata kunci → pilih filter (opsional) → klik "Cari" → sistem query database → tampilkan hasil tabel → pengguna lihat detail/preview/download → sistem catat log.
 
 **d. Activity Diagram Generate Laporan**
 
@@ -570,21 +451,7 @@ Diagram lengkap alur generate laporan dapat dilihat pada **Gambar 4.7**.
 
 *Gambar 4.7 Activity Diagram Generate Laporan*
 
-Alur proses membuat laporan:
-1. User (Admin/Kepala Sekolah/Staf) login ke sistem
-2. User akses menu "Laporan"
-3. User pilih jenis laporan (Surat Masuk/Surat Keluar/Disposisi)
-4. User pilih periode tanggal (tanggal mulai - tanggal selesai)
-5. User pilih format export (PDF/Excel) - opsional
-6. User klik tombol "Generate Laporan"
-7. Sistem query data dari database sesuai kriteria
-8. Sistem proses dan hitung statistik
-9. Sistem tampilkan laporan dalam format tabel dan grafik
-10. Jika export PDF: Sistem generate PDF menggunakan TCPDF
-11. Jika export Excel: Sistem generate Excel menggunakan PHPSpreadsheet
-12. Sistem tampilkan laporan atau download file
-13. Sistem catat log aktivitas
-14. Selesai
+**Alur:** User login → akses menu "Laporan" → pilih jenis & periode → pilih format export (opsional) → klik "Generate" → sistem query & hitung statistik → tampilkan tabel/grafik → export PDF/Excel jika dipilih → catat log.
 
 #### C. Entity Relationship Diagram (ERD)
 
@@ -596,52 +463,11 @@ Diagram lengkap ERD dapat dilihat pada **Gambar 4.8**.
 
 *Gambar 4.8 Entity Relationship Diagram Sistem*
 
-**Entitas Utama:**
+**Entitas Utama:** **(1) users** - data pengguna dengan role, **(2) surat_masuk** - data surat diterima, **(3) surat_keluar** - data surat diterbitkan, **(4) disposisi** - data disposisi dan instruksi, **(5) arsip** - arsip digital dokumen, **(6) log_aktivitas** - audit trail, **(7) notifikasi** - notifikasi pengguna.
 
-1. **users** - Menyimpan data semua pengguna sistem (admin, kepala sekolah, guru, staf)
-   - Atribut: id_user (PK), username, password, nama_lengkap, email, no_telepon, nip, alamat, role, foto_profil, status, last_login, created_at, updated_at
+**Relasi:** users (1:M) surat_masuk/keluar/disposisi/notifikasi, surat_masuk (1:M) disposisi, surat_masuk/keluar (1:1) arsip.
 
-2. **surat_masuk** - Menyimpan data surat masuk yang diterima sekolah
-   - Atribut: id_surat_masuk (PK), nomor_surat, tanggal_surat, tanggal_diterima, pengirim, perihal, kategori, sifat_surat, isi_ringkas, file_surat, lampiran, status, id_user_input (FK), created_at, updated_at
-
-3. **surat_keluar** - Menyimpan data surat keluar yang dibuat sekolah
-   - Atribut: id_surat_keluar (PK), nomor_surat, tanggal_surat, tujuan, alamat_tujuan, perihal, kategori, sifat_surat, isi_surat, file_surat, lampiran, id_penandatangan (FK), status, id_user_input (FK), created_at, updated_at
-
-4. **disposisi** - Menyimpan data disposisi surat dari kepala sekolah
-   - Atribut: id_disposisi (PK), id_surat_masuk (FK), id_dari (FK), id_kepada (FK), instruksi, catatan, prioritas, batas_waktu, status, tanggal_selesai, created_at, updated_at
-
-5. **arsip** - Menyimpan arsip digital semua surat
-   - Atribut: id_arsip (PK), jenis_surat, id_surat, nomor_surat, perihal, file_path, tanggal_surat, kategori, created_at, updated_at
-
-6. **log_aktivitas** - Menyimpan log aktivitas pengguna untuk audit
-   - Atribut: id_log (PK), id_user (FK), aktivitas, modul, deskripsi, ip_address, user_agent, created_at
-
-7. **notifikasi** - Menyimpan notifikasi untuk pengguna
-   - Atribut: id_notifikasi (PK), id_user (FK), judul, pesan, jenis, link, is_read, created_at, read_at
-
-**Relasi Antar Entitas:**
-
-- **users** (1) ↔ (M) **surat_masuk**: Satu user dapat menginput banyak surat masuk
-- **users** (1) ↔ (M) **surat_keluar**: Satu user dapat membuat banyak surat keluar
-- **users** (1) ↔ (M) **disposisi** (sebagai pemberi): Satu user dapat memberi banyak disposisi
-- **users** (1) ↔ (M) **disposisi** (sebagai penerima): Satu user dapat menerima banyak disposisi
-- **users** (1) ↔ (M) **log_aktivitas**: Satu user memiliki banyak log aktivitas
-- **users** (1) ↔ (M) **notifikasi**: Satu user dapat menerima banyak notifikasi
-- **surat_masuk** (1) ↔ (M) **disposisi**: Satu surat masuk dapat memiliki banyak disposisi (ke berbagai pihak)
-- **surat_masuk** (1) ↔ (1) **arsip**: Satu surat masuk memiliki satu arsip digital
-- **surat_keluar** (1) ↔ (1) **arsip**: Satu surat keluar memiliki satu arsip digital
-
-**Penjelasan Desain Database:**
-
-1. **Normalisasi 3NF**: Database dinormalisasi hingga Third Normal Form (3NF) untuk menghindari redundansi data dan menjaga integritas data.
-
-2. **Indexing**: Setiap tabel memiliki index yang tepat pada kolom yang sering di-query (username, email, nomor_surat, tanggal) untuk optimasi performa.
-
-3. **Relasi Many-to-Many**: Tabel `disposisi` memungkinkan satu surat didisposisikan ke banyak penerima dengan tracking status masing-masing.
-
-4. **Audit Trail**: Tabel `log_aktivitas` mencatat semua aktivitas penting pengguna untuk keperluan audit dan keamanan.
-
-5. **Soft Delete**: Beberapa tabel menggunakan status enum untuk "soft delete" (misalnya status 'archived') untuk menjaga integritas referensial.
+**Fitur Database:** Normalisasi 3NF (hindari redundansi), indexing optimal, relasi many-to-many untuk disposisi, audit trail lengkap, soft delete untuk integritas referensial.
 
 #### D. Desain Antarmuka Pengguna (UI/UX)
 
@@ -870,15 +696,11 @@ Halaman profil staf untuk mengelola informasi pribadi dan keamanan akun.
 
 #### C. Fitur Desain Unggulan
 
-**Desain Responsif:** Pendekatan *mobile-first* adaptif untuk desktop, tablet, dan mobile dengan *breakpoints* optimal.
-
-**Aksesibilitas:** Memenuhi standar *WCAG 2.1 Level AA* dengan rasio kontras minimal 4.5:1 dan navigasi keyboard.
-
-**Pengalaman Pengguna:** Navigasi konsisten, *call-to-action* jelas, loading indicator, toast notification, dan visualisasi data dengan *Chart.js*.
+**Responsif** (mobile-first, adaptif), **Aksesibilitas** (WCAG 2.1 AA, kontras ≥ 4.5:1, navigasi keyboard), **UX** (navigasi konsisten, loading indicator, toast notification, Chart.js).
 
 #### D. Dokumentasi Desain
 
-Total **38 halaman mockup** yang mencakup seluruh perjalanan pengguna dari 4 peran berbeda. Rincian distribusi:
+Total **37 halaman mockup** yang mencakup seluruh perjalanan pengguna dari 4 peran berbeda. Rincian distribusi:
 
 **Tabel 4.8 Distribusi Mockup per Role**
 
@@ -901,8 +723,6 @@ Semua mockup dirancang dengan prinsip:
 ---
 
 ## 4.4 Faktor Penentu Keberhasilan
-
-Keberhasilan implementasi Sistem Informasi Manajemen Arsip Persuratan SDIT Al-Huda ditentukan oleh berbagai faktor yang saling berkaitan. Faktor-faktor ini dibagi menjadi Faktor Kunci Keberhasilan (*Key Success Factors*/KSF), Faktor Kritis Keberhasilan (*Critical Success Factors*/CSF), dan Indikator Kinerja Utama (*Key Performance Indicators*/KPI).
 
 ### 4.4.1 Faktor Keberhasilan
 
@@ -973,18 +793,18 @@ Pengujian fungsional dilakukan untuk memastikan setiap fitur berfungsi sesuai de
 
 | No | Fitur | Skenario Pengujian | Hasil | Status |
 |----|-------|-------------------|-------|--------|
-| 1 | Login | Input username dan password valid | Berhasil masuk ke dashboard sesuai role | ✓ Pass |
-| 2 | Login | Input username/password invalid | Muncul pesan error yang sesuai | ✓ Pass |
-| 3 | Tambah Surat Masuk | Input data lengkap dan upload file | Data tersimpan dan file terupload | ✓ Pass |
-| 4 | Tambah Surat Masuk | Input data tanpa file | Data tersimpan tanpa file | ✓ Pass |
-| 5 | Pencarian Surat | Cari dengan nomor surat | Menampilkan surat yang sesuai | ✓ Pass |
-| 6 | Filter Surat | Filter berdasarkan kategori | Menampilkan surat sesuai kategori | ✓ Pass |
-| 7 | Disposisi | Buat disposisi untuk surat masuk | Disposisi tersimpan dan notifikasi terkirim | ✓ Pass |
-| 8 | Update Status Disposisi | Update status menjadi selesai | Status berubah dan tercatat | ✓ Pass |
-| 9 | Download Dokumen | Klik tombol download | File terdownload dengan benar | ✓ Pass |
-| 10 | Laporan PDF | Generate laporan periode tertentu | PDF terbuat dengan data yang benar | ✓ Pass |
-| 11 | Laporan Excel | Export data ke Excel | File Excel terbuat dengan format yang benar | ✓ Pass |
-| 12 | Notifikasi Email | Kirim disposisi baru | Email notifikasi diterima penerima | ✓ Pass |
+| 1 | Login | Input username dan password valid | Berhasil masuk ke dashboard sesuai role | Pass |
+| 2 | Login | Input username/password invalid | Muncul pesan error yang sesuai | Pass |
+| 3 | Tambah Surat Masuk | Input data lengkap dan upload file | Data tersimpan dan file terupload | Pass |
+| 4 | Tambah Surat Masuk | Input data tanpa file | Data tersimpan tanpa file | Pass |
+| 5 | Pencarian Surat | Cari dengan nomor surat | Menampilkan surat yang sesuai | Pass |
+| 6 | Filter Surat | Filter berdasarkan kategori | Menampilkan surat sesuai kategori | Pass |
+| 7 | Disposisi | Buat disposisi untuk surat masuk | Disposisi tersimpan dan notifikasi terkirim | Pass |
+| 8 | Update Status Disposisi | Update status menjadi selesai | Status berubah dan tercatat | Pass |
+| 9 | Download Dokumen | Klik tombol download | File terdownload dengan benar | Pass |
+| 10 | Laporan PDF | Generate laporan periode tertentu | PDF terbuat dengan data yang benar | Pass |
+| 11 | Laporan Excel | Export data ke Excel | File Excel terbuat dengan format yang benar | Pass |
+| 12 | Notifikasi Email | Kirim disposisi baru | Email notifikasi diterima penerima | Pass |
 
 **Hasil**: 12/12 fitur utama berfungsi dengan baik (100% Pass Rate)
 
@@ -1061,36 +881,7 @@ Perhitungan skor SUS menggunakan rumus standar:
 - R5 (Staf Admin 2): 87.5
 - R6 (Staf TU): 75.0
 
-**Hasil Skor SUS Rata-rata: 82.5/100** (Grade: A - Excellent)
-
-**C. Interpretasi Hasil**
-
-Kategori interpretasi skor SUS:
-- 80-100: Excellent (Grade A)
-- 68-79.9: Good (Grade B)
-- 68 ke bawah: Needs Improvement
-
-Hasil ini menunjukkan sistem memiliki tingkat usability yang sangat baik dan mudah digunakan oleh pengguna dengan berbagai tingkat literasi digital. Skor 82.5 berada pada kategori "Excellent", yang menunjukkan bahwa sistem telah memenuhi standar usability yang tinggi.
-
-**D. Analisis per Aspek**
-
-1. **Kemudahan Penggunaan** (Q3, Q8): Skor rata-rata 4.7/5
-   - Sistem dinilai sangat mudah digunakan dan tidak membingungkan
-
-2. **Efisiensi** (Q1, Q9): Skor rata-rata 4.4/5
-   - Pengguna akan sering menggunakan sistem tanpa hambatan
-
-3. **Kemudahan Pembelajaran** (Q4, Q7, Q10): Skor rata-rata 4.5/5
-   - Sistem mudah dipelajari tanpa bantuan teknis dan pelatihan minimal
-
-4. **Konsistensi** (Q2, Q5, Q6): Skor rata-rata 4.6/5
-   - Sistem konsisten dan fitur berjalan dengan baik
-
-**E. Feedback Kualitatif:**
-- "Sistem sangat mudah digunakan, tidak perlu training lama" - Staf Admin
-- "Disposisi jadi cepat, tidak perlu cari-cari guru lagi" - Kepala Sekolah
-- "Notifikasi email sangat membantu, tidak ada lagi disposisi yang terlewat" - Guru
-- "Pencarian arsip sekarang hanya butuh beberapa detik" - Staf TU
+**Hasil Skor SUS: 82.5/100** (Grade A - Excellent). Kategori: 80-100 (Excellent), 68-79.9 (Good), < 68 (Needs Improvement). Sistem memiliki usability sangat baik untuk berbagai tingkat literasi digital. **Aspek:** Kemudahan penggunaan (4.7/5), efisiensi (4.4/5), pembelajaran (4.5/5), konsistensi (4.6/5). **Feedback:** Sistem mudah, training singkat, disposisi cepat, notifikasi membantu, pencarian sangat cepat.
 
 ---
 
@@ -1100,27 +891,16 @@ Desiminasi proyek dilakukan untuk menyebarluaskan hasil dan pembelajaran kepada 
 
 ### 4.8.1 Metode dan Luaran Desiminasi
 
-**A. Laporan Capstone Project**
-- Laporan lengkap BAB I-V dengan dokumentasi teknis (SRS, desain sistem, panduan pengguna)
-- Format: PDF
+**Metode:** **(A)** Laporan capstone lengkap BAB I-V dengan dokumentasi teknis (PDF); **(B)** Pameran ilmiah - X-Banner, demo sistem interaktif (target: ≥ 10 pengunjung); **(C)** Presentasi akhir 30-45 menit kepada dosen pembimbing dan penguji.
 
-**B. Pameran Ilmiah**
-- X-Banner (60 × 160 cm) dengan judul, logo, latar belakang, tujuan, metodologi, hasil, manfaat, dan QR code kuesioner
-- Demo sistem interaktif
-- Target: Minimal 10 pengunjung, 10 responden kuesioner
+**Tabel 4.14 Luaran Desiminasi**
 
-**C. Presentasi Akhir**
-- Presentasi dan demonstrasi sistem di hadapan dosen pembimbing dan penguji (30-45 menit)
-- Sesi tanya jawab
-
-**Tabel 4.14 Luaran Desiminasi Proyek**
-
-| No | Luaran | Format | Target Audiens | Status |
-|----|--------|--------|----------------|--------|
-| 1 | Laporan Capstone Project | PDF + Cetak | Akademik | Selesai |
-| 2 | Pameran Ilmiah | Stand Interaktif | Sivitas + Publik | Selesai |
-| 3 | Presentasi Akhir | Slide + Demo | Dosen | Selesai |
-| 4 | Kuesioner Persepsi | Google Form | Publik | Selesai |
+| Luaran | Format | Audiens | Status |
+|--------|--------|---------|--------|
+| Laporan Capstone | PDF + Cetak | Akademik | Selesai |
+| Pameran Ilmiah | X-Banner + Demo | Sivitas + Publik | Selesai |
+| Presentasi Akhir | Slide + Demo | Dosen | Selesai |
+| Kuesioner Persepsi | Google Form | Publik | Selesai |
 
 ### 4.8.2 Jadwal dan Indikator Keberhasilan
 
