@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 12 - Diagram UML | Presentasi CUR-HEART</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+</head>
+<body class="bg-white min-h-screen p-8">
+    <div class="max-w-6xl mx-auto">
+        <div class="mb-8">
+            <div class="flex items-center mb-6">
+                <img src="assets/img/color.png" alt="CurHeart Logo" class="h-12 mr-4">
+                <h1 class="text-5xl font-bold text-gray-900">Diagram UML</h1>
+            </div>
+            <div class="h-1 w-32 bg-[#1E0E62] rounded-full"></div>
+        </div>
+
+        <!-- Use Case Diagram -->
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 mb-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Diagram Kasus Penggunaan</h2>
+            <div class="grid md:grid-cols-4 gap-4">
+                <div class="bg-[#1E0E62]/10 rounded-xl p-4 border-2 border-[#1E0E62]/30">
+                    <h3 class="font-bold text-gray-800 mb-3 text-center">Tamu</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Lihat layanan</li>
+                        <li>• Lihat terapis</li>
+                        <li>• Baca blog</li>
+                        <li>• Registrasi</li>
+                    </ul>
+                </div>
+                <div class="bg-[#FF6B7A]/10 rounded-xl p-4 border-2 border-[#FF6B7A]/30">
+                    <h3 class="font-bold text-gray-800 mb-3 text-center">Klien</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Buat reservasi</li>
+                        <li>• Bayar daring</li>
+                        <li>• Lihat progres</li>
+                        <li>• Beri ulasan</li>
+                    </ul>
+                </div>
+                <div class="bg-[#FFA94D]/10 rounded-xl p-4 border-2 border-[#FFA94D]/30">
+                    <h3 class="font-bold text-gray-800 mb-3 text-center">Terapis</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Kelola jadwal</li>
+                        <li>• Catat sesi</li>
+                        <li>• Lihat klien</li>
+                        <li>• Lihat pendapatan</li>
+                    </ul>
+                </div>
+                <div class="bg-[#FFEAA7]/10 rounded-xl p-4 border-2 border-[#FFA94D]/30">
+                    <h3 class="font-bold text-gray-800 mb-3 text-center">Admin</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Kelola pengguna</li>
+                        <li>• Kelola layanan</li>
+                        <li>• Lihat laporan</li>
+                        <li>• Kelola sistem</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity Diagram -->
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Diagram Aktivitas: Alur Reservasi</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <div class="bg-[#1E0E62] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 font-bold">
+                            1
+                        </div>
+                        <p class="text-gray-700">Klien masuk ke sistem</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-[#667BC6] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 font-bold">
+                            2
+                        </div>
+                        <p class="text-gray-700">Pilih layanan terapi</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-[#FF6B7A] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 font-bold">
+                            3
+                        </div>
+                        <p class="text-gray-700">Pilih terapis (opsional)</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-[#1E0E62] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 font-bold">
+                            4
+                        </div>
+                        <p class="text-gray-700">Pilih tanggal & waktu</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-[#FFA94D] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 font-bold">
+                            5
+                        </div>
+                        <p class="text-gray-700">Konfirmasi & bayar</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-[#FF6B7A] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 font-bold">
+                            6
+                        </div>
+                        <p class="text-gray-700">Terima konfirmasi email</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Diagram Aktivitas: Sesi Terapi</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <div class="bg-[#1E0E62] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 font-bold">
+                            1
+                        </div>
+                        <p class="text-gray-700">Terapis lihat jadwal hari ini</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-[#667BC6] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 font-bold">
+                            2
+                        </div>
+                        <p class="text-gray-700">Buka detail klien</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-[#FF6B7A] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 font-bold">
+                            3
+                        </div>
+                        <p class="text-gray-700">Lakukan sesi terapi</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-[#1E0E62] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 font-bold">
+                            4
+                        </div>
+                        <p class="text-gray-700">Catat hasil sesi</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-[#FFA94D] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 font-bold">
+                            5
+                        </div>
+                        <p class="text-gray-700">Perbarui progres klien</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-[#FF6B7A] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 font-bold">
+                            6
+                        </div>
+                        <p class="text-gray-700">Simpan dokumentasi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sequence Diagram -->
+        <div class="mt-6 bg-[#1E0E62] rounded-2xl p-6 text-white">
+            <h3 class="text-2xl font-bold mb-4">Diagram Urutan: Autentikasi</h3>
+            <div class="grid md:grid-cols-5 gap-2 text-center text-sm">
+                <div class="bg-white/20 rounded-lg p-3">
+                    <p class="font-bold">Pengguna</p>
+                </div>
+                <div class="flex items-center justify-center">
+                    <span class="iconify text-2xl" data-icon="mdi:arrow-right"></span>
+                </div>
+                <div class="bg-white/20 rounded-lg p-3">
+                    <p class="font-bold">Pengendali</p>
+                </div>
+                <div class="flex items-center justify-center">
+                    <span class="iconify text-2xl" data-icon="mdi:arrow-right"></span>
+                </div>
+                <div class="bg-white/20 rounded-lg p-3">
+                    <p class="font-bold">Basis Data</p>
+                </div>
+            </div>
+            <div class="mt-4 space-y-2 text-sm">
+                <p>1. Pengguna kirim formulir masuk</p>
+                <p>2. Pengendali validasi kredensial</p>
+                <p>3. Basis data verifikasi pengguna</p>
+                <p>4. Kembalikan data pengguna & token</p>
+                <p>5. Alihkan ke dasbor</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                window.location.href = 'slide-13-arsitektur-sistem.html';
+            }
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                window.location.href = 'slide-11-desain-uiux.html';
+            }
+            if (e.key === 'Escape') {
+                window.location.href = 'INDEX.html';
+            }
+        });
+    </script>
+</body>
+</html>
