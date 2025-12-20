@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 6 - Ruang Lingkup | Presentasi SDIT Al-Huda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#3fb980', 'primary-dark': '#2d8a5f' } } }
+        }
+    </script>
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-white min-h-screen p-8">
+    <div class="fixed top-6 right-6 text-gray-400 text-sm">6 / 13</div>
+
+    <div class="max-w-6xl mx-auto">
+        <div class="mb-8">
+            <div class="flex items-center gap-4 mb-2">
+                <img src="assets/img/logo-sdit.png" alt="Logo" class="h-10">
+                <h1 class="text-4xl font-bold text-gray-900">Ruang Lingkup</h1>
+            </div>
+            <p class="text-gray-500 ml-14">8 modul utama sistem informasi manajemen arsip persuratan</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all">
+                <div class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-3"><i class="fas fa-user-shield text-primary text-xl"></i></div>
+                <h3 class="font-bold text-gray-800 mb-2">Autentikasi</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Login multi-peran (Admin, Kepala Sekolah, Guru, Staf) dengan RBAC</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all">
+                <div class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-3"><i class="fas fa-inbox text-primary text-xl"></i></div>
+                <h3 class="font-bold text-gray-800 mb-2">Surat Masuk</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Pencatatan otomatis, upload file, kategorisasi, dan tracking status</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all">
+                <div class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-3"><i class="fas fa-paper-plane text-primary text-xl"></i></div>
+                <h3 class="font-bold text-gray-800 mb-2">Surat Keluar</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Penomoran otomatis, upload dokumen, dan pelacakan pengiriman</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all">
+                <div class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-3"><i class="fas fa-share text-primary text-xl"></i></div>
+                <h3 class="font-bold text-gray-800 mb-2">Disposisi</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Disposisi elektronik dengan notifikasi email dan tracking tindak lanjut</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all">
+                <div class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-3"><i class="fas fa-archive text-primary text-xl"></i></div>
+                <h3 class="font-bold text-gray-800 mb-2">Arsip Digital</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Penyimpanan digital, pencarian canggih, preview, dan download</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all">
+                <div class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-3"><i class="fas fa-chart-pie text-primary text-xl"></i></div>
+                <h3 class="font-bold text-gray-800 mb-2">Dashboard & Laporan</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Statistik real-time, grafik visualisasi, export PDF/Excel</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all">
+                <div class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-3"><i class="fas fa-bell text-primary text-xl"></i></div>
+                <h3 class="font-bold text-gray-800 mb-2">Notifikasi</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Notifikasi email otomatis untuk disposisi, deadline, dan surat penting</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all">
+                <div class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-3"><i class="fas fa-history text-primary text-xl"></i></div>
+                <h3 class="font-bold text-gray-800 mb-2">Log Aktivitas</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">Pencatatan aktivitas pengguna, jejak audit, dan riwayat perubahan</p>
+            </div>
+        </div>
+
+        <div class="mt-6 bg-primary/5 rounded-xl p-5 border border-primary/20">
+            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2"><i class="fas fa-users text-primary"></i>4 Role Pengguna</h4>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="bg-white rounded-lg p-3 text-center"><i class="fas fa-user-cog text-primary mb-1"></i><p class="text-sm font-medium text-gray-700">Admin</p></div>
+                <div class="bg-white rounded-lg p-3 text-center"><i class="fas fa-user-tie text-primary mb-1"></i><p class="text-sm font-medium text-gray-700">Kepala Sekolah</p></div>
+                <div class="bg-white rounded-lg p-3 text-center"><i class="fas fa-chalkboard-teacher text-primary mb-1"></i><p class="text-sm font-medium text-gray-700">Guru</p></div>
+                <div class="bg-white rounded-lg p-3 text-center"><i class="fas fa-user text-primary mb-1"></i><p class="text-sm font-medium text-gray-700">Staf TU</p></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') window.location.href = 'slide-07-metodologi.html';
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') window.location.href = 'slide-05-tujuan.html';
+        });
+    </script>
+</body>
+</html>

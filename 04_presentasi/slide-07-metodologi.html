@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 7 - Metodologi | Presentasi SDIT Al-Huda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#3fb980', 'primary-dark': '#2d8a5f' } } }
+        }
+    </script>
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-white min-h-screen p-8">
+    <div class="fixed top-6 right-6 text-gray-400 text-sm">7 / 13</div>
+
+    <div class="max-w-6xl mx-auto">
+        <div class="flex items-center gap-4 mb-8">
+            <img src="assets/img/logo-sdit.png" alt="Logo" class="h-10">
+            <h1 class="text-4xl font-bold text-gray-900">Metodologi Penelitian</h1>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><i class="fas fa-project-diagram text-primary"></i>SDLC Model Waterfall</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-primary text-white rounded-lg px-4 py-3 font-bold text-sm min-w-[140px]">1. Analisis</div>
+                        <div class="flex-1 bg-gray-100 rounded-lg px-4 py-3"><span class="text-gray-600 text-sm">2 minggu</span></div>
+                    </div>
+                    <div class="flex items-center gap-4 ml-4">
+                        <div class="bg-primary/90 text-white rounded-lg px-4 py-3 font-bold text-sm min-w-[140px]">2. Desain</div>
+                        <div class="flex-1 bg-gray-100 rounded-lg px-4 py-3"><span class="text-gray-600 text-sm">2 minggu</span></div>
+                    </div>
+                    <div class="flex items-center gap-4 ml-8">
+                        <div class="bg-primary/80 text-white rounded-lg px-4 py-3 font-bold text-sm min-w-[140px]">3. Implementasi</div>
+                        <div class="flex-1 bg-gray-100 rounded-lg px-4 py-3"><span class="text-gray-600 text-sm">4 minggu</span></div>
+                    </div>
+                    <div class="flex items-center gap-4 ml-12">
+                        <div class="bg-primary/70 text-white rounded-lg px-4 py-3 font-bold text-sm min-w-[140px]">4. Pengujian</div>
+                        <div class="flex-1 bg-gray-100 rounded-lg px-4 py-3"><span class="text-gray-600 text-sm">3 minggu</span></div>
+                    </div>
+                    <div class="flex items-center gap-4 ml-16">
+                        <div class="bg-primary/60 text-white rounded-lg px-4 py-3 font-bold text-sm min-w-[140px]">5. Deployment</div>
+                        <div class="flex-1 bg-gray-100 rounded-lg px-4 py-3"><span class="text-gray-600 text-sm">1 minggu</span></div>
+                    </div>
+                </div>
+                <div class="mt-6 bg-primary/5 rounded-xl p-4 border border-primary/20">
+                    <div class="flex items-center justify-between">
+                        <span class="font-semibold text-gray-700">Total Durasi:</span>
+                        <span class="text-primary font-bold text-xl">14 Minggu</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><i class="fas fa-clipboard-list text-primary"></i>Teknik Pengumpulan Data</h3>
+                <div class="space-y-4">
+                    <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                        <div class="flex items-start gap-3">
+                            <div class="bg-primary/10 p-2 rounded-lg"><i class="fas fa-eye text-primary"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Observasi</h4>
+                                <p class="text-gray-500 text-sm">Pengamatan langsung proses bisnis pengelolaan persuratan di SDIT Al-Huda</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                        <div class="flex items-start gap-3">
+                            <div class="bg-primary/10 p-2 rounded-lg"><i class="fas fa-comments text-primary"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Wawancara</h4>
+                                <p class="text-gray-500 text-sm">Wawancara semi-terstruktur dengan 6 pemangku kepentingan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                        <div class="flex items-start gap-3">
+                            <div class="bg-primary/10 p-2 rounded-lg"><i class="fas fa-book text-primary"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Studi Pustaka</h4>
+                                <p class="text-gray-500 text-sm">Referensi jurnal, buku, dan UU No. 43 Tahun 2009 tentang Kearsipan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                        <div class="flex items-start gap-3">
+                            <div class="bg-primary/10 p-2 rounded-lg"><i class="fas fa-poll text-primary"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Kuesioner</h4>
+                                <p class="text-gray-500 text-sm">Kuesioner analisis kebutuhan dan evaluasi SUS (System Usability Scale)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') window.location.href = 'slide-08-perencanaan.html';
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') window.location.href = 'slide-06-ruang-lingkup.html';
+        });
+    </script>
+</body>
+</html>

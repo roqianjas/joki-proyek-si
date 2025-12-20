@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 3 - Latar Belakang | Presentasi SDIT Al-Huda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#3fb980', 'primary-dark': '#2d8a5f' } } }
+        }
+    </script>
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-white min-h-screen p-8">
+    <div class="fixed top-6 right-6 text-gray-400 text-sm">3 / 13</div>
+
+    <div class="max-w-6xl mx-auto">
+        <div class="flex items-center gap-4 mb-8">
+            <img src="assets/img/logo-sdit.png" alt="Logo" class="h-10">
+            <h1 class="text-4xl font-bold text-gray-900">Latar Belakang</h1>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 mb-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-primary/10 p-3 rounded-lg"><i class="fas fa-school text-primary text-xl"></i></div>
+                        <h3 class="text-lg font-bold text-gray-800">SDIT Al-Huda</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed">Lembaga pendidikan Islam terpadu yang terus berkembang, menghadapi tantangan dalam pengelolaan arsip persuratan dengan volume surat yang terus meningkat setiap tahunnya.</p>
+                </div>
+
+                <div class="bg-primary/5 rounded-xl p-6 border border-primary/20">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4"><i class="fas fa-exclamation-triangle text-primary mr-2"></i>Kondisi Saat Ini</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm">
+                        <li class="flex items-start gap-2"><i class="fas fa-times-circle text-red-400 mt-0.5"></i><span>Pengelolaan surat masih <strong>manual</strong> dengan buku agenda</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-times-circle text-red-400 mt-0.5"></i><span>Penyimpanan menggunakan <strong>ordner dan lemari arsip fisik</strong></span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-times-circle text-red-400 mt-0.5"></i><span>Disposisi dengan <strong>catatan manual</strong> pada lembar surat</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-times-circle text-red-400 mt-0.5"></i><span><strong>Tidak ada sistem monitoring</strong> dan pelacakan status</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold text-gray-800 mb-4"><i class="fas fa-chart-bar text-primary mr-2"></i>Dampak Permasalahan</h3>
+                <div class="space-y-4">
+                    <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                        <div class="flex items-center justify-between mb-2"><span class="text-gray-700 font-medium">Pencatatan Surat</span><span class="text-primary font-bold">10-15 menit</span></div>
+                        <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-red-400 h-2 rounded-full" style="width: 75%"></div></div>
+                        <p class="text-xs text-gray-500 mt-2">per surat, rawan kesalahan pencatatan</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                        <div class="flex items-center justify-between mb-2"><span class="text-gray-700 font-medium">Pencarian Arsip</span><span class="text-primary font-bold">15-30 menit</span></div>
+                        <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-red-400 h-2 rounded-full" style="width: 85%"></div></div>
+                        <p class="text-xs text-gray-500 mt-2">membuka ordner satu per satu secara manual</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                        <div class="flex items-center justify-between mb-2"><span class="text-gray-700 font-medium">Proses Disposisi</span><span class="text-primary font-bold">1-3 hari</span></div>
+                        <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-red-400 h-2 rounded-full" style="width: 90%"></div></div>
+                        <p class="text-xs text-gray-500 mt-2">surat harus diteruskan secara fisik</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                        <div class="flex items-center justify-between mb-2"><span class="text-gray-700 font-medium">Pembuatan Laporan</span><span class="text-primary font-bold">2-3 hari</span></div>
+                        <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-red-400 h-2 rounded-full" style="width: 95%"></div></div>
+                        <p class="text-xs text-gray-500 mt-2">rekap manual dari buku agenda</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') window.location.href = 'slide-04-identifikasi-masalah.html';
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') window.location.href = 'slide-02-agenda.html';
+        });
+    </script>
+</body>
+</html>

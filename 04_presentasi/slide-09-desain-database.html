@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 9 - Desain Database | Presentasi SDIT Al-Huda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#3fb980', 'primary-dark': '#2d8a5f' } } }
+        }
+    </script>
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-white min-h-screen p-8">
+    <div class="fixed top-6 right-6 text-gray-400 text-sm">9 / 13</div>
+
+    <div class="max-w-6xl mx-auto">
+        <div class="mb-6">
+            <div class="flex items-center gap-4 mb-2">
+                <img src="assets/img/logo-sdit.png" alt="Logo" class="h-10">
+                <h1 class="text-4xl font-bold text-gray-900">Desain Database</h1>
+            </div>
+            <p class="text-gray-500 ml-14">7 tabel dengan normalisasi hingga Third Normal Form (3NF)</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6">
+            <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <div class="bg-primary text-white px-4 py-2 font-bold text-sm flex items-center gap-2"><i class="fas fa-users"></i>users</div>
+                <div class="p-3 text-xs space-y-1">
+                    <div class="flex items-center gap-2"><i class="fas fa-key text-primary text-[10px]"></i><span class="text-gray-700">id</span></div>
+                    <div class="text-gray-600">nama, username, password</div>
+                    <div class="text-gray-600">email, role, status</div>
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <div class="bg-primary text-white px-4 py-2 font-bold text-sm flex items-center gap-2"><i class="fas fa-inbox"></i>surat_masuk</div>
+                <div class="p-3 text-xs space-y-1">
+                    <div class="flex items-center gap-2"><i class="fas fa-key text-primary text-[10px]"></i><span class="text-gray-700">id</span></div>
+                    <div class="text-gray-600">no_surat, tgl_surat</div>
+                    <div class="text-gray-600">pengirim, perihal, kategori</div>
+                    <div class="text-gray-600">sifat, file, status</div>
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <div class="bg-primary text-white px-4 py-2 font-bold text-sm flex items-center gap-2"><i class="fas fa-paper-plane"></i>surat_keluar</div>
+                <div class="p-3 text-xs space-y-1">
+                    <div class="flex items-center gap-2"><i class="fas fa-key text-primary text-[10px]"></i><span class="text-gray-700">id</span></div>
+                    <div class="text-gray-600">no_surat, tgl_surat</div>
+                    <div class="text-gray-600">tujuan, perihal, kategori</div>
+                    <div class="text-gray-600">file, status</div>
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <div class="bg-primary text-white px-4 py-2 font-bold text-sm flex items-center gap-2"><i class="fas fa-share"></i>disposisi</div>
+                <div class="p-3 text-xs space-y-1">
+                    <div class="flex items-center gap-2"><i class="fas fa-key text-primary text-[10px]"></i><span class="text-gray-700">id</span></div>
+                    <div class="text-gray-600">surat_id, dari_user_id</div>
+                    <div class="text-gray-600">kepada_user_id, instruksi</div>
+                    <div class="text-gray-600">prioritas, deadline, status</div>
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <div class="bg-primary text-white px-4 py-2 font-bold text-sm flex items-center gap-2"><i class="fas fa-archive"></i>arsip</div>
+                <div class="p-3 text-xs space-y-1">
+                    <div class="flex items-center gap-2"><i class="fas fa-key text-primary text-[10px]"></i><span class="text-gray-700">id</span></div>
+                    <div class="text-gray-600">surat_masuk_id</div>
+                    <div class="text-gray-600">surat_keluar_id</div>
+                    <div class="text-gray-600">file_path, created_at</div>
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <div class="bg-primary text-white px-4 py-2 font-bold text-sm flex items-center gap-2"><i class="fas fa-history"></i>log_aktivitas</div>
+                <div class="p-3 text-xs space-y-1">
+                    <div class="flex items-center gap-2"><i class="fas fa-key text-primary text-[10px]"></i><span class="text-gray-700">id</span></div>
+                    <div class="text-gray-600">user_id, aksi</div>
+                    <div class="text-gray-600">deskripsi, ip_address</div>
+                    <div class="text-gray-600">created_at</div>
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <div class="bg-primary text-white px-4 py-2 font-bold text-sm flex items-center gap-2"><i class="fas fa-bell"></i>notifikasi</div>
+                <div class="p-3 text-xs space-y-1">
+                    <div class="flex items-center gap-2"><i class="fas fa-key text-primary text-[10px]"></i><span class="text-gray-700">id</span></div>
+                    <div class="text-gray-600">user_id, judul</div>
+                    <div class="text-gray-600">pesan, tipe</div>
+                    <div class="text-gray-600">is_read, created_at</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-primary/5 rounded-xl p-5 border border-primary/20">
+                <h3 class="font-bold text-gray-800 mb-3 flex items-center gap-2"><i class="fas fa-link text-primary"></i>Relasi Utama</h3>
+                <div class="space-y-2 text-sm text-gray-600">
+                    <div class="flex items-center gap-2"><span class="bg-primary/10 text-primary px-2 py-0.5 rounded text-xs">1:M</span><span>users → surat_masuk (input surat)</span></div>
+                    <div class="flex items-center gap-2"><span class="bg-primary/10 text-primary px-2 py-0.5 rounded text-xs">1:M</span><span>users → surat_keluar (buat surat)</span></div>
+                    <div class="flex items-center gap-2"><span class="bg-primary/10 text-primary px-2 py-0.5 rounded text-xs">1:M</span><span>users → disposisi (pemberi & penerima)</span></div>
+                    <div class="flex items-center gap-2"><span class="bg-primary/10 text-primary px-2 py-0.5 rounded text-xs">1:M</span><span>surat_masuk → disposisi</span></div>
+                    <div class="flex items-center gap-2"><span class="bg-gray-200 text-gray-600 px-2 py-0.5 rounded text-xs">1:1</span><span>surat_masuk/keluar → arsip</span></div>
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                <h3 class="font-bold text-gray-800 mb-3 flex items-center gap-2"><i class="fas fa-check-circle text-primary"></i>Fitur Database</h3>
+                <div class="space-y-2 text-sm text-gray-600">
+                    <div class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i><span>Normalisasi hingga 3NF (tidak ada redundansi)</span></div>
+                    <div class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i><span>Foreign key constraints untuk integritas</span></div>
+                    <div class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i><span>Indexing optimal untuk performa query</span></div>
+                    <div class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i><span>Soft delete untuk pelestarian data</span></div>
+                    <div class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i><span>Audit trail lengkap dengan log aktivitas</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') window.location.href = 'slide-10-desain-ui.html';
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') window.location.href = 'slide-08-perencanaan.html';
+        });
+    </script>
+</body>
+</html>

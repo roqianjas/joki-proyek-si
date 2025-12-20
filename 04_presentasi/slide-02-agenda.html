@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 2 - Agenda | Presentasi SDIT Al-Huda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#3fb980', 'primary-dark': '#2d8a5f' } } }
+        }
+    </script>
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-white min-h-screen p-8">
+    <div class="fixed top-6 right-6 text-gray-400 text-sm">2 / 13</div>
+
+    <div class="max-w-6xl mx-auto">
+        <div class="flex items-center gap-4 mb-10">
+            <img src="assets/img/logo-sdit.png" alt="Logo" class="h-10">
+            <h1 class="text-4xl font-bold text-gray-900">Agenda Presentasi</h1>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5">
+            <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-primary/30 transition-all hover:shadow-md">
+                <div class="flex items-start gap-4">
+                    <div class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">1</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">Latar Belakang & Masalah</h3>
+                        <p class="text-gray-500 text-sm">Kondisi pengelolaan arsip saat ini dan 8 permasalahan utama</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-primary/30 transition-all hover:shadow-md">
+                <div class="flex items-start gap-4">
+                    <div class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">2</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">Tujuan & Ruang Lingkup</h3>
+                        <p class="text-gray-500 text-sm">Tujuan penelitian dan 8 modul sistem yang dikembangkan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-primary/30 transition-all hover:shadow-md">
+                <div class="flex items-start gap-4">
+                    <div class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">3</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">Metodologi & Perencanaan</h3>
+                        <p class="text-gray-500 text-sm">SDLC Waterfall, timeline 14 minggu, anggaran proyek</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-primary/30 transition-all hover:shadow-md">
+                <div class="flex items-start gap-4">
+                    <div class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">4</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">Desain Sistem</h3>
+                        <p class="text-gray-500 text-sm">Database 7 tabel, 37 mockup UI/UX, arsitektur MVC</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-primary/30 transition-all hover:shadow-md">
+                <div class="flex items-start gap-4">
+                    <div class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">5</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">Hasil & Pengujian</h3>
+                        <p class="text-gray-500 text-sm">SUS Score 82.5/100, UAT 100% pass, peningkatan efisiensi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-primary/30 transition-all hover:shadow-md">
+                <div class="flex items-start gap-4">
+                    <div class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">6</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">Kesimpulan & Penutup</h3>
+                        <p class="text-gray-500 text-sm">Ringkasan pencapaian, manfaat, dan sesi tanya jawab</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') window.location.href = 'slide-03-latar-belakang.html';
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') window.location.href = 'slide-01-cover.html';
+        });
+    </script>
+</body>
+</html>
