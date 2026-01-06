@@ -18,3 +18,11 @@
 | Tabel 4.12 | Hasil User Acceptance Testing | 62 |
 | Tabel 4.13 | Hasil Kuesioner System Usability Scale (SUS) | 64 |
 | Tabel 4.14 | Luaran Desiminasi Proyek | 67 |
+| **Lampiran** | | |
+| Tabel L.1 | Profil Responden Kuesioner SUS | 77 |
+| Tabel L.2 | Hasil Kuesioner System Usability Scale (SUS) | 77 |
+| Tabel L.3 | Perhitungan Skor SUS per Responden | 78 |
+| Tabel L.4 | Ringkasan Skor SUS per Responden | 79 |
+| Tabel L.5 | Kategori Interpretasi Skor SUS | 79 |
+| Tabel L.6 | Analisis Aspek Usability | 80 |
+| Tabel L.7 | Feedback Responden | 80 |
